@@ -1,0 +1,1850 @@
+2026/01/30 08:23:59 INF MediaMTX v1.15.6
+2026/01/30 08:23:59 INF configuration loaded from C:\python\CCTV_Dashboard\streaming\mediamtx.yml
+2026/01/30 08:23:59 INF [RTSP] listener opened on :8554 (TCP)
+2026/01/30 08:23:59 INF [RTMP] listener opened on :1935
+2026/01/30 08:23:59 INF [HLS] listener opened on :8888
+2026/01/30 08:23:59 INF [WebRTC] listener opened on :8889 (HTTP), :8189 (ICE/UDP)
+2026/01/30 08:23:59 INF [SRT] listener opened on :8890 (UDP)
+2026/01/30 08:24:01 INF [RTSP] [conn [::1]:57836] opened
+2026/01/30 08:24:01 INF [path kesanapalli-04] [RTSP source] started on demand
+2026/01/30 08:24:01 INF [RTSP] [conn [::1]:57838] opened
+2026/01/30 08:24:01 INF [path kesanapalli-01] [RTSP source] started on demand
+2026/01/30 08:24:03 INF [path kesanapalli-01] [RTSP source] ready: 1 track (H265)
+2026/01/30 08:24:03 INF [RTSP] [session 8cd19408] created by [::1]:57838
+2026/01/30 08:24:03 INF [RTSP] [session 8cd19408] is reading from path 'kesanapalli-01', with TCP, 1 track (H265)
+2026/01/30 08:24:03 INF [WebRTC] [session 773759e0] created by [::1]:56247
+2026/01/30 08:24:03 INF [WebRTC] [session 773759e0] closed: no stream is available on path 'kesanapalli-04-h264'
+2026/01/30 08:24:03 INF [path kesanapalli-04] [RTSP source] ready: 1 track (H265)
+2026/01/30 08:24:03 INF [RTSP] [session 1b40aa77] created by [::1]:57836
+2026/01/30 08:24:03 INF [RTSP] [session 1b40aa77] is reading from path 'kesanapalli-04', with TCP, 1 track (H265)
+2026/01/30 08:24:06 WAR [path kesanapalli-04] [RTSP source] 54 RTP packets lost
+2026/01/30 08:24:08 WAR [path kesanapalli-01] [RTSP source] 99 RTP packets lost
+2026/01/30 08:24:09 WAR [path kesanapalli-04] [RTSP source] 878 RTP packets lost
+2026/01/30 08:24:09 INF [RTSP] [conn [::1]:49284] opened
+2026/01/30 08:24:09 INF [RTSP] [session 8a9f95cd] created by [::1]:49284
+2026/01/30 08:24:09 INF [RTSP] [session 8a9f95cd] is publishing to path 'kesanapalli-04-h264', 1 track (H264)
+2026/01/30 08:24:11 INF [RTSP] [conn [::1]:53763] opened
+2026/01/30 08:24:11 INF [RTSP] [session 7c3f646d] created by [::1]:53763
+2026/01/30 08:24:11 INF [RTSP] [session 7c3f646d] is publishing to path 'kesanapalli-01-h264', 1 track (H264)
+2026/01/30 08:24:12 WAR [path kesanapalli-04] [RTSP source] 317 RTP packets lost
+2026/01/30 08:24:12 WAR [path kesanapalli-01] [RTSP source] 2130 RTP packets lost
+2026/01/30 08:24:15 WAR [path kesanapalli-04] [RTSP source] 249 RTP packets lost
+2026/01/30 08:24:17 WAR [path kesanapalli-01] [RTSP source] 1573 RTP packets lost
+2026/01/30 08:24:18 WAR [path kesanapalli-04] [RTSP source] 316 RTP packets lost
+2026/01/30 08:24:21 WAR [path kesanapalli-04] [RTSP source] 227 RTP packets lost
+2026/01/30 08:24:21 INF [WebRTC] [session dc8426e4] created by [::1]:56247
+2026/01/30 08:24:21 INF [path vijayawada-01] [RTSP source] started on demand
+2026/01/30 08:24:23 WAR [path kesanapalli-01] [RTSP source] 1305 RTP packets lost
+2026/01/30 08:24:25 WAR [path kesanapalli-04] [RTSP source] 405 RTP packets lost
+2026/01/30 08:24:28 WAR [path kesanapalli-01] [RTSP source] 1186 RTP packets lost
+2026/01/30 08:24:30 WAR [path kesanapalli-04] [RTSP source] 319 RTP packets lost
+2026/01/30 08:24:31 INF [path vijayawada-01] [RTSP source] stopped: timed out
+2026/01/30 08:24:31 INF [WebRTC] [session dc8426e4] closed: source of path 'vijayawada-01' has timed out
+2026/01/30 08:24:31 ERR [path vijayawada-01] [RTSP source] dial tcp 10.205.101.141:554: i/o timeout
+2026/01/30 08:24:36 WAR [path kesanapalli-04] [RTSP source] 970 RTP packets lost
+2026/01/30 08:24:36 WAR [path kesanapalli-01] [RTSP source] 2245 RTP packets lost
+2026/01/30 08:24:40 WAR [path kesanapalli-04] [RTSP source] 320 RTP packets lost
+2026/01/30 08:24:42 WAR [path kesanapalli-01] [RTSP source] 1438 RTP packets lost
+2026/01/30 08:24:45 WAR [path kesanapalli-04] [RTSP source] 322 RTP packets lost
+2026/01/30 08:24:45 INF [WebRTC] [session a825de0a] created by [::1]:56247
+2026/01/30 08:24:45 INF [path kesanapalli-03] [RTSP source] started on demand
+2026/01/30 08:24:45 INF [path kesanapalli-03] [RTSP source] ready: 1 track (H264)
+2026/01/30 08:24:45 INF [WebRTC] [session a825de0a] peer connection established, local candidate: host/udp/192.168.1.70/8189, remote candidate: prflx/udp/192.168.1.70/51337
+2026/01/30 08:24:45 INF [WebRTC] [session a825de0a] is reading from path 'kesanapalli-03', 1 track (H264)
+2026/01/30 08:24:47 WAR [path kesanapalli-03] [RTSP source] 328 RTP packets lost
+2026/01/30 08:24:48 WAR [path kesanapalli-04] [RTSP source] 320 RTP packets lost
+2026/01/30 08:24:48 WAR [path kesanapalli-01] [RTSP source] 1434 RTP packets lost
+2026/01/30 08:24:48 WAR [path kesanapalli-03] [RTSP source] 75 RTP packets lost
+2026/01/30 08:24:48 INF [RTSP] [conn [::1]:57838] closed: read tcp [::1]:8554->[::1]:57838: wsarecv: An existing connection was forcibly closed by the remote host.
+2026/01/30 08:24:48 INF [RTSP] [session 8cd19408] destroyed: not in use
+2026/01/30 08:24:48 INF [RTSP] [conn [::1]:53763] closed: read tcp [::1]:8554->[::1]:53763: wsarecv: An existing connection was forcibly closed by the remote host.
+2026/01/30 08:24:48 INF [RTSP] [session 7c3f646d] destroyed: not in use
+2026/01/30 08:24:48 INF [RTSP] [conn [::1]:57836] closed: read tcp [::1]:8554->[::1]:57836: wsarecv: An existing connection was forcibly closed by the remote host.
+2026/01/30 08:24:48 INF [RTSP] [session 1b40aa77] destroyed: not in use
+2026/01/30 08:24:48 INF [RTSP] [conn [::1]:49284] closed: read tcp [::1]:8554->[::1]:49284: wsarecv: An existing connection was forcibly closed by the remote host.
+2026/01/30 08:24:48 INF [RTSP] [session 8a9f95cd] destroyed: not in use
+2026/01/30 08:24:48 INF [RTSP] [conn [::1]:53455] opened
+2026/01/30 08:24:48 INF [RTSP] [session a6ac6b58] created by [::1]:53455
+2026/01/30 08:24:49 INF [RTSP] [session a6ac6b58] is reading from path 'kesanapalli-01', with TCP, 1 track (H265)
+2026/01/30 08:24:49 INF [RTSP] [conn [::1]:53456] opened
+2026/01/30 08:24:49 INF [RTSP] [session 3add348c] created by [::1]:53456
+2026/01/30 08:24:49 INF [RTSP] [session 3add348c] is reading from path 'kesanapalli-04', with TCP, 1 track (H265)
+2026/01/30 08:24:49 WAR [path kesanapalli-03] [RTSP source] 189 RTP packets lost
+2026/01/30 08:24:50 WAR [path kesanapalli-04] [RTSP source] 320 RTP packets lost
+2026/01/30 08:24:50 WAR [path kesanapalli-03] [RTSP source] 305 RTP packets lost
+2026/01/30 08:24:50 INF [RTSP] [conn [::1]:57215] opened
+2026/01/30 08:24:50 INF [RTSP] [session 4dc26a1b] created by [::1]:57215
+2026/01/30 08:24:50 INF [RTSP] [session 4dc26a1b] is publishing to path 'kesanapalli-04-h264', 1 track (H264)
+2026/01/30 08:24:51 WAR [path kesanapalli-03] [RTSP source] 232 RTP packets lost
+2026/01/30 08:24:52 WAR [path kesanapalli-03] [RTSP source] 450 RTP packets lost
+2026/01/30 08:24:53 WAR [path kesanapalli-04] [RTSP source] 340 RTP packets lost
+2026/01/30 08:24:53 WAR [path kesanapalli-03] [RTSP source] 50 RTP packets lost
+2026/01/30 08:24:53 INF [RTSP] [conn [::1]:61368] opened
+2026/01/30 08:24:53 INF [RTSP] [session c4a7a217] created by [::1]:61368
+2026/01/30 08:24:53 INF [RTSP] [session c4a7a217] is publishing to path 'kesanapalli-01-h264', 1 track (H264)
+2026/01/30 08:24:54 WAR [path kesanapalli-01] [RTSP source] 1428 RTP packets lost
+2026/01/30 08:24:54 WAR [path kesanapalli-03] [RTSP source] 372 RTP packets lost
+2026/01/30 08:24:55 WAR [path kesanapalli-03] [RTSP source] 156 RTP packets lost
+2026/01/30 08:24:55 INF [WebRTC] [session 5fbd0b08] created by [::1]:56247
+2026/01/30 08:24:55 INF [WebRTC] [session a825de0a] closed: peer connection closed
+2026/01/30 08:24:56 WAR [path kesanapalli-03] [RTSP source] 120 RTP packets lost
+2026/01/30 08:24:57 WAR [path kesanapalli-03] [RTSP source] 266 RTP packets lost
+2026/01/30 08:24:58 WAR [path kesanapalli-04] [RTSP source] 320 RTP packets lost
+2026/01/30 08:24:58 WAR [path kesanapalli-03] [RTSP source] 155 RTP packets lost
+2026/01/30 08:24:58 INF [WebRTC] [session b0e96d7f] created by [::1]:56955
+2026/01/30 08:24:58 INF [WebRTC] [session bfa44a19] created by [::1]:62254
+2026/01/30 08:24:58 INF [path kesanapalli-02] [RTSP source] started on demand
+2026/01/30 08:24:58 INF [WebRTC] [session 05c8a596] created by [::1]:52730
+2026/01/30 08:24:58 INF [WebRTC] [session e7e5ab0c] created by [::1]:51093
+2026/01/30 08:24:58 INF [WebRTC] [session c15c386f] created by [::1]:53582
+2026/01/30 08:24:58 INF [path vijayawada-01] [RTSP source] started on demand
+2026/01/30 08:24:59 WAR [path kesanapalli-01] [RTSP source] 1452 RTP packets lost
+2026/01/30 08:24:59 WAR [path kesanapalli-03] [RTSP source] 255 RTP packets lost
+2026/01/30 08:24:59 INF [path kesanapalli-02] [RTSP source] ready: 1 track (H264)
+2026/01/30 08:24:59 INF [WebRTC] [session 05c8a596] peer connection established, local candidate: host/udp/172.19.96.1/8189, remote candidate: prflx/udp/192.168.1.70/58380
+2026/01/30 08:24:59 INF [WebRTC] [session 05c8a596] is reading from path 'kesanapalli-04-h264', 1 track (H264)
+2026/01/30 08:24:59 INF [WebRTC] [session b0e96d7f] peer connection established, local candidate: host/udp/192.168.1.70/8189, remote candidate: prflx/udp/192.168.1.70/58368
+2026/01/30 08:24:59 INF [WebRTC] [session b0e96d7f] is reading from path 'kesanapalli-01-h264', 1 track (H264)
+2026/01/30 08:24:59 INF [WebRTC] [session e7e5ab0c] peer connection established, local candidate: host/udp/127.0.0.1/8189, remote candidate: prflx/udp/192.168.1.70/58376
+2026/01/30 08:24:59 INF [WebRTC] [session e7e5ab0c] is reading from path 'kesanapalli-03', 1 track (H264)
+2026/01/30 08:24:59 INF [WebRTC] [session bfa44a19] peer connection established, local candidate: host/udp/172.19.96.1/8189, remote candidate: prflx/udp/192.168.1.70/58372
+2026/01/30 08:24:59 INF [WebRTC] [session bfa44a19] is reading from path 'kesanapalli-02', 1 track (H264)
+2026/01/30 08:25:00 WAR [path kesanapalli-04] [RTSP source] 323 RTP packets lost
+2026/01/30 08:25:00 WAR [path kesanapalli-03] [RTSP source] 95 RTP packets lost
+2026/01/30 08:25:01 WAR [path kesanapalli-03] [RTSP source] 290 RTP packets lost
+2026/01/30 08:25:02 INF [WebRTC] [session f32edf9e] created by [::1]:62254
+2026/01/30 08:25:02 WAR [path kesanapalli-03] [RTSP source] 437 RTP packets lost
+2026/01/30 08:25:02 INF [WebRTC] [session b0e96d7f] closed: peer connection closed
+2026/01/30 08:25:02 INF [WebRTC] [session f32edf9e] peer connection established, local candidate: host/udp/192.168.1.70/8189, remote candidate: prflx/udp/192.168.1.70/64774
+2026/01/30 08:25:02 INF [WebRTC] [session f32edf9e] is reading from path 'kesanapalli-02', 1 track (H264)
+2026/01/30 08:25:03 WAR [path kesanapalli-04] [RTSP source] 321 RTP packets lost
+2026/01/30 08:25:03 WAR [path kesanapalli-03] [RTSP source] 57 RTP packets lost
+2026/01/30 08:25:04 WAR [path kesanapalli-03] [RTSP source] 194 RTP packets lost
+2026/01/30 08:25:04 WAR [path kesanapalli-02] [RTSP source] 107 RTP packets lost
+2026/01/30 08:25:05 WAR [path kesanapalli-01] [RTSP source] 1714 RTP packets lost
+2026/01/30 08:25:05 INF [WebRTC] [session bfa44a19] closed: peer connection closed
+2026/01/30 08:25:05 INF [WebRTC] [session f32edf9e] closed: peer connection closed
+2026/01/30 08:25:06 WAR [path kesanapalli-03] [RTSP source] 641 RTP packets lost
+2026/01/30 08:25:06 INF [WebRTC] [session 5fbd0b08] closed: deadline exceeded while waiting connection
+2026/01/30 08:25:07 WAR [path kesanapalli-04] [RTSP source] 409 RTP packets lost
+2026/01/30 08:25:07 WAR [path kesanapalli-03] [RTSP source] 255 RTP packets lost
+2026/01/30 08:25:08 WAR [path kesanapalli-03] [RTSP source] 287 RTP packets lost
+2026/01/30 08:25:08 INF [WebRTC] [session b3048844] created by [::1]:56955
+2026/01/30 08:25:08 INF [WebRTC] [session 84eb9673] created by [::1]:62254
+2026/01/30 08:25:08 INF [WebRTC] [session aa659c84] created by [::1]:52730
+2026/01/30 08:25:08 INF [path vijayawada-01] [RTSP source] stopped: timed out
+2026/01/30 08:25:08 INF [WebRTC] [session c15c386f] closed: source of path 'vijayawada-01' has timed out
+2026/01/30 08:25:08 ERR [path vijayawada-01] [RTSP source] dial tcp 10.205.101.141:554: i/o timeout
+2026/01/30 08:25:09 WAR [path kesanapalli-03] [RTSP source] 348 RTP packets lost
+2026/01/30 08:25:09 INF [WebRTC] [session 84eb9673] peer connection established, local candidate: host/udp/192.168.1.70/8189, remote candidate: prflx/udp/192.168.1.70/57779
+2026/01/30 08:25:09 INF [WebRTC] [session 84eb9673] is reading from path 'kesanapalli-02', 1 track (H264)
+2026/01/30 08:25:09 INF [WebRTC] [session b3048844] peer connection established, local candidate: host/udp/192.168.1.70/8189, remote candidate: prflx/udp/192.168.1.70/57775
+2026/01/30 08:25:09 INF [WebRTC] [session b3048844] is reading from path 'kesanapalli-01-h264', 1 track (H264)
+2026/01/30 08:25:09 INF [WebRTC] [session aa659c84] peer connection established, local candidate: host/udp/172.19.96.1/8189, remote candidate: prflx/udp/192.168.1.70/57783
+2026/01/30 08:25:09 INF [WebRTC] [session aa659c84] is reading from path 'kesanapalli-02', 1 track (H264)
+2026/01/30 08:25:10 WAR [path kesanapalli-03] [RTSP source] 343 RTP packets lost
+2026/01/30 08:25:11 WAR [path kesanapalli-04] [RTSP source] 610 RTP packets lost
+2026/01/30 08:25:11 WAR [path kesanapalli-03] [RTSP source] 197 RTP packets lost
+2026/01/30 08:25:11 INF [WebRTC] [session b3048844] closed: peer connection closed
+2026/01/30 08:25:12 WAR [path kesanapalli-03] [RTSP source] 391 RTP packets lost
+2026/01/30 08:25:13 WAR [path kesanapalli-01] [RTSP source] 2656 RTP packets lost
+2026/01/30 08:25:13 WAR [path kesanapalli-03] [RTSP source] 297 RTP packets lost
+2026/01/30 08:25:14 WAR [path kesanapalli-03] [RTSP source] 197 RTP packets lost
+2026/01/30 08:25:15 WAR [path kesanapalli-04] [RTSP source] 410 RTP packets lost
+2026/01/30 08:25:15 WAR [path kesanapalli-03] [RTSP source] 641 RTP packets lost
+2026/01/30 08:25:16 WAR [path kesanapalli-03] [RTSP source] 291 RTP packets lost
+2026/01/30 08:25:17 WAR [path kesanapalli-04] [RTSP source] 409 RTP packets lost
+2026/01/30 08:25:17 WAR [path kesanapalli-03] [RTSP source] 155 RTP packets lost
+2026/01/30 08:25:17 INF [WebRTC] [session 19f9bdb8] created by [::1]:62254
+2026/01/30 08:25:18 WAR [path kesanapalli-03] [RTSP source] 60 RTP packets lost
+2026/01/30 08:25:18 INF [WebRTC] [session 19f9bdb8] peer connection established, local candidate: host/udp/127.0.0.1/8189, remote candidate: prflx/udp/192.168.1.70/53197
+2026/01/30 08:25:18 INF [WebRTC] [session 19f9bdb8] is reading from path 'kesanapalli-01-h264', 1 track (H264)
+2026/01/30 08:25:18 INF [WebRTC] [session 19f9bdb8] closed: peer connection closed
+2026/01/30 08:25:18 INF [WebRTC] [session 84eb9673] closed: peer connection closed
+2026/01/30 08:25:18 INF [WebRTC] [session e7e5ab0c] closed: peer connection closed
+2026/01/30 08:25:18 INF [WebRTC] [session 05c8a596] closed: peer connection closed
+2026/01/30 08:25:19 WAR [path kesanapalli-03] [RTSP source] 543 RTP packets lost
+2026/01/30 08:25:19 WAR [path kesanapalli-04] [RTSP source] 500 RTP packets lost
+2026/01/30 08:25:19 INF [WebRTC] [session 1f69e198] created by [::1]:62254
+2026/01/30 08:25:19 INF [WebRTC] [session 645d5141] created by [::1]:52730
+2026/01/30 08:25:19 INF [WebRTC] [session d76be8ba] created by [::1]:56955
+2026/01/30 08:25:19 INF [WebRTC] [session 46884f10] created by [::1]:53582
+2026/01/30 08:25:19 INF [WebRTC] [session 74b30e20] created by [::1]:51093
+2026/01/30 08:25:19 INF [path vijayawada-01] [RTSP source] started on demand
+2026/01/30 08:25:19 INF [WebRTC] [session d76be8ba] peer connection established, local candidate: host/udp/192.168.1.70/8189, remote candidate: prflx/udp/192.168.1.70/54940
+2026/01/30 08:25:19 INF [WebRTC] [session d76be8ba] is reading from path 'kesanapalli-02', 1 track (H264)
+2026/01/30 08:25:19 INF [WebRTC] [session 645d5141] peer connection established, local candidate: host/udp/192.168.1.70/8189, remote candidate: prflx/udp/192.168.1.70/54944
+2026/01/30 08:25:19 INF [WebRTC] [session 645d5141] is reading from path 'kesanapalli-03', 1 track (H264)
+2026/01/30 08:25:19 INF [WebRTC] [session 1f69e198] peer connection established, local candidate: host/udp/127.0.0.1/8189, remote candidate: prflx/udp/192.168.1.70/54936
+2026/01/30 08:25:19 INF [WebRTC] [session 1f69e198] is reading from path 'kesanapalli-01-h264', 1 track (H264)
+2026/01/30 08:25:19 INF [WebRTC] [session 46884f10] peer connection established, local candidate: host/udp/192.168.48.1/8189, remote candidate: prflx/udp/192.168.1.70/54948
+2026/01/30 08:25:19 INF [WebRTC] [session 46884f10] is reading from path 'kesanapalli-04-h264', 1 track (H264)
+2026/01/30 08:25:22 WAR [path kesanapalli-03] [RTSP source] 147 RTP packets lost
+2026/01/30 08:25:22 WAR [path kesanapalli-02] [RTSP source] 1232 RTP packets lost
+2026/01/30 08:25:23 WAR [path kesanapalli-03] [RTSP source] 1084 RTP packets lost
+2026/01/30 08:25:23 INF [WebRTC] [session 645d5141] closed: peer connection closed
+2026/01/30 08:25:23 WAR [path kesanapalli-02] [RTSP source] 638 RTP packets lost
+2026/01/30 08:25:24 WAR [path kesanapalli-03] [RTSP source] 245 RTP packets lost
+2026/01/30 08:25:26 WAR [path kesanapalli-04] [RTSP source] 864 RTP packets lost
+2026/01/30 08:25:26 WAR [path kesanapalli-03] [RTSP source] 95 RTP packets lost
+2026/01/30 08:25:26 WAR [path kesanapalli-02] [RTSP source] 177 RTP packets lost
+2026/01/30 08:25:27 WAR [path kesanapalli-03] [RTSP source] 655 RTP packets lost
+2026/01/30 08:25:27 WAR [path kesanapalli-02] [RTSP source] 34 RTP packets lost
+2026/01/30 08:25:28 INF [WebRTC] [session 868ff7d4] created by [::1]:56955
+2026/01/30 08:25:28 WAR [path kesanapalli-01] [RTSP source] 3584 RTP packets lost
+2026/01/30 08:25:28 WAR [path kesanapalli-03] [RTSP source] 200 RTP packets lost
+2026/01/30 08:25:28 INF [WebRTC] [session 868ff7d4] peer connection established, local candidate: host/udp/192.168.1.70/8189, remote candidate: prflx/udp/192.168.1.70/55702
+2026/01/30 08:25:28 INF [WebRTC] [session 868ff7d4] is reading from path 'kesanapalli-03', 1 track (H264)
+2026/01/30 08:25:29 WAR [path kesanapalli-04] [RTSP source] 680 RTP packets lost
+2026/01/30 08:25:29 WAR [path kesanapalli-03] [RTSP source] 151 RTP packets lost
+2026/01/30 08:25:29 INF [path vijayawada-01] [RTSP source] stopped: timed out
+2026/01/30 08:25:29 INF [WebRTC] [session 74b30e20] closed: source of path 'vijayawada-01' has timed out
+2026/01/30 08:25:29 ERR [path vijayawada-01] [RTSP source] dial tcp 10.205.101.141:554: i/o timeout
+2026/01/30 08:25:29 WAR [path kesanapalli-02] [RTSP source] 6 RTP packets lost
+2026/01/30 08:25:30 WAR [path kesanapalli-03] [RTSP source] 193 RTP packets lost
+2026/01/30 08:25:30 WAR [path kesanapalli-02] [RTSP source] 142 RTP packets lost
+2026/01/30 08:25:31 WAR [path kesanapalli-03] [RTSP source] 194 RTP packets lost
+2026/01/30 08:25:31 WAR [path kesanapalli-02] [RTSP source] 69 RTP packets lost
+2026/01/30 08:25:33 WAR [path kesanapalli-04] [RTSP source] 522 RTP packets lost
+2026/01/30 08:25:33 WAR [path kesanapalli-03] [RTSP source] 105 RTP packets lost
+2026/01/30 08:25:34 WAR [path kesanapalli-03] [RTSP source] 886 RTP packets lost
+2026/01/30 08:25:36 WAR [path kesanapalli-03] [RTSP source] 296 RTP packets lost
+2026/01/30 08:25:36 WAR [path kesanapalli-02] [RTSP source] 324 RTP packets lost
+2026/01/30 08:25:37 WAR [path kesanapalli-03] [RTSP source] 1025 RTP packets lost
+2026/01/30 08:25:38 WAR [path kesanapalli-03] [RTSP source] 94 RTP packets lost
+2026/01/30 08:25:38 WAR [path kesanapalli-02] [RTSP source] 72 RTP packets lost
+2026/01/30 08:25:39 WAR [path kesanapalli-04] [RTSP source] 952 RTP packets lost
+2026/01/30 08:25:39 WAR [path kesanapalli-03] [RTSP source] 625 RTP packets lost
+2026/01/30 08:25:39 WAR [path kesanapalli-02] [RTSP source] 143 RTP packets lost
+2026/01/30 08:25:40 WAR [path kesanapalli-01] [RTSP source] 3850 RTP packets lost
+2026/01/30 08:25:40 WAR [path kesanapalli-03] [RTSP source] 196 RTP packets lost
+2026/01/30 08:25:41 WAR [path kesanapalli-03] [RTSP source] 351 RTP packets lost
+2026/01/30 08:25:42 WAR [path kesanapalli-03] [RTSP source] 96 RTP packets lost
+2026/01/30 08:25:43 WAR [path kesanapalli-04] [RTSP source] 685 RTP packets lost
+2026/01/30 08:25:43 WAR [path kesanapalli-03] [RTSP source] 53 RTP packets lost
+2026/01/30 08:25:43 WAR [path kesanapalli-02] [RTSP source] 72 RTP packets lost
+2026/01/30 08:25:44 WAR [path kesanapalli-03] [RTSP source] 475 RTP packets lost
+2026/01/30 08:25:44 WAR [path kesanapalli-02] [RTSP source] 142 RTP packets lost
+2026/01/30 08:25:45 WAR [path kesanapalli-03] [RTSP source] 390 RTP packets lost
+2026/01/30 08:25:45 WAR [path kesanapalli-02] [RTSP source] 144 RTP packets lost
+2026/01/30 08:25:46 WAR [path kesanapalli-03] [RTSP source] 95 RTP packets lost
+2026/01/30 08:25:46 WAR [path kesanapalli-02] [RTSP source] 96 RTP packets lost
+2026/01/30 08:25:47 WAR [path kesanapalli-04] [RTSP source] 770 RTP packets lost
+2026/01/30 08:25:47 WAR [path kesanapalli-03] [RTSP source] 147 RTP packets lost
+2026/01/30 08:25:47 WAR [path kesanapalli-02] [RTSP source] 178 RTP packets lost
+2026/01/30 08:25:48 WAR [path kesanapalli-03] [RTSP source] 458 RTP packets lost
+2026/01/30 08:25:48 WAR [path kesanapalli-02] [RTSP source] 72 RTP packets lost
+2026/01/30 08:25:49 WAR [path kesanapalli-03] [RTSP source] 210 RTP packets lost
+2026/01/30 08:25:49 WAR [path kesanapalli-02] [RTSP source] 132 RTP packets lost
+2026/01/30 08:25:51 WAR [path kesanapalli-02] [RTSP source] 290 RTP packets lost
+2026/01/30 08:25:52 WAR [path kesanapalli-04] [RTSP source] 507 RTP packets lost
+2026/01/30 08:25:52 WAR [path kesanapalli-01] [RTSP source] 3336 RTP packets lost
+2026/01/30 08:25:52 WAR [path kesanapalli-03] [RTSP source] 110 RTP packets lost
+2026/01/30 08:25:53 WAR [path kesanapalli-02] [RTSP source] 511 RTP packets lost
+2026/01/30 08:25:54 WAR [path kesanapalli-02] [RTSP source] 34 RTP packets lost
+2026/01/30 08:25:55 WAR [path kesanapalli-04] [RTSP source] 1343 RTP packets lost
+2026/01/30 08:25:55 WAR [path kesanapalli-03] [RTSP source] 1022 RTP packets lost
+2026/01/30 08:25:56 WAR [path kesanapalli-03] [RTSP source] 1264 RTP packets lost
+2026/01/30 08:25:57 WAR [path kesanapalli-04] [RTSP source] 324 RTP packets lost
+2026/01/30 08:25:57 WAR [path kesanapalli-03] [RTSP source] 399 RTP packets lost
+2026/01/30 08:25:59 WAR [path kesanapalli-01] [RTSP source] 3035 RTP packets lost
+2026/01/30 08:26:00 WAR [path kesanapalli-04] [RTSP source] 233 RTP packets lost
+2026/01/30 08:26:00 WAR [path kesanapalli-03] [RTSP source] 228 RTP packets lost
+2026/01/30 08:26:03 WAR [path kesanapalli-04] [RTSP source] 324 RTP packets lost
+2026/01/30 08:26:04 WAR [path kesanapalli-01] [RTSP source] 1295 RTP packets lost
+2026/01/30 08:26:06 WAR [path kesanapalli-03] [RTSP source] 54 RTP packets lost
+2026/01/30 08:26:07 WAR [path kesanapalli-03] [RTSP source] 441 RTP packets lost
+2026/01/30 08:26:08 INF [WebRTC] [session 1f69e198] closed: peer connection closed
+2026/01/30 08:26:08 INF [WebRTC] [session d76be8ba] closed: peer connection closed
+2026/01/30 08:26:08 INF [WebRTC] [session 868ff7d4] closed: peer connection closed
+2026/01/30 08:26:08 INF [WebRTC] [session 46884f10] closed: peer connection closed
+2026/01/30 08:26:08 INF [WebRTC] [session aa659c84] closed: peer connection closed
+2026/01/30 08:26:09 INF [WebRTC] [session 8a1f4af3] created by [::1]:53344
+2026/01/30 08:26:10 INF [WebRTC] [session 8a1f4af3] peer connection established, local candidate: host/udp/192.168.1.70/8189, remote candidate: prflx/udp/192.168.1.70/49402
+2026/01/30 08:26:10 INF [WebRTC] [session 8a1f4af3] is reading from path 'kesanapalli-02', 1 track (H264)
+2026/01/30 08:26:10 WAR [path kesanapalli-02] [RTSP source] 352 RTP packets lost
+2026/01/30 08:26:11 WAR [path kesanapalli-04] [RTSP source] 776 RTP packets lost
+2026/01/30 08:26:11 WAR [path kesanapalli-03] [RTSP source] 1717 RTP packets lost
+2026/01/30 08:26:12 WAR [path kesanapalli-04] [RTSP source] 793 RTP packets lost
+2026/01/30 08:26:12 WAR [path kesanapalli-03] [RTSP source] 399 RTP packets lost
+2026/01/30 08:26:13 WAR [path kesanapalli-03] [RTSP source] 149 RTP packets lost
+2026/01/30 08:26:14 WAR [path kesanapalli-03] [RTSP source] 148 RTP packets lost
+2026/01/30 08:26:15 WAR [path kesanapalli-04] [RTSP source] 324 RTP packets lost
+2026/01/30 08:26:15 WAR [path kesanapalli-03] [RTSP source] 145 RTP packets lost
+2026/01/30 08:26:16 WAR [path kesanapalli-01] [RTSP source] 3705 RTP packets lost
+2026/01/30 08:26:16 WAR [path kesanapalli-03] [RTSP source] 63 RTP packets lost
+2026/01/30 08:26:17 WAR [path kesanapalli-04] [RTSP source] 233 RTP packets lost
+2026/01/30 08:26:18 INF [path kesanapalli-03] [RTSP source] stopped: not needed by anyone
+2026/01/30 08:26:20 WAR [path kesanapalli-01] [RTSP source] 918 RTP packets lost
+2026/01/30 08:26:21 WAR [path kesanapalli-04] [RTSP source] 324 RTP packets lost
+2026/01/30 08:26:23 WAR [path kesanapalli-04] [RTSP source] 324 RTP packets lost
+2026/01/30 08:26:24 WAR [path kesanapalli-04] [RTSP source] 253 RTP packets lost
+2026/01/30 08:26:26 WAR [path kesanapalli-01] [RTSP source] 1568 RTP packets lost
+2026/01/30 08:26:28 WAR [path kesanapalli-04] [RTSP source] 324 RTP packets lost
+2026/01/30 08:26:30 WAR [path kesanapalli-04] [RTSP source] 233 RTP packets lost
+2026/01/30 08:26:31 WAR [path kesanapalli-01] [RTSP source] 1305 RTP packets lost
+2026/01/30 08:26:33 WAR [path kesanapalli-04] [RTSP source] 415 RTP packets lost
+2026/01/30 08:26:37 WAR [path kesanapalli-01] [RTSP source] 1712 RTP packets lost
+2026/01/30 08:26:39 WAR [path kesanapalli-04] [RTSP source] 324 RTP packets lost
+2026/01/30 08:26:42 WAR [path kesanapalli-04] [RTSP source] 253 RTP packets lost
+2026/01/30 08:26:43 WAR [path kesanapalli-04] [RTSP source] 324 RTP packets lost
+2026/01/30 08:26:44 WAR [path kesanapalli-01] [RTSP source] 1706 RTP packets lost
+2026/01/30 08:26:47 WAR [path kesanapalli-04] [RTSP source] 324 RTP packets lost
+2026/01/30 08:26:49 WAR [path kesanapalli-01] [RTSP source] 1301 RTP packets lost
+2026/01/30 08:26:50 WAR [path kesanapalli-04] [RTSP source] 233 RTP packets lost
+2026/01/30 08:26:52 WAR [path kesanapalli-04] [RTSP source] 233 RTP packets lost
+2026/01/30 08:26:56 WAR [path kesanapalli-01] [RTSP source] 1847 RTP packets lost
+2026/01/30 08:26:57 WAR [path kesanapalli-04] [RTSP source] 344 RTP packets lost
+2026/01/30 08:26:57 INF [WebRTC] [session 8a1f4af3] closed: peer connection closed
+2026/01/30 08:27:00 INF [WebRTC] [session 139a8b82] created by [::1]:51156
+2026/01/30 08:27:01 WAR [path kesanapalli-04] [RTSP source] 233 RTP packets lost
+2026/01/30 08:27:01 WAR [path kesanapalli-01] [RTSP source] 1301 RTP packets lost
+2026/01/30 08:27:01 INF [WebRTC] [session 139a8b82] peer connection established, local candidate: host/udp/172.19.96.1/8189, remote candidate: prflx/udp/192.168.1.70/62010
+2026/01/30 08:27:01 INF [WebRTC] [session 139a8b82] is reading from path 'kesanapalli-02', 1 track (H264)
+2026/01/30 08:27:04 WAR [path kesanapalli-04] [RTSP source] 233 RTP packets lost
+2026/01/30 08:27:07 WAR [path kesanapalli-01] [RTSP source] 1566 RTP packets lost
+2026/01/30 08:27:08 WAR [path kesanapalli-04] [RTSP source] 324 RTP packets lost
+2026/01/30 08:27:10 WAR [path kesanapalli-01] [RTSP source] 900 RTP packets lost
+2026/01/30 08:27:11 WAR [path kesanapalli-04] [RTSP source] 417 RTP packets lost
+2026/01/30 08:27:14 WAR [path kesanapalli-04] [RTSP source] 256 RTP packets lost
+2026/01/30 08:27:14 WAR [path kesanapalli-01] [RTSP source] 1173 RTP packets lost
+2026/01/30 08:27:16 WAR [path kesanapalli-04] [RTSP source] 328 RTP packets lost
+2026/01/30 08:27:19 WAR [path kesanapalli-04] [RTSP source] 415 RTP packets lost
+2026/01/30 08:27:21 WAR [path kesanapalli-01] [RTSP source] 1459 RTP packets lost
+2026/01/30 08:27:23 WAR [path kesanapalli-04] [RTSP source] 233 RTP packets lost
+2026/01/30 08:27:28 WAR [path kesanapalli-04] [RTSP source] 328 RTP packets lost
+2026/01/30 08:27:28 WAR [path kesanapalli-01] [RTSP source] 1975 RTP packets lost
+2026/01/30 08:27:31 WAR [path kesanapalli-04] [RTSP source] 344 RTP packets lost
+2026/01/30 08:27:32 WAR [path kesanapalli-01] [RTSP source] 1037 RTP packets lost
+2026/01/30 08:27:35 WAR [path kesanapalli-04] [RTSP source] 321 RTP packets lost
+2026/01/30 08:27:38 WAR [path kesanapalli-04] [RTSP source] 415 RTP packets lost
+2026/01/30 08:27:39 WAR [path kesanapalli-01] [RTSP source] 1841 RTP packets lost
+2026/01/30 08:27:42 WAR [path kesanapalli-04] [RTSP source] 324 RTP packets lost
+2026/01/30 08:27:45 WAR [path kesanapalli-04] [RTSP source] 415 RTP packets lost
+2026/01/30 08:27:46 WAR [path kesanapalli-01] [RTSP source] 1974 RTP packets lost
+2026/01/30 08:27:49 WAR [path kesanapalli-04] [RTSP source] 253 RTP packets lost
+2026/01/30 08:27:50 INF [WebRTC] [session 542704c6] created by [::1]:61127
+2026/01/30 08:27:50 INF [WebRTC] [session a616cd8b] created by [::1]:52571
+2026/01/30 08:27:50 INF [WebRTC] [session 424d903c] created by [::1]:63460
+2026/01/30 08:27:50 INF [WebRTC] [session 2688c4bc] created by [::1]:63866
+2026/01/30 08:27:50 INF [WebRTC] [session 884d9fb1] created by [::1]:56610
+2026/01/30 08:27:50 INF [path kesanapalli-03] [RTSP source] started on demand
+2026/01/30 08:27:50 INF [path vijayawada-01] [RTSP source] started on demand
+2026/01/30 08:27:50 INF [WebRTC] [session 542704c6] peer connection established, local candidate: host/udp/192.168.1.70/8189, remote candidate: prflx/udp/192.168.1.70/51342
+2026/01/30 08:27:50 INF [WebRTC] [session 542704c6] is reading from path 'kesanapalli-02', 1 track (H264)
+2026/01/30 08:27:50 INF [path kesanapalli-03] [RTSP source] ready: 1 track (H264)
+2026/01/30 08:27:50 INF [WebRTC] [session 2688c4bc] peer connection established, local candidate: host/udp/172.19.96.1/8189, remote candidate: prflx/udp/192.168.1.70/51338
+2026/01/30 08:27:50 INF [WebRTC] [session 2688c4bc] is reading from path 'kesanapalli-01-h264', 1 track (H264)
+2026/01/30 08:27:50 INF [WebRTC] [session a616cd8b] peer connection established, local candidate: host/udp/127.0.0.1/8189, remote candidate: prflx/udp/192.168.1.70/51350
+2026/01/30 08:27:50 INF [WebRTC] [session a616cd8b] is reading from path 'kesanapalli-04-h264', 1 track (H264)
+2026/01/30 08:27:51 INF [WebRTC] [session 424d903c] peer connection established, local candidate: host/udp/127.0.0.1/8189, remote candidate: prflx/udp/192.168.1.70/51346
+2026/01/30 08:27:51 INF [WebRTC] [session 424d903c] is reading from path 'kesanapalli-03', 1 track (H264)
+2026/01/30 08:27:51 INF [WebRTC] [session 2688c4bc] closed: peer connection closed
+2026/01/30 08:27:51 INF [WebRTC] [session 542704c6] closed: peer connection closed
+2026/01/30 08:27:51 INF [WebRTC] [session 424d903c] closed: peer connection closed
+2026/01/30 08:27:51 INF [WebRTC] [session a616cd8b] closed: peer connection closed
+2026/01/30 08:27:51 INF [WebRTC] [session d99a2764] created by [::1]:61127
+2026/01/30 08:27:51 INF [WebRTC] [session f2bf1df6] created by [::1]:63866
+2026/01/30 08:27:51 INF [WebRTC] [session cb767483] created by [::1]:52571
+2026/01/30 08:27:51 INF [WebRTC] [session 87680c49] created by [::1]:63460
+2026/01/30 08:27:51 INF [WebRTC] [session b97ae94e] created by [::1]:49978
+2026/01/30 08:27:52 WAR [path kesanapalli-01] [RTSP source] 1319 RTP packets lost
+2026/01/30 08:27:52 WAR [path kesanapalli-03] [RTSP source] 340 RTP packets lost
+2026/01/30 08:27:52 INF [WebRTC] [session cb767483] peer connection established, local candidate: host/udp/192.168.1.70/8189, remote candidate: prflx/udp/192.168.1.70/60880
+2026/01/30 08:27:52 INF [WebRTC] [session cb767483] is reading from path 'kesanapalli-02', 1 track (H264)
+2026/01/30 08:27:52 INF [WebRTC] [session 87680c49] peer connection established, local candidate: host/udp/192.168.1.70/8189, remote candidate: prflx/udp/192.168.1.70/60876
+2026/01/30 08:27:52 INF [WebRTC] [session 87680c49] is reading from path 'kesanapalli-01-h264', 1 track (H264)
+2026/01/30 08:27:52 INF [WebRTC] [session d99a2764] peer connection established, local candidate: host/udp/192.168.1.70/8189, remote candidate: prflx/udp/192.168.1.70/60888
+2026/01/30 08:27:52 INF [WebRTC] [session d99a2764] is reading from path 'kesanapalli-04-h264', 1 track (H264)
+2026/01/30 08:27:52 INF [WebRTC] [session f2bf1df6] peer connection established, local candidate: host/udp/172.19.96.1/8189, remote candidate: prflx/udp/192.168.1.70/60884
+2026/01/30 08:27:52 INF [WebRTC] [session f2bf1df6] is reading from path 'kesanapalli-03', 1 track (H264)
+2026/01/30 08:27:53 WAR [path kesanapalli-04] [RTSP source] 324 RTP packets lost
+2026/01/30 08:27:53 WAR [path kesanapalli-03] [RTSP source] 137 RTP packets lost
+2026/01/30 08:27:53 INF [WebRTC] [session 139a8b82] closed: peer connection closed
+2026/01/30 08:27:55 WAR [path kesanapalli-03] [RTSP source] 692 RTP packets lost
+2026/01/30 08:27:56 WAR [path kesanapalli-04] [RTSP source] 324 RTP packets lost
+2026/01/30 08:27:56 INF [WebRTC] [session eaf0e543] created by [::1]:61127
+2026/01/30 08:27:56 WAR [path kesanapalli-03] [RTSP source] 106 RTP packets lost
+2026/01/30 08:27:56 INF [WebRTC] [session eaf0e543] peer connection established, local candidate: host/udp/192.168.1.70/8189, remote candidate: prflx/udp/192.168.1.70/59303
+2026/01/30 08:27:56 INF [WebRTC] [session eaf0e543] is reading from path 'kesanapalli-02', 1 track (H264)
+2026/01/30 08:27:57 WAR [path kesanapalli-03] [RTSP source] 63 RTP packets lost
+2026/01/30 08:27:58 WAR [path kesanapalli-01] [RTSP source] 1702 RTP packets lost
+2026/01/30 08:27:58 WAR [path kesanapalli-03] [RTSP source] 125 RTP packets lost
+2026/01/30 08:27:59 WAR [path kesanapalli-03] [RTSP source] 61 RTP packets lost
+2026/01/30 08:28:00 WAR [path kesanapalli-03] [RTSP source] 63 RTP packets lost
+2026/01/30 08:28:00 INF [path vijayawada-01] [RTSP source] stopped: timed out
+2026/01/30 08:28:00 INF [WebRTC] [session b97ae94e] closed: source of path 'vijayawada-01' has timed out
+2026/01/30 08:28:00 INF [WebRTC] [session 884d9fb1] closed: source of path 'vijayawada-01' has timed out
+2026/01/30 08:28:00 ERR [path vijayawada-01] [RTSP source] dial tcp 10.205.101.141:554: i/o timeout
+2026/01/30 08:28:01 WAR [path kesanapalli-04] [RTSP source] 233 RTP packets lost
+2026/01/30 08:28:01 WAR [path kesanapalli-03] [RTSP source] 239 RTP packets lost
+2026/01/30 08:28:04 WAR [path kesanapalli-04] [RTSP source] 324 RTP packets lost
+2026/01/30 08:28:04 WAR [path kesanapalli-01] [RTSP source] 1838 RTP packets lost
+2026/01/30 08:28:04 WAR [path kesanapalli-03] [RTSP source] 170 RTP packets lost
+2026/01/30 08:28:06 WAR [path kesanapalli-03] [RTSP source] 230 RTP packets lost
+2026/01/30 08:28:07 WAR [path kesanapalli-03] [RTSP source] 62 RTP packets lost
+2026/01/30 08:28:08 WAR [path kesanapalli-04] [RTSP source] 435 RTP packets lost
+2026/01/30 08:28:08 WAR [path kesanapalli-03] [RTSP source] 104 RTP packets lost
+2026/01/30 08:28:09 WAR [path kesanapalli-03] [RTSP source] 446 RTP packets lost
+2026/01/30 08:28:10 WAR [path kesanapalli-01] [RTSP source] 1441 RTP packets lost
+2026/01/30 08:28:10 WAR [path kesanapalli-03] [RTSP source] 215 RTP packets lost
+2026/01/30 08:28:11 WAR [path kesanapalli-04] [RTSP source] 412 RTP packets lost
+2026/01/30 08:28:11 WAR [path kesanapalli-03] [RTSP source] 114 RTP packets lost
+2026/01/30 08:28:12 WAR [path kesanapalli-03] [RTSP source] 174 RTP packets lost
+2026/01/30 08:28:13 INF [WebRTC] [session eaf0e543] closed: peer connection closed
+2026/01/30 08:28:14 WAR [path kesanapalli-04] [RTSP source] 410 RTP packets lost
+2026/01/30 08:28:15 WAR [path kesanapalli-01] [RTSP source] 1701 RTP packets lost
+2026/01/30 08:28:16 WAR [path kesanapalli-03] [RTSP source] 62 RTP packets lost
+2026/01/30 08:28:17 WAR [path kesanapalli-03] [RTSP source] 281 RTP packets lost
+2026/01/30 08:28:18 WAR [path kesanapalli-03] [RTSP source] 110 RTP packets lost
+2026/01/30 08:28:19 WAR [path kesanapalli-04] [RTSP source] 410 RTP packets lost
+2026/01/30 08:28:19 WAR [path kesanapalli-01] [RTSP source] 1051 RTP packets lost
+2026/01/30 08:28:19 WAR [path kesanapalli-03] [RTSP source] 368 RTP packets lost
+2026/01/30 08:28:20 WAR [path kesanapalli-03] [RTSP source] 253 RTP packets lost
+2026/01/30 08:28:20 INF [WebRTC] [session cb767483] closed: peer connection closed
+2026/01/30 08:28:20 INF [WebRTC] [session d99a2764] closed: peer connection closed
+2026/01/30 08:28:20 INF [WebRTC] [session f2bf1df6] closed: peer connection closed
+2026/01/30 08:28:20 INF [WebRTC] [session 87680c49] closed: peer connection closed
+2026/01/30 09:16:54 INF [path kesanapalli-02] [RTSP source] stopped: an error occurred
+2026/01/30 09:16:55 INF [RTSP] [conn [::1]:53456] closed: read tcp [::1]:8554->[::1]:53456: i/o timeout
+2026/01/30 09:16:55 INF [path kesanapalli-03] [RTSP source] stopped: an error occurred
+2026/01/30 09:16:55 INF [path kesanapalli-04] [RTSP source] stopped: an error occurred
+2026/01/30 09:16:55 ERR [path kesanapalli-04] [RTSP source] write tcp 192.168.1.70:57837->117.236.225.213:554: wsasend: An existing connection was forcibly closed by the remote host.
+2026/01/30 09:16:55 INF [RTSP] [session 3add348c] destroyed: not in use
+2026/01/30 09:16:55 INF [path kesanapalli-01] [RTSP source] stopped: an error occurred
+2026/01/30 09:16:55 ERR [path kesanapalli-03] [RTSP source] write tcp 192.168.1.70:63461->117.236.225.212:554: wsasend: An existing connection was forcibly closed by the remote host.
+2026/01/30 09:16:55 ERR [path kesanapalli-01] [RTSP source] read tcp 192.168.1.70:57839->117.236.225.209:554: wsarecv: An existing connection was forcibly closed by the remote host.
+2026/01/30 09:16:55 INF [RTSP] [session a6ac6b58] destroyed: not in use
+2026/01/30 09:16:55 INF [RTSP] [session 4dc26a1b] destroyed: not in use
+2026/01/30 09:16:55 INF [RTSP] [conn [::1]:57215] closed: read tcp [::1]:8554->[::1]:57215: i/o timeout
+2026/01/30 09:16:55 INF [RTSP] [conn [::1]:53455] closed: read tcp [::1]:8554->[::1]:53455: i/o timeout
+2026/01/30 09:16:56 INF [RTSP] [session c4a7a217] destroyed: torn down by [::1]:61368
+2026/01/30 09:16:56 INF [RTSP] [conn [::1]:61368] closed: read tcp [::1]:8554->[::1]:61368: wsarecv: An established connection was aborted by the software in your host machine.
+2026/01/30 09:41:51 INF [WebRTC] [session 4f7ad0ea] created by [::1]:57033
+2026/01/30 09:41:51 INF [WebRTC] [session e4eabf05] created by [::1]:52764
+2026/01/30 09:41:51 INF [WebRTC] [session 4f7ad0ea] closed: no stream is available on path 'kesanapalli-01-h264'
+2026/01/30 09:41:51 INF [path kesanapalli-02] [RTSP source] started on demand
+2026/01/30 09:41:51 INF [WebRTC] [session a12889c6] created by [::1]:55512
+2026/01/30 09:41:51 INF [path kesanapalli-03] [RTSP source] started on demand
+2026/01/30 09:41:51 INF [WebRTC] [session fc415879] created by [::1]:57033
+2026/01/30 09:41:51 INF [WebRTC] [session fc415879] closed: no stream is available on path 'kesanapalli-04-h264'
+2026/01/30 09:41:51 INF [WebRTC] [session cb186ae1] created by [::1]:50430
+2026/01/30 09:41:51 INF [path vijayawada-01] [RTSP source] started on demand
+2026/01/30 09:42:01 INF [path kesanapalli-02] [RTSP source] stopped: timed out
+2026/01/30 09:42:01 INF [WebRTC] [session e4eabf05] closed: source of path 'kesanapalli-02' has timed out
+2026/01/30 09:42:01 INF [WebRTC] [session a12889c6] closed: source of path 'kesanapalli-03' has timed out
+2026/01/30 09:42:01 ERR [path kesanapalli-02] [RTSP source] dial tcp 117.236.225.211:554: i/o timeout
+2026/01/30 09:42:01 INF [path kesanapalli-03] [RTSP source] stopped: timed out
+2026/01/30 09:42:01 ERR [path kesanapalli-03] [RTSP source] dial tcp 117.236.225.212:554: i/o timeout
+2026/01/30 09:42:01 INF [path vijayawada-01] [RTSP source] stopped: timed out
+2026/01/30 09:42:01 INF [WebRTC] [session cb186ae1] closed: source of path 'vijayawada-01' has timed out
+2026/01/30 09:42:01 ERR [path vijayawada-01] [RTSP source] dial tcp 10.205.101.141:554: i/o timeout
+2026/01/30 09:42:31 INF [WebRTC] [session 40952418] created by [::1]:50430
+2026/01/30 09:42:31 INF [WebRTC] [session 40952418] closed: no stream is available on path 'kesanapalli-01-h264'
+2026/01/30 09:42:47 INF [WebRTC] [session 76c5b845] created by [::1]:63556
+2026/01/30 09:42:47 INF [WebRTC] [session 76c5b845] closed: no stream is available on path 'kesanapalli-01-h264'
+2026/01/30 09:42:47 INF [WebRTC] [session d0a50ecf] created by [::1]:49792
+2026/01/30 09:42:47 INF [path kesanapalli-03] [RTSP source] started on demand
+2026/01/30 09:42:47 INF [WebRTC] [session 1521e155] created by [::1]:63556
+2026/01/30 09:42:47 INF [WebRTC] [session cdbc345b] created by [::1]:53413
+2026/01/30 09:42:47 INF [WebRTC] [session c78bf899] created by [::1]:57705
+2026/01/30 09:42:47 INF [path kesanapalli-02] [RTSP source] started on demand
+2026/01/30 09:42:47 INF [WebRTC] [session cdbc345b] closed: no stream is available on path 'kesanapalli-04-h264'
+2026/01/30 09:42:47 INF [path vijayawada-01] [RTSP source] started on demand
+2026/01/30 09:42:48 INF [path kesanapalli-03] [RTSP source] ready: 1 track (H264)
+2026/01/30 09:42:48 INF [path kesanapalli-02] [RTSP source] ready: 1 track (H264)
+2026/01/30 09:42:48 INF [WebRTC] [session d0a50ecf] peer connection established, local candidate: host/udp/172.19.96.1/8189, remote candidate: prflx/udp/172.20.10.3/61336
+2026/01/30 09:42:48 INF [WebRTC] [session d0a50ecf] is reading from path 'kesanapalli-03', 1 track (H264)
+2026/01/30 09:42:48 INF [WebRTC] [session 1521e155] peer connection established, local candidate: host/udp/192.168.1.70/8189, remote candidate: prflx/udp/127.0.0.1/61332
+2026/01/30 09:42:48 INF [WebRTC] [session 1521e155] is reading from path 'kesanapalli-02', 1 track (H264)
+2026/01/30 09:42:49 WAR [path kesanapalli-03] [RTSP source] 74 RTP packets lost
+2026/01/30 09:42:50 WAR [path kesanapalli-03] [RTSP source] 134 RTP packets lost
+2026/01/30 09:42:50 INF [WebRTC] [session b6feea23] created by [::1]:63556
+2026/01/30 09:42:51 INF [WebRTC] [session b6feea23] peer connection established, local candidate: host/udp/192.168.1.70/8189, remote candidate: prflx/udp/127.0.0.1/58034
+2026/01/30 09:42:51 INF [WebRTC] [session b6feea23] is reading from path 'kesanapalli-02', 1 track (H264)
+2026/01/30 09:42:52 WAR [path kesanapalli-03] [RTSP source] 515 RTP packets lost
+2026/01/30 09:42:52 INF [WebRTC] [session d1f04c95] created by [::1]:63556
+2026/01/30 09:42:52 INF [WebRTC] [session d1f04c95] closed: no stream is available on path 'kesanapalli-01-h264'
+2026/01/30 09:42:53 WAR [path kesanapalli-02] [RTSP source] 34 RTP packets lost
+2026/01/30 09:42:54 WAR [path kesanapalli-03] [RTSP source] 382 RTP packets lost
+2026/01/30 09:42:54 WAR [path kesanapalli-02] [RTSP source] 176 RTP packets lost
+2026/01/30 09:42:55 WAR [path kesanapalli-02] [RTSP source] 34 RTP packets lost
+2026/01/30 09:42:56 WAR [path kesanapalli-02] [RTSP source] 140 RTP packets lost
+2026/01/30 09:42:57 WAR [path kesanapalli-03] [RTSP source] 451 RTP packets lost
+2026/01/30 09:42:57 WAR [path kesanapalli-02] [RTSP source] 202 RTP packets lost
+2026/01/30 09:42:57 INF [path vijayawada-01] [RTSP source] stopped: timed out
+2026/01/30 09:42:57 INF [WebRTC] [session c78bf899] closed: source of path 'vijayawada-01' has timed out
+2026/01/30 09:42:57 ERR [path vijayawada-01] [RTSP source] dial tcp 10.205.101.141:554: i/o timeout
+2026/01/30 09:42:58 WAR [path kesanapalli-02] [RTSP source] 34 RTP packets lost
+2026/01/30 09:42:58 INF [WebRTC] [session 08979c02] created by [::1]:63556
+2026/01/30 09:42:58 INF [WebRTC] [session 08979c02] closed: no stream is available on path 'kesanapalli-04-h264'
+2026/01/30 09:42:59 WAR [path kesanapalli-03] [RTSP source] 250 RTP packets lost
+2026/01/30 09:42:59 WAR [path kesanapalli-02] [RTSP source] 142 RTP packets lost
+2026/01/30 09:43:00 WAR [path kesanapalli-03] [RTSP source] 176 RTP packets lost
+2026/01/30 09:43:04 WAR [path kesanapalli-03] [RTSP source] 303 RTP packets lost
+2026/01/30 09:43:04 INF [WebRTC] [session c3410a38] created by [::1]:63556
+2026/01/30 09:43:04 INF [path vijayawada-01] [RTSP source] started on demand
+2026/01/30 09:43:07 WAR [path kesanapalli-03] [RTSP source] 386 RTP packets lost
+2026/01/30 09:43:08 WAR [path kesanapalli-03] [RTSP source] 253 RTP packets lost
+2026/01/30 09:43:10 WAR [path kesanapalli-03] [RTSP source] 204 RTP packets lost
+2026/01/30 09:43:13 WAR [path kesanapalli-03] [RTSP source] 324 RTP packets lost
+2026/01/30 09:43:14 INF [path vijayawada-01] [RTSP source] stopped: timed out
+2026/01/30 09:43:14 INF [WebRTC] [session c3410a38] closed: source of path 'vijayawada-01' has timed out
+2026/01/30 09:43:14 ERR [path vijayawada-01] [RTSP source] dial tcp 10.205.101.141:554: i/o timeout
+2026/01/30 09:43:15 WAR [path kesanapalli-02] [RTSP source] 72 RTP packets lost
+2026/01/30 09:43:16 WAR [path kesanapalli-03] [RTSP source] 372 RTP packets lost
+2026/01/30 09:43:18 WAR [path kesanapalli-03] [RTSP source] 738 RTP packets lost
+2026/01/30 09:43:18 WAR [path kesanapalli-02] [RTSP source] 72 RTP packets lost
+2026/01/30 09:43:19 INF [WebRTC] [session b6feea23] closed: peer connection closed
+2026/01/30 09:43:19 WAR [path kesanapalli-03] [RTSP source] 368 RTP packets lost
+2026/01/30 09:43:19 WAR [path kesanapalli-02] [RTSP source] 118 RTP packets lost
+2026/01/30 09:43:20 WAR [path kesanapalli-02] [RTSP source] 108 RTP packets lost
+2026/01/30 09:43:21 WAR [path kesanapalli-02] [RTSP source] 180 RTP packets lost
+2026/01/30 09:43:22 WAR [path kesanapalli-03] [RTSP source] 722 RTP packets lost
+2026/01/30 09:43:23 WAR [path kesanapalli-02] [RTSP source] 36 RTP packets lost
+2026/01/30 09:43:24 WAR [path kesanapalli-02] [RTSP source] 72 RTP packets lost
+2026/01/30 09:43:26 WAR [path kesanapalli-03] [RTSP source] 714 RTP packets lost
+2026/01/30 09:43:27 WAR [path kesanapalli-02] [RTSP source] 662 RTP packets lost
+2026/01/30 09:43:29 WAR [path kesanapalli-03] [RTSP source] 654 RTP packets lost
+2026/01/30 09:43:32 WAR [path kesanapalli-02] [RTSP source] 36 RTP packets lost
+2026/01/30 09:43:33 WAR [path kesanapalli-03] [RTSP source] 576 RTP packets lost
+2026/01/30 09:43:33 WAR [path kesanapalli-02] [RTSP source] 190 RTP packets lost
+2026/01/30 09:43:35 WAR [path kesanapalli-03] [RTSP source] 1005 RTP packets lost
+2026/01/30 09:43:35 WAR [path kesanapalli-02] [RTSP source] 200 RTP packets lost
+2026/01/30 09:43:37 INF [WebRTC] [session d0a50ecf] closed: peer connection closed
+2026/01/30 09:43:38 WAR [path kesanapalli-03] [RTSP source] 464 RTP packets lost
+2026/01/30 09:43:42 WAR [path kesanapalli-03] [RTSP source] 348 RTP packets lost
+2026/01/30 09:43:42 WAR [path kesanapalli-02] [RTSP source] 36 RTP packets lost
+2026/01/30 09:43:43 WAR [path kesanapalli-02] [RTSP source] 72 RTP packets lost
+2026/01/30 09:43:43 INF [WebRTC] [session 48059e8f] created by [::1]:63556
+2026/01/30 09:43:44 INF [WebRTC] [session 48059e8f] peer connection established, local candidate: host/udp/192.168.1.70/8189, remote candidate: prflx/udp/127.0.0.1/64918
+2026/01/30 09:43:44 INF [WebRTC] [session 48059e8f] is reading from path 'kesanapalli-03', 1 track (H264)
+2026/01/30 09:43:45 WAR [path kesanapalli-03] [RTSP source] 928 RTP packets lost
+2026/01/30 09:43:45 WAR [path kesanapalli-02] [RTSP source] 72 RTP packets lost
+2026/01/30 09:43:49 INF [WebRTC] [session 48059e8f] closed: peer connection closed
+2026/01/30 09:43:50 WAR [path kesanapalli-03] [RTSP source] 279 RTP packets lost
+2026/01/30 09:43:52 WAR [path kesanapalli-03] [RTSP source] 540 RTP packets lost
+2026/01/30 09:43:52 INF [WebRTC] [session 960377c6] created by [::1]:63556
+2026/01/30 09:43:53 INF [WebRTC] [session 960377c6] peer connection established, local candidate: host/udp/192.168.1.70/8189, remote candidate: prflx/udp/127.0.0.1/50739
+2026/01/30 09:43:53 INF [WebRTC] [session 960377c6] is reading from path 'kesanapalli-03', 1 track (H264)
+2026/01/30 09:43:54 WAR [path kesanapalli-02] [RTSP source] 651 RTP packets lost
+2026/01/30 09:43:55 WAR [path kesanapalli-02] [RTSP source] 458 RTP packets lost
+2026/01/30 09:43:57 WAR [path kesanapalli-03] [RTSP source] 1018 RTP packets lost
+2026/01/30 09:43:57 WAR [path kesanapalli-02] [RTSP source] 180 RTP packets lost
+2026/01/30 09:43:58 WAR [path kesanapalli-02] [RTSP source] 72 RTP packets lost
+2026/01/30 09:44:00 WAR [path kesanapalli-02] [RTSP source] 72 RTP packets lost
+2026/01/30 09:44:01 WAR [path kesanapalli-02] [RTSP source] 82 RTP packets lost
+2026/01/30 09:44:02 WAR [path kesanapalli-03] [RTSP source] 1008 RTP packets lost
+2026/01/30 09:44:04 WAR [path kesanapalli-02] [RTSP source] 211 RTP packets lost
+2026/01/30 09:44:05 WAR [path kesanapalli-03] [RTSP source] 545 RTP packets lost
+2026/01/30 09:44:07 WAR [path kesanapalli-02] [RTSP source] 34 RTP packets lost
+2026/01/30 09:44:08 WAR [path kesanapalli-03] [RTSP source] 436 RTP packets lost
+2026/01/30 09:44:08 WAR [path kesanapalli-02] [RTSP source] 398 RTP packets lost
+2026/01/30 09:44:10 WAR [path kesanapalli-03] [RTSP source] 854 RTP packets lost
+2026/01/30 09:44:10 WAR [path kesanapalli-02] [RTSP source] 212 RTP packets lost
+2026/01/30 09:44:11 WAR [path kesanapalli-02] [RTSP source] 344 RTP packets lost
+2026/01/30 09:44:13 WAR [path kesanapalli-03] [RTSP source] 372 RTP packets lost
+2026/01/30 09:44:14 WAR [path kesanapalli-03] [RTSP source] 415 RTP packets lost
+2026/01/30 09:44:17 WAR [path kesanapalli-03] [RTSP source] 426 RTP packets lost
+2026/01/30 09:44:20 WAR [path kesanapalli-03] [RTSP source] 474 RTP packets lost
+2026/01/30 09:44:22 WAR [path kesanapalli-03] [RTSP source] 409 RTP packets lost
+2026/01/30 09:44:24 WAR [path kesanapalli-03] [RTSP source] 605 RTP packets lost
+2026/01/30 09:44:26 WAR [path kesanapalli-02] [RTSP source] 70 RTP packets lost
+2026/01/30 09:44:28 WAR [path kesanapalli-03] [RTSP source] 423 RTP packets lost
+2026/01/30 09:44:28 WAR [path kesanapalli-02] [RTSP source] 70 RTP packets lost
+2026/01/30 09:44:29 WAR [path kesanapalli-03] [RTSP source] 420 RTP packets lost
+2026/01/30 09:44:29 WAR [path kesanapalli-02] [RTSP source] 140 RTP packets lost
+2026/01/30 09:44:30 WAR [path kesanapalli-02] [RTSP source] 34 RTP packets lost
+2026/01/30 09:44:31 WAR [path kesanapalli-02] [RTSP source] 132 RTP packets lost
+2026/01/30 09:44:32 WAR [path kesanapalli-03] [RTSP source] 609 RTP packets lost
+2026/01/30 09:44:32 WAR [path kesanapalli-02] [RTSP source] 288 RTP packets lost
+2026/01/30 09:44:33 WAR [path kesanapalli-02] [RTSP source] 72 RTP packets lost
+2026/01/30 09:44:34 WAR [path kesanapalli-03] [RTSP source] 402 RTP packets lost
+2026/01/30 09:44:34 WAR [path kesanapalli-02] [RTSP source] 98 RTP packets lost
+2026/01/30 09:44:36 WAR [path kesanapalli-02] [RTSP source] 96 RTP packets lost
+2026/01/30 09:44:37 WAR [path kesanapalli-03] [RTSP source] 601 RTP packets lost
+2026/01/30 09:44:37 WAR [path kesanapalli-02] [RTSP source] 320 RTP packets lost
+2026/01/30 09:44:37 INF [WebRTC] [session 960377c6] closed: peer connection closed
+2026/01/30 09:44:40 WAR [path kesanapalli-03] [RTSP source] 719 RTP packets lost
+2026/01/30 09:44:40 WAR [path kesanapalli-02] [RTSP source] 540 RTP packets lost
+2026/01/30 09:44:40 INF [WebRTC] [session 24e3dcd9] created by [::1]:58630
+2026/01/30 09:44:41 INF [WebRTC] [session 24e3dcd9] peer connection established, local candidate: host/udp/192.168.1.70/8189, remote candidate: prflx/udp/127.0.0.1/60710
+2026/01/30 09:44:41 INF [WebRTC] [session 24e3dcd9] is reading from path 'kesanapalli-03', 1 track (H264)
+2026/01/30 09:44:43 WAR [path kesanapalli-02] [RTSP source] 142 RTP packets lost
+2026/01/30 09:44:44 WAR [path kesanapalli-03] [RTSP source] 629 RTP packets lost
+2026/01/30 09:44:46 WAR [path kesanapalli-03] [RTSP source] 516 RTP packets lost
+2026/01/30 09:44:46 WAR [path kesanapalli-02] [RTSP source] 104 RTP packets lost
+2026/01/30 09:44:47 WAR [path kesanapalli-02] [RTSP source] 250 RTP packets lost
+2026/01/30 09:44:48 WAR [path kesanapalli-03] [RTSP source] 385 RTP packets lost
+2026/01/30 09:44:50 WAR [path kesanapalli-02] [RTSP source] 68 RTP packets lost
+2026/01/30 09:44:51 WAR [path kesanapalli-03] [RTSP source] 821 RTP packets lost
+2026/01/30 09:44:51 WAR [path kesanapalli-02] [RTSP source] 104 RTP packets lost
+2026/01/30 09:44:52 WAR [path kesanapalli-03] [RTSP source] 369 RTP packets lost
+2026/01/30 09:44:52 WAR [path kesanapalli-02] [RTSP source] 174 RTP packets lost
+2026/01/30 09:44:53 WAR [path kesanapalli-02] [RTSP source] 104 RTP packets lost
+2026/01/30 09:44:54 WAR [path kesanapalli-03] [RTSP source] 482 RTP packets lost
+2026/01/30 09:44:54 WAR [path kesanapalli-02] [RTSP source] 168 RTP packets lost
+2026/01/30 09:44:55 WAR [path kesanapalli-02] [RTSP source] 210 RTP packets lost
+2026/01/30 09:44:56 WAR [path kesanapalli-02] [RTSP source] 236 RTP packets lost
+2026/01/30 09:44:57 WAR [path kesanapalli-03] [RTSP source] 482 RTP packets lost
+2026/01/30 09:44:57 WAR [path kesanapalli-02] [RTSP source] 104 RTP packets lost
+2026/01/30 09:45:00 WAR [path kesanapalli-03] [RTSP source] 357 RTP packets lost
+2026/01/30 09:45:03 WAR [path kesanapalli-03] [RTSP source] 909 RTP packets lost
+2026/01/30 09:45:03 WAR [path kesanapalli-02] [RTSP source] 140 RTP packets lost
+2026/01/30 09:45:04 WAR [path kesanapalli-02] [RTSP source] 644 RTP packets lost
+2026/01/30 09:45:05 WAR [path kesanapalli-03] [RTSP source] 351 RTP packets lost
+2026/01/30 09:45:05 WAR [path kesanapalli-02] [RTSP source] 168 RTP packets lost
+2026/01/30 09:45:07 WAR [path kesanapalli-02] [RTSP source] 70 RTP packets lost
+2026/01/30 09:45:08 INF [WebRTC] [session b2aca88e] created by [::1]:58630
+2026/01/30 09:45:08 INF [WebRTC] [session b2aca88e] closed: no stream is available on path 'kesanapalli-04-h264'
+2026/01/30 09:45:09 WAR [path kesanapalli-03] [RTSP source] 639 RTP packets lost
+2026/01/30 09:45:11 WAR [path kesanapalli-03] [RTSP source] 763 RTP packets lost
+2026/01/30 09:45:11 WAR [path kesanapalli-02] [RTSP source] 180 RTP packets lost
+2026/01/30 09:45:13 WAR [path kesanapalli-03] [RTSP source] 550 RTP packets lost
+2026/01/30 09:45:13 WAR [path kesanapalli-02] [RTSP source] 850 RTP packets lost
+2026/01/30 09:45:14 WAR [path kesanapalli-02] [RTSP source] 432 RTP packets lost
+2026/01/30 09:45:16 WAR [path kesanapalli-02] [RTSP source] 72 RTP packets lost
+2026/01/30 09:45:17 WAR [path kesanapalli-02] [RTSP source] 490 RTP packets lost
+2026/01/30 09:45:19 WAR [path kesanapalli-03] [RTSP source] 1287 RTP packets lost
+2026/01/30 09:45:21 WAR [path kesanapalli-02] [RTSP source] 34 RTP packets lost
+2026/01/30 09:45:22 WAR [path kesanapalli-03] [RTSP source] 529 RTP packets lost
+2026/01/30 09:45:22 WAR [path kesanapalli-02] [RTSP source] 34 RTP packets lost
+2026/01/30 09:45:23 WAR [path kesanapalli-02] [RTSP source] 504 RTP packets lost
+2026/01/30 09:45:24 WAR [path kesanapalli-02] [RTSP source] 320 RTP packets lost
+2026/01/30 09:45:26 WAR [path kesanapalli-03] [RTSP source] 418 RTP packets lost
+2026/01/30 09:45:27 WAR [path kesanapalli-03] [RTSP source] 440 RTP packets lost
+2026/01/30 09:45:27 WAR [path kesanapalli-02] [RTSP source] 216 RTP packets lost
+2026/01/30 09:45:28 WAR [path kesanapalli-02] [RTSP source] 104 RTP packets lost
+2026/01/30 09:45:29 WAR [path kesanapalli-03] [RTSP source] 288 RTP packets lost
+2026/01/30 09:45:29 WAR [path kesanapalli-02] [RTSP source] 72 RTP packets lost
+2026/01/30 09:45:30 WAR [path kesanapalli-02] [RTSP source] 109 RTP packets lost
+2026/01/30 09:45:31 WAR [path kesanapalli-02] [RTSP source] 274 RTP packets lost
+2026/01/30 09:45:32 WAR [path kesanapalli-02] [RTSP source] 106 RTP packets lost
+2026/01/30 09:45:33 WAR [path kesanapalli-03] [RTSP source] 466 RTP packets lost
+2026/01/30 09:45:33 WAR [path kesanapalli-02] [RTSP source] 202 RTP packets lost
+2026/01/30 09:45:36 WAR [path kesanapalli-02] [RTSP source] 270 RTP packets lost
+2026/01/30 09:45:39 WAR [path kesanapalli-03] [RTSP source] 785 RTP packets lost
+2026/01/30 09:45:39 WAR [path kesanapalli-02] [RTSP source] 430 RTP packets lost
+2026/01/30 09:45:40 WAR [path kesanapalli-02] [RTSP source] 502 RTP packets lost
+2026/01/30 09:45:41 WAR [path kesanapalli-03] [RTSP source] 1157 RTP packets lost
+2026/01/30 09:45:43 WAR [path kesanapalli-02] [RTSP source] 36 RTP packets lost
+2026/01/30 09:45:44 WAR [path kesanapalli-02] [RTSP source] 958 RTP packets lost
+2026/01/30 09:45:45 WAR [path kesanapalli-03] [RTSP source] 1168 RTP packets lost
+2026/01/30 09:45:47 WAR [path kesanapalli-02] [RTSP source] 99 RTP packets lost
+2026/01/30 09:45:48 WAR [path kesanapalli-02] [RTSP source] 98 RTP packets lost
+2026/01/30 09:45:49 WAR [path kesanapalli-02] [RTSP source] 558 RTP packets lost
+2026/01/30 09:45:50 WAR [path kesanapalli-02] [RTSP source] 166 RTP packets lost
+2026/01/30 09:45:51 WAR [path kesanapalli-03] [RTSP source] 1036 RTP packets lost
+2026/01/30 09:45:53 WAR [path kesanapalli-03] [RTSP source] 1055 RTP packets lost
+2026/01/30 09:45:56 WAR [path kesanapalli-03] [RTSP source] 779 RTP packets lost
+2026/01/30 09:45:56 WAR [path kesanapalli-02] [RTSP source] 322 RTP packets lost
+2026/01/30 09:45:57 WAR [path kesanapalli-02] [RTSP source] 168 RTP packets lost
+2026/01/30 09:45:58 WAR [path kesanapalli-02] [RTSP source] 500 RTP packets lost
+2026/01/30 09:45:59 WAR [path kesanapalli-02] [RTSP source] 266 RTP packets lost
+2026/01/30 09:46:00 WAR [path kesanapalli-03] [RTSP source] 793 RTP packets lost
+2026/01/30 09:46:00 WAR [path kesanapalli-02] [RTSP source] 308 RTP packets lost
+2026/01/30 09:46:01 WAR [path kesanapalli-02] [RTSP source] 104 RTP packets lost
+2026/01/30 09:46:02 WAR [path kesanapalli-02] [RTSP source] 106 RTP packets lost
+2026/01/30 09:46:03 WAR [path kesanapalli-03] [RTSP source] 782 RTP packets lost
+2026/01/30 09:46:08 WAR [path kesanapalli-03] [RTSP source] 955 RTP packets lost
+2026/01/30 09:46:08 WAR [path kesanapalli-02] [RTSP source] 854 RTP packets lost
+2026/01/30 09:46:12 WAR [path kesanapalli-03] [RTSP source] 466 RTP packets lost
+2026/01/30 09:46:14 WAR [path kesanapalli-03] [RTSP source] 685 RTP packets lost
+2026/01/30 09:46:14 WAR [path kesanapalli-02] [RTSP source] 34 RTP packets lost
+2026/01/30 09:46:15 WAR [path kesanapalli-02] [RTSP source] 720 RTP packets lost
+2026/01/30 09:46:18 WAR [path kesanapalli-03] [RTSP source] 462 RTP packets lost
+2026/01/30 09:46:20 WAR [path kesanapalli-03] [RTSP source] 585 RTP packets lost
+2026/01/30 09:46:21 WAR [path kesanapalli-03] [RTSP source] 463 RTP packets lost
+2026/01/30 09:46:21 WAR [path kesanapalli-02] [RTSP source] 142 RTP packets lost
+2026/01/30 09:46:22 WAR [path kesanapalli-02] [RTSP source] 106 RTP packets lost
+2026/01/30 09:46:23 WAR [path kesanapalli-02] [RTSP source] 140 RTP packets lost
+2026/01/30 09:46:24 WAR [path kesanapalli-03] [RTSP source] 421 RTP packets lost
+2026/01/30 09:46:24 WAR [path kesanapalli-02] [RTSP source] 70 RTP packets lost
+2026/01/30 09:46:25 WAR [path kesanapalli-02] [RTSP source] 238 RTP packets lost
+2026/01/30 09:46:26 WAR [path kesanapalli-02] [RTSP source] 232 RTP packets lost
+2026/01/30 09:46:27 WAR [path kesanapalli-03] [RTSP source] 352 RTP packets lost
+2026/01/30 09:46:27 WAR [path kesanapalli-02] [RTSP source] 162 RTP packets lost
+2026/01/30 09:46:28 WAR [path kesanapalli-02] [RTSP source] 168 RTP packets lost
+2026/01/30 09:46:29 WAR [path kesanapalli-03] [RTSP source] 452 RTP packets lost
+2026/01/30 09:46:29 WAR [path kesanapalli-02] [RTSP source] 232 RTP packets lost
+2026/01/30 09:46:30 WAR [path kesanapalli-02] [RTSP source] 226 RTP packets lost
+2026/01/30 09:46:31 WAR [path kesanapalli-03] [RTSP source] 481 RTP packets lost
+2026/01/30 09:46:31 WAR [path kesanapalli-02] [RTSP source] 112 RTP packets lost
+2026/01/30 09:46:32 WAR [path kesanapalli-02] [RTSP source] 34 RTP packets lost
+2026/01/30 09:46:33 WAR [path kesanapalli-03] [RTSP source] 252 RTP packets lost
+2026/01/30 09:46:34 WAR [path kesanapalli-03] [RTSP source] 269 RTP packets lost
+2026/01/30 09:46:38 WAR [path kesanapalli-03] [RTSP source] 483 RTP packets lost
+2026/01/30 09:46:40 WAR [path kesanapalli-02] [RTSP source] 104 RTP packets lost
+2026/01/30 09:46:41 WAR [path kesanapalli-02] [RTSP source] 142 RTP packets lost
+2026/01/30 09:46:42 WAR [path kesanapalli-03] [RTSP source] 843 RTP packets lost
+2026/01/30 09:46:42 WAR [path kesanapalli-02] [RTSP source] 276 RTP packets lost
+2026/01/30 09:46:43 WAR [path kesanapalli-02] [RTSP source] 382 RTP packets lost
+2026/01/30 09:46:44 WAR [path kesanapalli-02] [RTSP source] 68 RTP packets lost
+2026/01/30 09:46:46 WAR [path kesanapalli-03] [RTSP source] 957 RTP packets lost
+2026/01/30 09:46:48 WAR [path kesanapalli-02] [RTSP source] 462 RTP packets lost
+2026/01/30 09:46:49 WAR [path kesanapalli-02] [RTSP source] 232 RTP packets lost
+2026/01/30 09:46:51 WAR [path kesanapalli-03] [RTSP source] 821 RTP packets lost
+2026/01/30 09:46:52 WAR [path kesanapalli-02] [RTSP source] 158 RTP packets lost
+2026/01/30 09:46:53 WAR [path kesanapalli-03] [RTSP source] 765 RTP packets lost
+2026/01/30 09:46:54 WAR [path kesanapalli-02] [RTSP source] 212 RTP packets lost
+2026/01/30 09:46:55 WAR [path kesanapalli-02] [RTSP source] 658 RTP packets lost
+2026/01/30 09:46:56 WAR [path kesanapalli-03] [RTSP source] 657 RTP packets lost
+2026/01/30 09:46:57 WAR [path kesanapalli-02] [RTSP source] 364 RTP packets lost
+2026/01/30 09:46:59 WAR [path kesanapalli-03] [RTSP source] 484 RTP packets lost
+2026/01/30 09:47:00 WAR [path kesanapalli-02] [RTSP source] 68 RTP packets lost
+2026/01/30 09:47:01 WAR [path kesanapalli-03] [RTSP source] 373 RTP packets lost
+2026/01/30 09:47:01 WAR [path kesanapalli-02] [RTSP source] 305 RTP packets lost
+2026/01/30 09:47:02 INF [WebRTC] [session 1521e155] closed: peer connection closed
+2026/01/30 09:47:02 INF [WebRTC] [session 24e3dcd9] closed: peer connection closed
+2026/01/30 09:47:02 WAR [path kesanapalli-02] [RTSP source] 34 RTP packets lost
+2026/01/30 09:47:03 INF [WebRTC] [session a003f9c5] created by [::1]:55210
+2026/01/30 09:47:03 INF [WebRTC] [session a003f9c5] closed: no stream is available on path 'kesanapalli-01-h264'
+2026/01/30 09:47:03 INF [WebRTC] [session e9552157] created by [::1]:52042
+2026/01/30 09:47:03 INF [WebRTC] [session 3b463603] created by [::1]:63173
+2026/01/30 09:47:03 INF [WebRTC] [session 97191763] created by [::1]:55210
+2026/01/30 09:47:03 INF [WebRTC] [session 8fcb2c1f] created by [::1]:55808
+2026/01/30 09:47:03 INF [WebRTC] [session 97191763] closed: no stream is available on path 'kesanapalli-04-h264'
+2026/01/30 09:47:03 INF [path vijayawada-01] [RTSP source] started on demand
+2026/01/30 09:47:03 WAR [path kesanapalli-02] [RTSP source] 34 RTP packets lost
+2026/01/30 09:47:03 INF [WebRTC] [session e9552157] peer connection established, local candidate: host/udp/172.19.96.1/8189, remote candidate: prflx/udp/127.0.0.1/56780
+2026/01/30 09:47:03 INF [WebRTC] [session e9552157] is reading from path 'kesanapalli-02', 1 track (H264)
+2026/01/30 09:47:03 INF [WebRTC] [session 3b463603] peer connection established, local candidate: host/udp/192.168.1.70/8189, remote candidate: prflx/udp/127.0.0.1/56784
+2026/01/30 09:47:03 INF [WebRTC] [session 3b463603] is reading from path 'kesanapalli-03', 1 track (H264)
+2026/01/30 09:47:04 WAR [path kesanapalli-03] [RTSP source] 508 RTP packets lost
+2026/01/30 09:47:05 WAR [path kesanapalli-02] [RTSP source] 96 RTP packets lost
+2026/01/30 09:47:06 INF [WebRTC] [session 129a5e50] created by [::1]:63173
+2026/01/30 09:47:06 INF [WebRTC] [session 129a5e50] peer connection established, local candidate: host/udp/172.19.96.1/8189, remote candidate: prflx/udp/172.19.96.1/58977
+2026/01/30 09:47:06 INF [WebRTC] [session 129a5e50] is reading from path 'kesanapalli-02', 1 track (H264)
+2026/01/30 09:47:07 WAR [path kesanapalli-02] [RTSP source] 70 RTP packets lost
+2026/01/30 09:47:08 WAR [path kesanapalli-02] [RTSP source] 964 RTP packets lost
+2026/01/30 09:47:10 WAR [path kesanapalli-03] [RTSP source] 998 RTP packets lost
+2026/01/30 09:47:10 WAR [path kesanapalli-02] [RTSP source] 34 RTP packets lost
+2026/01/30 09:47:11 WAR [path kesanapalli-02] [RTSP source] 248 RTP packets lost
+2026/01/30 09:47:12 WAR [path kesanapalli-02] [RTSP source] 144 RTP packets lost
+2026/01/30 09:47:13 INF [path vijayawada-01] [RTSP source] stopped: timed out
+2026/01/30 09:47:13 INF [WebRTC] [session 8fcb2c1f] closed: source of path 'vijayawada-01' has timed out
+2026/01/30 09:47:13 ERR [path vijayawada-01] [RTSP source] dial tcp 10.205.101.141:554: i/o timeout
+2026/01/30 09:47:13 WAR [path kesanapalli-03] [RTSP source] 1378 RTP packets lost
+2026/01/30 09:47:14 WAR [path kesanapalli-02] [RTSP source] 248 RTP packets lost
+2026/01/30 09:47:15 WAR [path kesanapalli-02] [RTSP source] 364 RTP packets lost
+2026/01/30 09:47:17 WAR [path kesanapalli-02] [RTSP source] 130 RTP packets lost
+2026/01/30 09:47:17 INF [WebRTC] [session 7e527524] created by [::1]:55808
+2026/01/30 09:47:17 INF [WebRTC] [session 7e527524] closed: no stream is available on path 'kesanapalli-01-h264'
+2026/01/30 09:47:18 WAR [path kesanapalli-03] [RTSP source] 739 RTP packets lost
+2026/01/30 09:47:18 WAR [path kesanapalli-02] [RTSP source] 396 RTP packets lost
+2026/01/30 09:47:21 WAR [path kesanapalli-03] [RTSP source] 851 RTP packets lost
+2026/01/30 09:47:21 WAR [path kesanapalli-02] [RTSP source] 496 RTP packets lost
+2026/01/30 09:47:22 WAR [path kesanapalli-03] [RTSP source] 543 RTP packets lost
+2026/01/30 09:47:22 WAR [path kesanapalli-02] [RTSP source] 34 RTP packets lost
+2026/01/30 09:47:24 WAR [path kesanapalli-02] [RTSP source] 114 RTP packets lost
+2026/01/30 09:47:25 WAR [path kesanapalli-02] [RTSP source] 276 RTP packets lost
+2026/01/30 09:47:26 WAR [path kesanapalli-03] [RTSP source] 468 RTP packets lost
+2026/01/30 09:47:26 WAR [path kesanapalli-02] [RTSP source] 108 RTP packets lost
+2026/01/30 09:47:27 WAR [path kesanapalli-02] [RTSP source] 108 RTP packets lost
+2026/01/30 09:47:29 INF [WebRTC] [session e9552157] closed: peer connection closed
+2026/01/30 09:47:29 INF [WebRTC] [session 129a5e50] closed: peer connection closed
+2026/01/30 09:47:31 WAR [path kesanapalli-03] [RTSP source] 570 RTP packets lost
+2026/01/30 09:47:31 WAR [path kesanapalli-02] [RTSP source] 36 RTP packets lost
+2026/01/30 09:47:32 WAR [path kesanapalli-02] [RTSP source] 108 RTP packets lost
+2026/01/30 09:47:32 INF [WebRTC] [session f714d7c6] created by [::1]:63173
+2026/01/30 09:47:32 INF [WebRTC] [session 60172e3f] created by [::1]:55808
+2026/01/30 09:47:32 INF [WebRTC] [session 60172e3f] peer connection established, local candidate: host/udp/192.168.1.70/8189, remote candidate: prflx/udp/127.0.0.1/59462
+2026/01/30 09:47:32 INF [WebRTC] [session 60172e3f] is reading from path 'kesanapalli-02', 1 track (H264)
+2026/01/30 09:47:33 INF [WebRTC] [session f714d7c6] peer connection established, local candidate: host/udp/172.19.96.1/8189, remote candidate: prflx/udp/127.0.0.1/59458
+2026/01/30 09:47:33 INF [WebRTC] [session f714d7c6] is reading from path 'kesanapalli-02', 1 track (H264)
+2026/01/30 09:47:33 WAR [path kesanapalli-02] [RTSP source] 612 RTP packets lost
+2026/01/30 09:47:34 WAR [path kesanapalli-03] [RTSP source] 1195 RTP packets lost
+2026/01/30 09:47:34 WAR [path kesanapalli-02] [RTSP source] 144 RTP packets lost
+2026/01/30 09:47:35 WAR [path kesanapalli-02] [RTSP source] 72 RTP packets lost
+2026/01/30 09:47:36 WAR [path kesanapalli-02] [RTSP source] 180 RTP packets lost
+2026/01/30 09:47:37 WAR [path kesanapalli-03] [RTSP source] 784 RTP packets lost
+2026/01/30 09:47:37 WAR [path kesanapalli-02] [RTSP source] 108 RTP packets lost
+2026/01/30 09:47:38 WAR [path kesanapalli-03] [RTSP source] 514 RTP packets lost
+2026/01/30 09:47:38 WAR [path kesanapalli-02] [RTSP source] 36 RTP packets lost
+2026/01/30 09:47:47 WAR [path kesanapalli-03] [RTSP source] 503 RTP packets lost
+2026/01/30 09:47:51 WAR [path kesanapalli-03] [RTSP source] 872 RTP packets lost
+2026/01/30 09:47:51 WAR [path kesanapalli-02] [RTSP source] 184 RTP packets lost
+2026/01/30 09:47:53 WAR [path kesanapalli-02] [RTSP source] 226 RTP packets lost
+2026/01/30 09:47:54 WAR [path kesanapalli-03] [RTSP source] 710 RTP packets lost
+2026/01/30 09:47:54 WAR [path kesanapalli-02] [RTSP source] 144 RTP packets lost
+2026/01/30 09:47:56 WAR [path kesanapalli-03] [RTSP source] 587 RTP packets lost
+2026/01/30 09:47:56 WAR [path kesanapalli-02] [RTSP source] 36 RTP packets lost
+2026/01/30 09:47:57 WAR [path kesanapalli-02] [RTSP source] 108 RTP packets lost
+2026/01/30 09:47:58 WAR [path kesanapalli-03] [RTSP source] 583 RTP packets lost
+2026/01/30 09:47:58 WAR [path kesanapalli-02] [RTSP source] 72 RTP packets lost
+2026/01/30 09:47:59 WAR [path kesanapalli-02] [RTSP source] 108 RTP packets lost
+2026/01/30 09:48:00 WAR [path kesanapalli-03] [RTSP source] 576 RTP packets lost
+2026/01/30 09:48:03 WAR [path kesanapalli-02] [RTSP source] 108 RTP packets lost
+2026/01/30 09:48:04 WAR [path kesanapalli-02] [RTSP source] 36 RTP packets lost
+2026/01/30 09:48:05 WAR [path kesanapalli-03] [RTSP source] 748 RTP packets lost
+2026/01/30 09:48:05 WAR [path kesanapalli-02] [RTSP source] 72 RTP packets lost
+2026/01/30 09:48:06 WAR [path kesanapalli-02] [RTSP source] 154 RTP packets lost
+2026/01/30 09:48:07 WAR [path kesanapalli-03] [RTSP source] 631 RTP packets lost
+2026/01/30 09:48:07 WAR [path kesanapalli-02] [RTSP source] 144 RTP packets lost
+2026/01/30 09:48:08 WAR [path kesanapalli-02] [RTSP source] 72 RTP packets lost
+2026/01/30 09:48:09 WAR [path kesanapalli-02] [RTSP source] 36 RTP packets lost
+2026/01/30 09:48:10 WAR [path kesanapalli-02] [RTSP source] 168 RTP packets lost
+2026/01/30 09:48:11 WAR [path kesanapalli-03] [RTSP source] 781 RTP packets lost
+2026/01/30 09:48:11 WAR [path kesanapalli-02] [RTSP source] 144 RTP packets lost
+2026/01/30 09:48:12 WAR [path kesanapalli-02] [RTSP source] 36 RTP packets lost
+2026/01/30 09:48:14 WAR [path kesanapalli-03] [RTSP source] 650 RTP packets lost
+2026/01/30 09:48:15 WAR [path kesanapalli-02] [RTSP source] 108 RTP packets lost
+2026/01/30 09:48:16 WAR [path kesanapalli-03] [RTSP source] 743 RTP packets lost
+2026/01/30 09:48:17 WAR [path kesanapalli-02] [RTSP source] 374 RTP packets lost
+2026/01/30 09:48:18 WAR [path kesanapalli-02] [RTSP source] 116 RTP packets lost
+2026/01/30 09:48:21 WAR [path kesanapalli-02] [RTSP source] 72 RTP packets lost
+2026/01/30 09:48:22 WAR [path kesanapalli-02] [RTSP source] 240 RTP packets lost
+2026/01/30 09:48:23 WAR [path kesanapalli-03] [RTSP source] 1567 RTP packets lost
+2026/01/30 09:48:25 WAR [path kesanapalli-02] [RTSP source] 36 RTP packets lost
+2026/01/30 09:48:26 WAR [path kesanapalli-02] [RTSP source] 328 RTP packets lost
+2026/01/30 09:48:28 WAR [path kesanapalli-02] [RTSP source] 118 RTP packets lost
+2026/01/30 09:48:29 WAR [path kesanapalli-03] [RTSP source] 1517 RTP packets lost
+2026/01/30 09:48:30 WAR [path kesanapalli-02] [RTSP source] 118 RTP packets lost
+2026/01/30 09:48:33 WAR [path kesanapalli-03] [RTSP source] 347 RTP packets lost
+2026/01/30 09:48:36 WAR [path kesanapalli-03] [RTSP source] 907 RTP packets lost
+2026/01/30 09:48:37 WAR [path kesanapalli-02] [RTSP source] 792 RTP packets lost
+2026/01/30 09:48:40 WAR [path kesanapalli-03] [RTSP source] 678 RTP packets lost
+2026/01/30 09:48:41 INF [WebRTC] [session f714d7c6] closed: peer connection closed
+2026/01/30 09:48:41 INF [WebRTC] [session 60172e3f] closed: peer connection closed
+2026/01/30 09:48:42 WAR [path kesanapalli-02] [RTSP source] 142 RTP packets lost
+2026/01/30 09:48:43 WAR [path kesanapalli-03] [RTSP source] 555 RTP packets lost
+2026/01/30 09:48:43 WAR [path kesanapalli-02] [RTSP source] 106 RTP packets lost
+2026/01/30 09:48:44 WAR [path kesanapalli-02] [RTSP source] 132 RTP packets lost
+2026/01/30 09:48:44 INF [WebRTC] [session a19c6e7e] created by [::1]:56545
+2026/01/30 09:48:44 INF [WebRTC] [session 12a8bcc8] created by [::1]:59602
+2026/01/30 09:48:45 INF [WebRTC] [session a19c6e7e] peer connection established, local candidate: host/udp/192.168.1.70/8189, remote candidate: prflx/udp/127.0.0.1/52082
+2026/01/30 09:48:45 INF [WebRTC] [session a19c6e7e] is reading from path 'kesanapalli-02', 1 track (H264)
+2026/01/30 09:48:45 INF [WebRTC] [session 12a8bcc8] peer connection established, local candidate: host/udp/192.168.1.70/8189, remote candidate: prflx/udp/127.0.0.1/52086
+2026/01/30 09:48:45 INF [WebRTC] [session 12a8bcc8] is reading from path 'kesanapalli-02', 1 track (H264)
+2026/01/30 09:48:45 WAR [path kesanapalli-02] [RTSP source] 136 RTP packets lost
+2026/01/30 09:48:46 WAR [path kesanapalli-02] [RTSP source] 384 RTP packets lost
+2026/01/30 09:48:47 WAR [path kesanapalli-02] [RTSP source] 68 RTP packets lost
+2026/01/30 09:48:48 WAR [path kesanapalli-03] [RTSP source] 1526 RTP packets lost
+2026/01/30 09:48:50 WAR [path kesanapalli-03] [RTSP source] 406 RTP packets lost
+2026/01/30 09:48:51 INF [WebRTC] [session 12a8bcc8] closed: peer connection closed
+2026/01/30 09:48:53 INF [WebRTC] [session 8f779913] created by [::1]:59602
+2026/01/30 09:48:53 INF [WebRTC] [session 8f779913] closed: no stream is available on path 'kesanapalli-04-h264'
+2026/01/30 09:48:56 WAR [path kesanapalli-02] [RTSP source] 185 RTP packets lost
+2026/01/30 09:48:57 WAR [path kesanapalli-03] [RTSP source] 602 RTP packets lost
+2026/01/30 09:48:57 WAR [path kesanapalli-02] [RTSP source] 98 RTP packets lost
+2026/01/30 09:48:58 WAR [path kesanapalli-02] [RTSP source] 180 RTP packets lost
+2026/01/30 09:48:59 WAR [path kesanapalli-02] [RTSP source] 214 RTP packets lost
+2026/01/30 09:49:00 WAR [path kesanapalli-03] [RTSP source] 591 RTP packets lost
+2026/01/30 09:49:00 WAR [path kesanapalli-02] [RTSP source] 104 RTP packets lost
+2026/01/30 09:49:01 WAR [path kesanapalli-02] [RTSP source] 34 RTP packets lost
+2026/01/30 09:49:02 WAR [path kesanapalli-03] [RTSP source] 917 RTP packets lost
+2026/01/30 09:49:04 WAR [path kesanapalli-02] [RTSP source] 140 RTP packets lost
+2026/01/30 09:49:05 WAR [path kesanapalli-03] [RTSP source] 687 RTP packets lost
+2026/01/30 09:49:06 WAR [path kesanapalli-02] [RTSP source] 668 RTP packets lost
+2026/01/30 09:49:07 WAR [path kesanapalli-02] [RTSP source] 398 RTP packets lost
+2026/01/30 09:49:08 WAR [path kesanapalli-02] [RTSP source] 140 RTP packets lost
+2026/01/30 09:49:09 WAR [path kesanapalli-02] [RTSP source] 72 RTP packets lost
+2026/01/30 09:49:10 WAR [path kesanapalli-03] [RTSP source] 464 RTP packets lost
+2026/01/30 09:49:10 WAR [path kesanapalli-02] [RTSP source] 36 RTP packets lost
+2026/01/30 09:49:11 WAR [path kesanapalli-02] [RTSP source] 457 RTP packets lost
+2026/01/30 09:49:12 WAR [path kesanapalli-03] [RTSP source] 943 RTP packets lost
+2026/01/30 09:49:12 WAR [path kesanapalli-02] [RTSP source] 292 RTP packets lost
+2026/01/30 09:49:13 WAR [path kesanapalli-02] [RTSP source] 98 RTP packets lost
+2026/01/30 09:49:14 WAR [path kesanapalli-03] [RTSP source] 349 RTP packets lost
+2026/01/30 09:49:14 WAR [path kesanapalli-02] [RTSP source] 70 RTP packets lost
+2026/01/30 09:49:15 WAR [path kesanapalli-02] [RTSP source] 432 RTP packets lost
+2026/01/30 09:49:17 WAR [path kesanapalli-03] [RTSP source] 532 RTP packets lost
+2026/01/30 09:49:17 WAR [path kesanapalli-02] [RTSP source] 34 RTP packets lost
+2026/01/30 09:49:18 WAR [path kesanapalli-02] [RTSP source] 308 RTP packets lost
+2026/01/30 09:49:19 WAR [path kesanapalli-03] [RTSP source] 600 RTP packets lost
+2026/01/30 09:49:21 WAR [path kesanapalli-02] [RTSP source] 68 RTP packets lost
+2026/01/30 09:49:23 WAR [path kesanapalli-03] [RTSP source] 507 RTP packets lost
+2026/01/30 09:49:23 INF [WebRTC] [session 3b463603] closed: peer connection closed
+2026/01/30 09:49:25 WAR [path kesanapalli-03] [RTSP source] 908 RTP packets lost
+2026/01/30 09:49:26 WAR [path kesanapalli-02] [RTSP source] 386 RTP packets lost
+2026/01/30 09:49:26 INF [WebRTC] [session 9186399e] created by [::1]:59107
+2026/01/30 09:49:27 INF [WebRTC] [session 9186399e] peer connection established, local candidate: host/udp/127.0.0.1/8189, remote candidate: prflx/udp/172.19.96.1/61160
+2026/01/30 09:49:27 INF [WebRTC] [session 9186399e] is reading from path 'kesanapalli-03', 1 track (H264)
+2026/01/30 09:49:30 WAR [path kesanapalli-03] [RTSP source] 282 RTP packets lost
+2026/01/30 09:49:31 WAR [path kesanapalli-02] [RTSP source] 1112 RTP packets lost
+2026/01/30 09:49:32 WAR [path kesanapalli-03] [RTSP source] 730 RTP packets lost
+2026/01/30 09:49:33 WAR [path kesanapalli-03] [RTSP source] 463 RTP packets lost
+2026/01/30 09:49:34 WAR [path kesanapalli-02] [RTSP source] 816 RTP packets lost
+2026/01/30 09:49:35 WAR [path kesanapalli-02] [RTSP source] 134 RTP packets lost
+2026/01/30 09:49:36 WAR [path kesanapalli-02] [RTSP source] 420 RTP packets lost
+2026/01/30 09:49:37 WAR [path kesanapalli-03] [RTSP source] 785 RTP packets lost
+2026/01/30 09:49:37 WAR [path kesanapalli-02] [RTSP source] 140 RTP packets lost
+2026/01/30 09:49:38 WAR [path kesanapalli-02] [RTSP source] 132 RTP packets lost
+2026/01/30 09:49:39 WAR [path kesanapalli-02] [RTSP source] 104 RTP packets lost
+2026/01/30 09:49:40 WAR [path kesanapalli-02] [RTSP source] 328 RTP packets lost
+2026/01/30 09:49:41 WAR [path kesanapalli-02] [RTSP source] 132 RTP packets lost
+2026/01/30 09:49:42 WAR [path kesanapalli-02] [RTSP source] 176 RTP packets lost
+2026/01/30 09:49:43 WAR [path kesanapalli-02] [RTSP source] 70 RTP packets lost
+2026/01/30 09:49:44 WAR [path kesanapalli-03] [RTSP source] 995 RTP packets lost
+2026/01/30 09:49:44 WAR [path kesanapalli-02] [RTSP source] 418 RTP packets lost
+2026/01/30 09:49:45 WAR [path kesanapalli-02] [RTSP source] 70 RTP packets lost
+2026/01/30 09:49:47 WAR [path kesanapalli-02] [RTSP source] 140 RTP packets lost
+2026/01/30 09:49:48 WAR [path kesanapalli-03] [RTSP source] 896 RTP packets lost
+2026/01/30 09:49:48 WAR [path kesanapalli-02] [RTSP source] 630 RTP packets lost
+2026/01/30 09:49:49 WAR [path kesanapalli-03] [RTSP source] 868 RTP packets lost
+2026/01/30 09:49:49 WAR [path kesanapalli-02] [RTSP source] 36 RTP packets lost
+2026/01/30 09:49:52 WAR [path kesanapalli-02] [RTSP source] 166 RTP packets lost
+2026/01/30 09:49:53 WAR [path kesanapalli-03] [RTSP source] 789 RTP packets lost
+2026/01/30 09:49:53 WAR [path kesanapalli-02] [RTSP source] 576 RTP packets lost
+2026/01/30 09:49:55 WAR [path kesanapalli-03] [RTSP source] 228 RTP packets lost
+2026/01/30 09:49:58 WAR [path kesanapalli-03] [RTSP source] 344 RTP packets lost
+2026/01/30 09:50:00 WAR [path kesanapalli-03] [RTSP source] 299 RTP packets lost
+2026/01/30 09:50:05 WAR [path kesanapalli-03] [RTSP source] 466 RTP packets lost
+2026/01/30 09:50:05 WAR [path kesanapalli-02] [RTSP source] 286 RTP packets lost
+2026/01/30 09:50:06 WAR [path kesanapalli-02] [RTSP source] 354 RTP packets lost
+2026/01/30 09:50:07 WAR [path kesanapalli-03] [RTSP source] 1025 RTP packets lost
+2026/01/30 09:50:07 WAR [path kesanapalli-02] [RTSP source] 68 RTP packets lost
+2026/01/30 09:50:08 WAR [path kesanapalli-03] [RTSP source] 338 RTP packets lost
+2026/01/30 09:50:10 WAR [path kesanapalli-03] [RTSP source] 350 RTP packets lost
+2026/01/30 09:50:12 WAR [path kesanapalli-03] [RTSP source] 343 RTP packets lost
+2026/01/30 09:50:13 WAR [path kesanapalli-02] [RTSP source] 182 RTP packets lost
+2026/01/30 09:50:16 WAR [path kesanapalli-03] [RTSP source] 645 RTP packets lost
+2026/01/30 09:50:16 WAR [path kesanapalli-02] [RTSP source] 34 RTP packets lost
+2026/01/30 09:50:17 WAR [path kesanapalli-02] [RTSP source] 312 RTP packets lost
+2026/01/30 09:50:18 WAR [path kesanapalli-03] [RTSP source] 568 RTP packets lost
+2026/01/30 09:50:20 WAR [path kesanapalli-02] [RTSP source] 36 RTP packets lost
+2026/01/30 09:50:21 WAR [path kesanapalli-02] [RTSP source] 72 RTP packets lost
+2026/01/30 09:50:22 WAR [path kesanapalli-03] [RTSP source] 577 RTP packets lost
+2026/01/30 09:50:23 WAR [path kesanapalli-02] [RTSP source] 72 RTP packets lost
+2026/01/30 09:50:23 INF [WebRTC] [session a19c6e7e] closed: peer connection closed
+2026/01/30 09:50:24 WAR [path kesanapalli-02] [RTSP source] 210 RTP packets lost
+2026/01/30 09:50:26 WAR [path kesanapalli-03] [RTSP source] 575 RTP packets lost
+2026/01/30 09:50:26 WAR [path kesanapalli-02] [RTSP source] 72 RTP packets lost
+2026/01/30 09:50:27 WAR [path kesanapalli-03] [RTSP source] 672 RTP packets lost
+2026/01/30 09:50:30 INF [WebRTC] [session a4bf0b79] created by [::1]:54838
+2026/01/30 09:50:30 INF [WebRTC] [session a4bf0b79] peer connection established, local candidate: host/udp/192.168.48.1/8189, remote candidate: prflx/udp/127.0.0.1/57536
+2026/01/30 09:50:30 INF [WebRTC] [session a4bf0b79] is reading from path 'kesanapalli-02', 1 track (H264)
+2026/01/30 09:50:31 WAR [path kesanapalli-02] [RTSP source] 216 RTP packets lost
+2026/01/30 09:50:32 WAR [path kesanapalli-03] [RTSP source] 573 RTP packets lost
+2026/01/30 09:50:32 WAR [path kesanapalli-02] [RTSP source] 83 RTP packets lost
+2026/01/30 09:50:34 WAR [path kesanapalli-02] [RTSP source] 108 RTP packets lost
+2026/01/30 09:50:35 WAR [path kesanapalli-02] [RTSP source] 416 RTP packets lost
+2026/01/30 09:50:36 WAR [path kesanapalli-03] [RTSP source] 1210 RTP packets lost
+2026/01/30 09:50:36 WAR [path kesanapalli-02] [RTSP source] 111 RTP packets lost
+2026/01/30 09:50:37 WAR [path kesanapalli-02] [RTSP source] 121 RTP packets lost
+2026/01/30 09:50:38 WAR [path kesanapalli-02] [RTSP source] 111 RTP packets lost
+2026/01/30 09:50:39 WAR [path kesanapalli-02] [RTSP source] 37 RTP packets lost
+2026/01/30 09:50:40 WAR [path kesanapalli-03] [RTSP source] 864 RTP packets lost
+2026/01/30 09:50:41 WAR [path kesanapalli-02] [RTSP source] 37 RTP packets lost
+2026/01/30 09:50:42 WAR [path kesanapalli-03] [RTSP source] 546 RTP packets lost
+2026/01/30 09:50:43 WAR [path kesanapalli-02] [RTSP source] 344 RTP packets lost
+2026/01/30 09:50:46 WAR [path kesanapalli-03] [RTSP source] 657 RTP packets lost
+2026/01/30 09:50:46 WAR [path kesanapalli-02] [RTSP source] 240 RTP packets lost
+2026/01/30 09:50:47 WAR [path kesanapalli-02] [RTSP source] 364 RTP packets lost
+2026/01/30 09:50:48 INF [WebRTC] [session 9e2345ba] created by [::1]:54838
+2026/01/30 09:50:48 INF [path vijayawada-01] [RTSP source] started on demand
+2026/01/30 09:50:48 WAR [path kesanapalli-02] [RTSP source] 240 RTP packets lost
+2026/01/30 09:50:50 WAR [path kesanapalli-03] [RTSP source] 868 RTP packets lost
+2026/01/30 09:50:52 WAR [path kesanapalli-03] [RTSP source] 656 RTP packets lost
+2026/01/30 09:50:53 WAR [path kesanapalli-02] [RTSP source] 72 RTP packets lost
+2026/01/30 09:50:54 WAR [path kesanapalli-03] [RTSP source] 221 RTP packets lost
+2026/01/30 09:50:55 WAR [path kesanapalli-02] [RTSP source] 214 RTP packets lost
+2026/01/30 09:50:56 WAR [path kesanapalli-02] [RTSP source] 286 RTP packets lost
+2026/01/30 09:50:58 INF [path vijayawada-01] [RTSP source] stopped: timed out
+2026/01/30 09:50:58 INF [WebRTC] [session 9e2345ba] closed: source of path 'vijayawada-01' has timed out
+2026/01/30 09:50:58 ERR [path vijayawada-01] [RTSP source] dial tcp 10.205.101.141:554: i/o timeout
+2026/01/30 09:50:58 WAR [path kesanapalli-03] [RTSP source] 1057 RTP packets lost
+2026/01/30 09:50:59 WAR [path kesanapalli-02] [RTSP source] 70 RTP packets lost
+2026/01/30 09:51:00 WAR [path kesanapalli-02] [RTSP source] 250 RTP packets lost
+2026/01/30 09:51:01 WAR [path kesanapalli-02] [RTSP source] 316 RTP packets lost
+2026/01/30 09:51:03 WAR [path kesanapalli-02] [RTSP source] 83 RTP packets lost
+2026/01/30 09:51:04 WAR [path kesanapalli-03] [RTSP source] 697 RTP packets lost
+2026/01/30 09:51:05 WAR [path kesanapalli-03] [RTSP source] 917 RTP packets lost
+2026/01/30 09:51:05 WAR [path kesanapalli-02] [RTSP source] 106 RTP packets lost
+2026/01/30 09:51:07 WAR [path kesanapalli-03] [RTSP source] 293 RTP packets lost
+2026/01/30 09:51:07 WAR [path kesanapalli-02] [RTSP source] 586 RTP packets lost
+2026/01/30 09:51:08 WAR [path kesanapalli-02] [RTSP source] 392 RTP packets lost
+2026/01/30 09:51:09 WAR [path kesanapalli-03] [RTSP source] 341 RTP packets lost
+2026/01/30 09:51:11 WAR [path kesanapalli-02] [RTSP source] 72 RTP packets lost
+2026/01/30 09:51:12 WAR [path kesanapalli-03] [RTSP source] 678 RTP packets lost
+2026/01/30 09:51:13 WAR [path kesanapalli-02] [RTSP source] 260 RTP packets lost
+2026/01/30 09:51:15 WAR [path kesanapalli-02] [RTSP source] 504 RTP packets lost
+2026/01/30 09:51:16 WAR [path kesanapalli-02] [RTSP source] 34 RTP packets lost
+2026/01/30 09:51:17 WAR [path kesanapalli-03] [RTSP source] 569 RTP packets lost
+2026/01/30 09:51:17 WAR [path kesanapalli-02] [RTSP source] 444 RTP packets lost
+2026/01/30 09:51:18 WAR [path kesanapalli-02] [RTSP source] 34 RTP packets lost
+2026/01/30 09:51:19 WAR [path kesanapalli-03] [RTSP source] 816 RTP packets lost
+2026/01/30 09:51:20 WAR [path kesanapalli-03] [RTSP source] 459 RTP packets lost
+2026/01/30 09:51:20 WAR [path kesanapalli-02] [RTSP source] 144 RTP packets lost
+2026/01/30 09:51:23 WAR [path kesanapalli-03] [RTSP source] 359 RTP packets lost
+2026/01/30 09:51:26 WAR [path kesanapalli-03] [RTSP source] 357 RTP packets lost
+2026/01/30 09:51:28 WAR [path kesanapalli-03] [RTSP source] 427 RTP packets lost
+2026/01/30 09:51:30 WAR [path kesanapalli-02] [RTSP source] 70 RTP packets lost
+2026/01/30 09:51:32 WAR [path kesanapalli-03] [RTSP source] 245 RTP packets lost
+2026/01/30 09:51:33 WAR [path kesanapalli-02] [RTSP source] 38 RTP packets lost
+2026/01/30 09:51:35 WAR [path kesanapalli-03] [RTSP source] 248 RTP packets lost
+2026/01/30 09:51:36 INF [WebRTC] [session eb372a17] created by [::1]:62703
+2026/01/30 09:51:36 INF [WebRTC] [session eb372a17] closed: no stream is available on path 'kesanapalli-01-h264'
+2026/01/30 09:51:37 WAR [path kesanapalli-03] [RTSP source] 372 RTP packets lost
+2026/01/30 09:51:38 WAR [path kesanapalli-03] [RTSP source] 247 RTP packets lost
+2026/01/30 09:51:38 WAR [path kesanapalli-02] [RTSP source] 68 RTP packets lost
+2026/01/30 09:51:41 WAR [path kesanapalli-03] [RTSP source] 310 RTP packets lost
+2026/01/30 09:51:44 WAR [path kesanapalli-03] [RTSP source] 357 RTP packets lost
+2026/01/30 09:51:46 WAR [path kesanapalli-03] [RTSP source] 360 RTP packets lost
+2026/01/30 09:51:47 WAR [path kesanapalli-03] [RTSP source] 358 RTP packets lost
+2026/01/30 09:51:48 WAR [path kesanapalli-02] [RTSP source] 68 RTP packets lost
+2026/01/30 09:51:49 WAR [path kesanapalli-03] [RTSP source] 241 RTP packets lost
+2026/01/30 09:51:49 WAR [path kesanapalli-02] [RTSP source] 62 RTP packets lost
+2026/01/30 09:51:52 WAR [path kesanapalli-03] [RTSP source] 410 RTP packets lost
+2026/01/30 09:51:54 WAR [path kesanapalli-03] [RTSP source] 292 RTP packets lost
+2026/01/30 09:51:56 WAR [path kesanapalli-03] [RTSP source] 359 RTP packets lost
+2026/01/30 09:51:58 WAR [path kesanapalli-03] [RTSP source] 428 RTP packets lost
+2026/01/30 09:51:58 WAR [path kesanapalli-02] [RTSP source] 72 RTP packets lost
+2026/01/30 09:52:01 WAR [path kesanapalli-03] [RTSP source] 363 RTP packets lost
+2026/01/30 09:52:03 WAR [path kesanapalli-03] [RTSP source] 358 RTP packets lost
+2026/01/30 09:52:06 INF [WebRTC] [session 9186399e] closed: peer connection closed
+2026/01/30 09:52:06 WAR [path kesanapalli-02] [RTSP source] 142 RTP packets lost
+2026/01/30 09:52:07 WAR [path kesanapalli-03] [RTSP source] 594 RTP packets lost
+2026/01/30 09:52:07 WAR [path kesanapalli-02] [RTSP source] 178 RTP packets lost
+2026/01/30 09:52:09 INF [WebRTC] [session a4bf0b79] closed: peer connection closed
+2026/01/30 09:52:10 WAR [path kesanapalli-02] [RTSP source] 278 RTP packets lost
+2026/01/30 09:52:11 WAR [path kesanapalli-02] [RTSP source] 142 RTP packets lost
+2026/01/30 09:52:12 INF [WebRTC] [session cb3e9eea] created by [::1]:63175
+2026/01/30 09:52:12 WAR [path kesanapalli-03] [RTSP source] 872 RTP packets lost
+2026/01/30 09:52:12 WAR [path kesanapalli-02] [RTSP source] 202 RTP packets lost
+2026/01/30 09:52:12 INF [WebRTC] [session cb3e9eea] peer connection established, local candidate: host/udp/192.168.48.1/8189, remote candidate: prflx/udp/172.19.96.1/57674
+2026/01/30 09:52:12 INF [WebRTC] [session cb3e9eea] is reading from path 'kesanapalli-03', 1 track (H264)
+2026/01/30 09:52:13 WAR [path kesanapalli-03] [RTSP source] 937 RTP packets lost
+2026/01/30 09:52:13 WAR [path kesanapalli-02] [RTSP source] 142 RTP packets lost
+2026/01/30 09:52:14 WAR [path kesanapalli-02] [RTSP source] 134 RTP packets lost
+2026/01/30 09:52:15 INF [WebRTC] [session 3daddd7a] created by [::1]:63175
+2026/01/30 09:52:15 WAR [path kesanapalli-02] [RTSP source] 410 RTP packets lost
+2026/01/30 09:52:15 INF [WebRTC] [session 3daddd7a] peer connection established, local candidate: host/udp/172.19.96.1/8189, remote candidate: prflx/udp/172.19.96.1/58689
+2026/01/30 09:52:15 INF [WebRTC] [session 3daddd7a] is reading from path 'kesanapalli-02', 1 track (H264)
+2026/01/30 09:52:16 WAR [path kesanapalli-03] [RTSP source] 464 RTP packets lost
+2026/01/30 09:52:18 WAR [path kesanapalli-02] [RTSP source] 70 RTP packets lost
+2026/01/30 09:52:19 WAR [path kesanapalli-02] [RTSP source] 72 RTP packets lost
+2026/01/30 09:52:20 WAR [path kesanapalli-03] [RTSP source] 348 RTP packets lost
+2026/01/30 09:52:20 WAR [path kesanapalli-02] [RTSP source] 206 RTP packets lost
+2026/01/30 09:52:21 WAR [path kesanapalli-02] [RTSP source] 388 RTP packets lost
+2026/01/30 09:52:22 WAR [path kesanapalli-02] [RTSP source] 107 RTP packets lost
+2026/01/30 09:52:22 WAR [path kesanapalli-03] [RTSP source] 1090 RTP packets lost
+2026/01/30 09:52:23 WAR [path kesanapalli-02] [RTSP source] 178 RTP packets lost
+2026/01/30 09:52:24 WAR [path kesanapalli-02] [RTSP source] 250 RTP packets lost
+2026/01/30 09:52:26 WAR [path kesanapalli-02] [RTSP source] 132 RTP packets lost
+2026/01/30 09:52:27 INF [WebRTC] [session 56f1a11b] created by [::1]:63175
+2026/01/30 09:52:27 INF [WebRTC] [session 56f1a11b] closed: no stream is available on path 'kesanapalli-04-h264'
+2026/01/30 09:52:27 WAR [path kesanapalli-03] [RTSP source] 779 RTP packets lost
+2026/01/30 09:52:28 WAR [path kesanapalli-02] [RTSP source] 168 RTP packets lost
+2026/01/30 09:52:29 WAR [path kesanapalli-02] [RTSP source] 653 RTP packets lost
+2026/01/30 09:52:30 WAR [path kesanapalli-03] [RTSP source] 767 RTP packets lost
+2026/01/30 09:52:33 WAR [path kesanapalli-03] [RTSP source] 752 RTP packets lost
+2026/01/30 09:52:34 WAR [path kesanapalli-03] [RTSP source] 634 RTP packets lost
+2026/01/30 09:52:35 WAR [path kesanapalli-02] [RTSP source] 362 RTP packets lost
+2026/01/30 09:52:36 WAR [path kesanapalli-02] [RTSP source] 110 RTP packets lost
+2026/01/30 09:52:37 WAR [path kesanapalli-02] [RTSP source] 36 RTP packets lost
+2026/01/30 09:52:38 WAR [path kesanapalli-02] [RTSP source] 72 RTP packets lost
+2026/01/30 09:52:41 WAR [path kesanapalli-03] [RTSP source] 972 RTP packets lost
+2026/01/30 09:52:42 WAR [path kesanapalli-02] [RTSP source] 152 RTP packets lost
+2026/01/30 09:52:43 WAR [path kesanapalli-02] [RTSP source] 118 RTP packets lost
+2026/01/30 09:52:44 WAR [path kesanapalli-02] [RTSP source] 108 RTP packets lost
+2026/01/30 09:52:45 INF [WebRTC] [session 0563b384] created by [::1]:63175
+2026/01/30 09:52:45 INF [path vijayawada-01] [RTSP source] started on demand
+2026/01/30 09:52:45 WAR [path kesanapalli-03] [RTSP source] 1341 RTP packets lost
+2026/01/30 09:52:45 WAR [path kesanapalli-02] [RTSP source] 576 RTP packets lost
+2026/01/30 09:52:46 WAR [path kesanapalli-02] [RTSP source] 72 RTP packets lost
+2026/01/30 09:52:47 WAR [path kesanapalli-02] [RTSP source] 36 RTP packets lost
+2026/01/30 09:52:48 WAR [path kesanapalli-03] [RTSP source] 441 RTP packets lost
+2026/01/30 09:52:48 WAR [path kesanapalli-02] [RTSP source] 72 RTP packets lost
+2026/01/30 09:52:50 WAR [path kesanapalli-02] [RTSP source] 108 RTP packets lost
+2026/01/30 09:52:51 WAR [path kesanapalli-02] [RTSP source] 116 RTP packets lost
+2026/01/30 09:52:53 WAR [path kesanapalli-02] [RTSP source] 142 RTP packets lost
+2026/01/30 09:52:54 WAR [path kesanapalli-03] [RTSP source] 1365 RTP packets lost
+2026/01/30 09:52:54 WAR [path kesanapalli-02] [RTSP source] 604 RTP packets lost
+2026/01/30 09:52:55 INF [path vijayawada-01] [RTSP source] stopped: timed out
+2026/01/30 09:52:55 INF [WebRTC] [session 0563b384] closed: source of path 'vijayawada-01' has timed out
+2026/01/30 09:52:55 ERR [path vijayawada-01] [RTSP source] dial tcp 10.205.101.141:554: i/o timeout
+2026/01/30 09:52:56 WAR [path kesanapalli-02] [RTSP source] 426 RTP packets lost
+2026/01/30 09:52:57 WAR [path kesanapalli-03] [RTSP source] 771 RTP packets lost
+2026/01/30 09:52:57 WAR [path kesanapalli-02] [RTSP source] 70 RTP packets lost
+2026/01/30 09:52:58 WAR [path kesanapalli-02] [RTSP source] 132 RTP packets lost
+2026/01/30 09:52:59 WAR [path kesanapalli-02] [RTSP source] 288 RTP packets lost
+2026/01/30 09:53:00 WAR [path kesanapalli-02] [RTSP source] 206 RTP packets lost
+2026/01/30 09:53:01 WAR [path kesanapalli-03] [RTSP source] 1103 RTP packets lost
+2026/01/30 09:53:01 WAR [path kesanapalli-02] [RTSP source] 248 RTP packets lost
+2026/01/30 09:53:02 WAR [path kesanapalli-02] [RTSP source] 274 RTP packets lost
+2026/01/30 09:53:03 INF [WebRTC] [session d4346d8f] created by [::1]:63175
+2026/01/30 09:53:03 INF [WebRTC] [session d4346d8f] closed: no stream is available on path 'kesanapalli-04-h264'
+2026/01/30 09:53:03 WAR [path kesanapalli-03] [RTSP source] 334 RTP packets lost
+2026/01/30 09:53:03 WAR [path kesanapalli-02] [RTSP source] 140 RTP packets lost
+2026/01/30 09:53:04 WAR [path kesanapalli-02] [RTSP source] 168 RTP packets lost
+2026/01/30 09:53:05 WAR [path kesanapalli-02] [RTSP source] 390 RTP packets lost
+2026/01/30 09:53:07 WAR [path kesanapalli-03] [RTSP source] 667 RTP packets lost
+2026/01/30 09:53:10 WAR [path kesanapalli-03] [RTSP source] 623 RTP packets lost
+2026/01/30 09:53:10 WAR [path kesanapalli-02] [RTSP source] 416 RTP packets lost
+2026/01/30 09:53:11 WAR [path kesanapalli-02] [RTSP source] 360 RTP packets lost
+2026/01/30 09:53:12 WAR [path kesanapalli-03] [RTSP source] 455 RTP packets lost
+2026/01/30 09:53:13 WAR [path kesanapalli-02] [RTSP source] 34 RTP packets lost
+2026/01/30 09:53:14 WAR [path kesanapalli-03] [RTSP source] 461 RTP packets lost
+2026/01/30 09:53:14 WAR [path kesanapalli-02] [RTSP source] 206 RTP packets lost
+2026/01/30 09:53:15 WAR [path kesanapalli-02] [RTSP source] 104 RTP packets lost
+2026/01/30 09:53:16 WAR [path kesanapalli-02] [RTSP source] 104 RTP packets lost
+2026/01/30 09:53:17 WAR [path kesanapalli-03] [RTSP source] 411 RTP packets lost
+2026/01/30 09:53:17 WAR [path kesanapalli-02] [RTSP source] 104 RTP packets lost
+2026/01/30 09:53:18 WAR [path kesanapalli-02] [RTSP source] 70 RTP packets lost
+2026/01/30 09:53:19 WAR [path kesanapalli-03] [RTSP source] 501 RTP packets lost
+2026/01/30 09:53:19 WAR [path kesanapalli-02] [RTSP source] 70 RTP packets lost
+2026/01/30 09:53:20 WAR [path kesanapalli-02] [RTSP source] 328 RTP packets lost
+2026/01/30 09:53:21 WAR [path kesanapalli-02] [RTSP source] 204 RTP packets lost
+2026/01/30 09:53:22 WAR [path kesanapalli-02] [RTSP source] 70 RTP packets lost
+2026/01/30 09:53:23 WAR [path kesanapalli-03] [RTSP source] 827 RTP packets lost
+2026/01/30 09:53:24 WAR [path kesanapalli-02] [RTSP source] 230 RTP packets lost
+2026/01/30 09:53:25 WAR [path kesanapalli-03] [RTSP source] 389 RTP packets lost
+2026/01/30 09:53:25 WAR [path kesanapalli-02] [RTSP source] 356 RTP packets lost
+2026/01/30 09:53:27 WAR [path kesanapalli-02] [RTSP source] 36 RTP packets lost
+2026/01/30 09:53:28 WAR [path kesanapalli-03] [RTSP source] 673 RTP packets lost
+2026/01/30 09:53:28 WAR [path kesanapalli-02] [RTSP source] 70 RTP packets lost
+2026/01/30 09:53:29 WAR [path kesanapalli-02] [RTSP source] 286 RTP packets lost
+2026/01/30 09:53:30 WAR [path kesanapalli-02] [RTSP source] 106 RTP packets lost
+2026/01/30 09:53:31 WAR [path kesanapalli-02] [RTSP source] 36 RTP packets lost
+2026/01/30 09:53:32 WAR [path kesanapalli-02] [RTSP source] 320 RTP packets lost
+2026/01/30 09:53:33 INF [WebRTC] [session 3daddd7a] closed: peer connection closed
+2026/01/30 09:53:33 WAR [path kesanapalli-02] [RTSP source] 370 RTP packets lost
+2026/01/30 09:53:34 WAR [path kesanapalli-03] [RTSP source] 1059 RTP packets lost
+2026/01/30 09:53:35 WAR [path kesanapalli-02] [RTSP source] 140 RTP packets lost
+2026/01/30 09:53:36 WAR [path kesanapalli-02] [RTSP source] 70 RTP packets lost
+2026/01/30 09:53:37 WAR [path kesanapalli-02] [RTSP source] 426 RTP packets lost
+2026/01/30 09:53:38 WAR [path kesanapalli-03] [RTSP source] 1215 RTP packets lost
+2026/01/30 09:53:39 WAR [path kesanapalli-02] [RTSP source] 132 RTP packets lost
+2026/01/30 09:53:39 INF [WebRTC] [session 169e5b53] created by [::1]:60419
+2026/01/30 09:53:39 INF [WebRTC] [session 169e5b53] closed: no stream is available on path 'kesanapalli-04-h264'
+2026/01/30 09:53:40 WAR [path kesanapalli-02] [RTSP source] 384 RTP packets lost
+2026/01/30 09:53:41 WAR [path kesanapalli-03] [RTSP source] 791 RTP packets lost
+2026/01/30 09:53:41 WAR [path kesanapalli-02] [RTSP source] 278 RTP packets lost
+2026/01/30 09:53:43 INF [path kesanapalli-02] [RTSP source] stopped: not needed by anyone
+2026/01/30 09:53:44 WAR [path kesanapalli-03] [RTSP source] 405 RTP packets lost
+2026/01/30 09:53:46 WAR [path kesanapalli-03] [RTSP source] 631 RTP packets lost
+2026/01/30 09:53:48 WAR [path kesanapalli-03] [RTSP source] 335 RTP packets lost
+2026/01/30 09:53:48 INF [WebRTC] [session 9cb82871] created by [::1]:60419
+2026/01/30 09:53:48 INF [path kesanapalli-02] [RTSP source] started on demand
+2026/01/30 09:53:49 INF [path kesanapalli-02] [RTSP source] ready: 1 track (H264)
+2026/01/30 09:53:49 INF [WebRTC] [session 9cb82871] peer connection established, local candidate: host/udp/172.19.96.1/8189, remote candidate: prflx/udp/127.0.0.1/55669
+2026/01/30 09:53:49 INF [WebRTC] [session 9cb82871] is reading from path 'kesanapalli-02', 1 track (H264)
+2026/01/30 09:53:52 WAR [path kesanapalli-03] [RTSP source] 562 RTP packets lost
+2026/01/30 09:53:52 WAR [path kesanapalli-02] [RTSP source] 37 RTP packets lost
+2026/01/30 09:53:53 WAR [path kesanapalli-02] [RTSP source] 121 RTP packets lost
+2026/01/30 09:53:54 WAR [path kesanapalli-03] [RTSP source] 995 RTP packets lost
+2026/01/30 09:53:55 WAR [path kesanapalli-02] [RTSP source] 74 RTP packets lost
+2026/01/30 09:53:56 WAR [path kesanapalli-02] [RTSP source] 82 RTP packets lost
+2026/01/30 09:53:58 WAR [path kesanapalli-03] [RTSP source] 626 RTP packets lost
+2026/01/30 09:53:59 WAR [path kesanapalli-03] [RTSP source] 571 RTP packets lost
+2026/01/30 09:53:59 WAR [path kesanapalli-02] [RTSP source] 37 RTP packets lost
+2026/01/30 09:54:00 WAR [path kesanapalli-02] [RTSP source] 111 RTP packets lost
+2026/01/30 09:54:01 WAR [path kesanapalli-02] [RTSP source] 84 RTP packets lost
+2026/01/30 09:54:02 WAR [path kesanapalli-02] [RTSP source] 148 RTP packets lost
+2026/01/30 09:54:03 WAR [path kesanapalli-03] [RTSP source] 452 RTP packets lost
+2026/01/30 09:54:03 WAR [path kesanapalli-02] [RTSP source] 37 RTP packets lost
+2026/01/30 09:54:04 WAR [path kesanapalli-03] [RTSP source] 448 RTP packets lost
+2026/01/30 09:54:08 WAR [path kesanapalli-03] [RTSP source] 394 RTP packets lost
+2026/01/30 09:54:10 WAR [path kesanapalli-02] [RTSP source] 148 RTP packets lost
+2026/01/30 09:54:12 WAR [path kesanapalli-03] [RTSP source] 356 RTP packets lost
+2026/01/30 09:54:15 WAR [path kesanapalli-03] [RTSP source] 191 RTP packets lost
+2026/01/30 09:54:18 WAR [path kesanapalli-03] [RTSP source] 247 RTP packets lost
+2026/01/30 09:54:21 WAR [path kesanapalli-03] [RTSP source] 534 RTP packets lost
+2026/01/30 09:54:23 WAR [path kesanapalli-03] [RTSP source] 430 RTP packets lost
+2026/01/30 09:54:25 WAR [path kesanapalli-03] [RTSP source] 364 RTP packets lost
+2026/01/30 09:54:28 WAR [path kesanapalli-03] [RTSP source] 478 RTP packets lost
+2026/01/30 09:54:29 WAR [path kesanapalli-03] [RTSP source] 301 RTP packets lost
+2026/01/30 09:54:29 WAR [path kesanapalli-02] [RTSP source] 74 RTP packets lost
+2026/01/30 09:54:31 WAR [path kesanapalli-03] [RTSP source] 360 RTP packets lost
+2026/01/30 09:54:34 WAR [path kesanapalli-03] [RTSP source] 599 RTP packets lost
+2026/01/30 09:54:37 WAR [path kesanapalli-03] [RTSP source] 474 RTP packets lost
+2026/01/30 09:54:38 WAR [path kesanapalli-02] [RTSP source] 37 RTP packets lost
+2026/01/30 09:54:39 WAR [path kesanapalli-02] [RTSP source] 111 RTP packets lost
+2026/01/30 09:54:41 WAR [path kesanapalli-02] [RTSP source] 39 RTP packets lost
+2026/01/30 09:54:42 WAR [path kesanapalli-03] [RTSP source] 466 RTP packets lost
+2026/01/30 09:54:42 WAR [path kesanapalli-02] [RTSP source] 66 RTP packets lost
+2026/01/30 09:54:43 WAR [path kesanapalli-03] [RTSP source] 1030 RTP packets lost
+2026/01/30 09:54:43 WAR [path kesanapalli-02] [RTSP source] 111 RTP packets lost
+2026/01/30 09:54:44 WAR [path kesanapalli-02] [RTSP source] 358 RTP packets lost
+2026/01/30 09:54:45 WAR [path kesanapalli-03] [RTSP source] 292 RTP packets lost
+2026/01/30 09:54:45 WAR [path kesanapalli-02] [RTSP source] 113 RTP packets lost
+2026/01/30 09:54:46 WAR [path kesanapalli-02] [RTSP source] 185 RTP packets lost
+2026/01/30 09:54:47 WAR [path kesanapalli-02] [RTSP source] 74 RTP packets lost
+2026/01/30 09:54:48 WAR [path kesanapalli-03] [RTSP source] 347 RTP packets lost
+2026/01/30 09:54:48 WAR [path kesanapalli-02] [RTSP source] 313 RTP packets lost
+2026/01/30 09:54:49 WAR [path kesanapalli-02] [RTSP source] 210 RTP packets lost
+2026/01/30 09:54:50 WAR [path kesanapalli-03] [RTSP source] 690 RTP packets lost
+2026/01/30 09:54:50 WAR [path kesanapalli-02] [RTSP source] 140 RTP packets lost
+2026/01/30 09:54:52 WAR [path kesanapalli-03] [RTSP source] 341 RTP packets lost
+2026/01/30 09:54:53 WAR [path kesanapalli-02] [RTSP source] 752 RTP packets lost
+2026/01/30 09:54:55 WAR [path kesanapalli-03] [RTSP source] 569 RTP packets lost
+2026/01/30 09:54:55 WAR [path kesanapalli-02] [RTSP source] 144 RTP packets lost
+2026/01/30 09:54:56 WAR [path kesanapalli-02] [RTSP source] 138 RTP packets lost
+2026/01/30 09:54:57 WAR [path kesanapalli-02] [RTSP source] 140 RTP packets lost
+2026/01/30 09:54:58 WAR [path kesanapalli-02] [RTSP source] 140 RTP packets lost
+2026/01/30 09:54:59 WAR [path kesanapalli-02] [RTSP source] 187 RTP packets lost
+2026/01/30 09:55:00 WAR [path kesanapalli-02] [RTSP source] 335 RTP packets lost
+2026/01/30 09:55:01 WAR [path kesanapalli-02] [RTSP source] 74 RTP packets lost
+2026/01/30 09:55:02 WAR [path kesanapalli-03] [RTSP source] 1576 RTP packets lost
+2026/01/30 09:55:03 WAR [path kesanapalli-02] [RTSP source] 39 RTP packets lost
+2026/01/30 09:55:04 WAR [path kesanapalli-03] [RTSP source] 741 RTP packets lost
+2026/01/30 09:55:04 WAR [path kesanapalli-02] [RTSP source] 278 RTP packets lost
+2026/01/30 09:55:05 WAR [path kesanapalli-02] [RTSP source] 220 RTP packets lost
+2026/01/30 09:55:06 WAR [path kesanapalli-02] [RTSP source] 121 RTP packets lost
+2026/01/30 09:55:07 WAR [path kesanapalli-03] [RTSP source] 448 RTP packets lost
+2026/01/30 09:55:09 WAR [path kesanapalli-03] [RTSP source] 671 RTP packets lost
+2026/01/30 09:55:09 WAR [path kesanapalli-02] [RTSP source] 184 RTP packets lost
+2026/01/30 09:55:11 WAR [path kesanapalli-03] [RTSP source] 228 RTP packets lost
+2026/01/30 09:55:13 WAR [path kesanapalli-02] [RTSP source] 111 RTP packets lost
+2026/01/30 09:55:14 WAR [path kesanapalli-02] [RTSP source] 148 RTP packets lost
+2026/01/30 09:55:15 WAR [path kesanapalli-02] [RTSP source] 37 RTP packets lost
+2026/01/30 09:55:16 WAR [path kesanapalli-03] [RTSP source] 462 RTP packets lost
+2026/01/30 09:55:16 WAR [path kesanapalli-02] [RTSP source] 74 RTP packets lost
+2026/01/30 09:55:18 WAR [path kesanapalli-03] [RTSP source] 680 RTP packets lost
+2026/01/30 09:55:18 WAR [path kesanapalli-02] [RTSP source] 74 RTP packets lost
+2026/01/30 09:55:19 WAR [path kesanapalli-02] [RTSP source] 158 RTP packets lost
+2026/01/30 09:55:20 WAR [path kesanapalli-02] [RTSP source] 232 RTP packets lost
+2026/01/30 09:55:21 WAR [path kesanapalli-03] [RTSP source] 513 RTP packets lost
+2026/01/30 09:55:21 WAR [path kesanapalli-02] [RTSP source] 168 RTP packets lost
+2026/01/30 09:55:21 INF [WebRTC] [session 9cb82871] closed: peer connection closed
+2026/01/30 09:55:23 WAR [path kesanapalli-02] [RTSP source] 37 RTP packets lost
+2026/01/30 09:55:24 WAR [path kesanapalli-02] [RTSP source] 36 RTP packets lost
+2026/01/30 09:55:24 INF [WebRTC] [session dfe986d6] created by [::1]:49773
+2026/01/30 09:55:25 INF [WebRTC] [session dfe986d6] peer connection established, local candidate: host/udp/192.168.1.70/8189, remote candidate: prflx/udp/127.0.0.1/52310
+2026/01/30 09:55:25 INF [WebRTC] [session dfe986d6] is reading from path 'kesanapalli-02', 1 track (H264)
+2026/01/30 09:55:26 WAR [path kesanapalli-03] [RTSP source] 1033 RTP packets lost
+2026/01/30 09:55:26 WAR [path kesanapalli-02] [RTSP source] 36 RTP packets lost
+2026/01/30 09:55:27 WAR [path kesanapalli-02] [RTSP source] 180 RTP packets lost
+2026/01/30 09:55:28 WAR [path kesanapalli-02] [RTSP source] 302 RTP packets lost
+2026/01/30 09:55:29 WAR [path kesanapalli-03] [RTSP source] 757 RTP packets lost
+2026/01/30 09:55:29 WAR [path kesanapalli-02] [RTSP source] 108 RTP packets lost
+2026/01/30 09:55:30 WAR [path kesanapalli-02] [RTSP source] 150 RTP packets lost
+2026/01/30 09:55:31 WAR [path kesanapalli-03] [RTSP source] 886 RTP packets lost
+2026/01/30 09:55:31 WAR [path kesanapalli-02] [RTSP source] 68 RTP packets lost
+2026/01/30 09:55:32 WAR [path kesanapalli-02] [RTSP source] 174 RTP packets lost
+2026/01/30 09:55:33 WAR [path kesanapalli-02] [RTSP source] 68 RTP packets lost
+2026/01/30 09:55:34 WAR [path kesanapalli-03] [RTSP source] 122 RTP packets lost
+2026/01/30 09:55:34 WAR [path kesanapalli-02] [RTSP source] 96 RTP packets lost
+2026/01/30 09:55:36 INF [WebRTC] [session 3db992a1] created by [::1]:49773
+2026/01/30 09:55:36 INF [WebRTC] [session 3db992a1] closed: no stream is available on path 'kesanapalli-01-h264'
+2026/01/30 09:55:37 WAR [path kesanapalli-03] [RTSP source] 428 RTP packets lost
+2026/01/30 09:55:39 WAR [path kesanapalli-03] [RTSP source] 369 RTP packets lost
+2026/01/30 09:55:42 WAR [path kesanapalli-03] [RTSP source] 430 RTP packets lost
+2026/01/30 09:55:45 WAR [path kesanapalli-03] [RTSP source] 494 RTP packets lost
+2026/01/30 09:55:45 INF [WebRTC] [session dc0a48d9] created by [::1]:49773
+2026/01/30 09:55:45 INF [WebRTC] [session dc0a48d9] closed: no stream is available on path 'kesanapalli-04-h264'
+2026/01/30 09:55:46 WAR [path kesanapalli-03] [RTSP source] 312 RTP packets lost
+2026/01/30 09:55:49 WAR [path kesanapalli-03] [RTSP source] 490 RTP packets lost
+2026/01/30 09:55:51 WAR [path kesanapalli-03] [RTSP source] 368 RTP packets lost
+2026/01/30 09:55:56 WAR [path kesanapalli-03] [RTSP source] 379 RTP packets lost
+2026/01/30 09:55:56 WAR [path kesanapalli-02] [RTSP source] 72 RTP packets lost
+2026/01/30 09:55:58 WAR [path kesanapalli-02] [RTSP source] 36 RTP packets lost
+2026/01/30 09:55:59 WAR [path kesanapalli-03] [RTSP source] 614 RTP packets lost
+2026/01/30 09:56:00 WAR [path kesanapalli-03] [RTSP source] 245 RTP packets lost
+2026/01/30 09:56:04 WAR [path kesanapalli-03] [RTSP source] 320 RTP packets lost
+2026/01/30 09:56:06 WAR [path kesanapalli-03] [RTSP source] 612 RTP packets lost
+2026/01/30 09:56:06 INF [WebRTC] [session 02740b19] created by [::1]:49773
+2026/01/30 09:56:06 INF [path vijayawada-01] [RTSP source] started on demand
+2026/01/30 09:56:09 WAR [path kesanapalli-03] [RTSP source] 368 RTP packets lost
+2026/01/30 09:56:10 WAR [path kesanapalli-03] [RTSP source] 359 RTP packets lost
+2026/01/30 09:56:10 WAR [path kesanapalli-02] [RTSP source] 72 RTP packets lost
+2026/01/30 09:56:11 WAR [path kesanapalli-02] [RTSP source] 36 RTP packets lost
+2026/01/30 09:56:12 WAR [path kesanapalli-02] [RTSP source] 72 RTP packets lost
+2026/01/30 09:56:13 WAR [path kesanapalli-02] [RTSP source] 54 RTP packets lost
+2026/01/30 09:56:14 WAR [path kesanapalli-03] [RTSP source] 372 RTP packets lost
+2026/01/30 09:56:16 WAR [path kesanapalli-03] [RTSP source] 248 RTP packets lost
+2026/01/30 09:56:16 INF [path vijayawada-01] [RTSP source] stopped: timed out
+2026/01/30 09:56:16 INF [WebRTC] [session 02740b19] closed: source of path 'vijayawada-01' has timed out
+2026/01/30 09:56:16 ERR [path vijayawada-01] [RTSP source] dial tcp 10.205.101.141:554: i/o timeout
+2026/01/30 09:56:19 WAR [path kesanapalli-03] [RTSP source] 559 RTP packets lost
+2026/01/30 09:56:20 WAR [path kesanapalli-03] [RTSP source] 247 RTP packets lost
+2026/01/30 09:56:21 INF [WebRTC] [session dfe986d6] closed: peer connection closed
+2026/01/30 09:56:22 WAR [path kesanapalli-03] [RTSP source] 248 RTP packets lost
+2026/01/30 09:56:25 WAR [path kesanapalli-03] [RTSP source] 245 RTP packets lost
+2026/01/30 09:56:26 WAR [path kesanapalli-03] [RTSP source] 363 RTP packets lost
+2026/01/30 09:56:27 INF [WebRTC] [session d69d6311] created by [::1]:49773
+2026/01/30 09:56:28 INF [WebRTC] [session d69d6311] peer connection established, local candidate: host/udp/172.19.96.1/8189, remote candidate: prflx/udp/127.0.0.1/55878
+2026/01/30 09:56:28 INF [WebRTC] [session d69d6311] is reading from path 'kesanapalli-02', 1 track (H264)
+2026/01/30 09:56:28 WAR [path kesanapalli-03] [RTSP source] 363 RTP packets lost
+2026/01/30 09:56:30 INF [WebRTC] [session cb3e9eea] closed: peer connection closed
+2026/01/30 09:56:33 WAR [path kesanapalli-03] [RTSP source] 504 RTP packets lost
+2026/01/30 09:56:33 INF [WebRTC] [session 5b07b90f] created by [::1]:49773
+2026/01/30 09:56:34 INF [WebRTC] [session 5b07b90f] peer connection established, local candidate: host/udp/172.19.96.1/8189, remote candidate: prflx/udp/127.0.0.1/50315
+2026/01/30 09:56:34 INF [WebRTC] [session 5b07b90f] is reading from path 'kesanapalli-03', 1 track (H264)
+2026/01/30 09:56:34 WAR [path kesanapalli-03] [RTSP source] 363 RTP packets lost
+2026/01/30 09:56:35 WAR [path kesanapalli-03] [RTSP source] 244 RTP packets lost
+2026/01/30 09:56:37 WAR [path kesanapalli-03] [RTSP source] 359 RTP packets lost
+2026/01/30 09:56:40 WAR [path kesanapalli-03] [RTSP source] 193 RTP packets lost
+2026/01/30 09:56:42 WAR [path kesanapalli-03] [RTSP source] 490 RTP packets lost
+2026/01/30 09:56:44 WAR [path kesanapalli-03] [RTSP source] 245 RTP packets lost
+2026/01/30 09:56:45 WAR [path kesanapalli-02] [RTSP source] 72 RTP packets lost
+2026/01/30 09:56:46 WAR [path kesanapalli-03] [RTSP source] 300 RTP packets lost
+2026/01/30 09:56:46 WAR [path kesanapalli-02] [RTSP source] 36 RTP packets lost
+2026/01/30 09:56:47 WAR [path kesanapalli-03] [RTSP source] 242 RTP packets lost
+2026/01/30 09:56:49 WAR [path kesanapalli-03] [RTSP source] 243 RTP packets lost
+2026/01/30 09:56:50 WAR [path kesanapalli-03] [RTSP source] 242 RTP packets lost
+2026/01/30 09:56:52 WAR [path kesanapalli-03] [RTSP source] 361 RTP packets lost
+2026/01/30 09:56:54 WAR [path kesanapalli-03] [RTSP source] 310 RTP packets lost
+2026/01/30 09:56:57 WAR [path kesanapalli-03] [RTSP source] 315 RTP packets lost
+2026/01/30 09:56:59 WAR [path kesanapalli-03] [RTSP source] 370 RTP packets lost
+2026/01/30 09:57:01 WAR [path kesanapalli-02] [RTSP source] 72 RTP packets lost
+2026/01/30 09:57:02 WAR [path kesanapalli-02] [RTSP source] 108 RTP packets lost
+2026/01/30 09:57:03 WAR [path kesanapalli-03] [RTSP source] 495 RTP packets lost
+2026/01/30 09:57:03 WAR [path kesanapalli-02] [RTSP source] 36 RTP packets lost
+2026/01/30 09:57:04 WAR [path kesanapalli-03] [RTSP source] 248 RTP packets lost
+2026/01/30 09:57:04 WAR [path kesanapalli-02] [RTSP source] 72 RTP packets lost
+2026/01/30 09:57:05 WAR [path kesanapalli-02] [RTSP source] 82 RTP packets lost
+2026/01/30 09:57:06 WAR [path kesanapalli-02] [RTSP source] 36 RTP packets lost
+2026/01/30 09:57:10 WAR [path kesanapalli-03] [RTSP source] 713 RTP packets lost
+2026/01/30 09:57:10 WAR [path kesanapalli-02] [RTSP source] 108 RTP packets lost
+2026/01/30 09:57:11 WAR [path kesanapalli-02] [RTSP source] 106 RTP packets lost
+2026/01/30 09:57:12 WAR [path kesanapalli-03] [RTSP source] 252 RTP packets lost
+2026/01/30 09:57:14 WAR [path kesanapalli-03] [RTSP source] 377 RTP packets lost
+2026/01/30 09:57:16 WAR [path kesanapalli-03] [RTSP source] 570 RTP packets lost
+2026/01/30 09:57:20 WAR [path kesanapalli-03] [RTSP source] 250 RTP packets lost
+2026/01/30 09:57:22 WAR [path kesanapalli-03] [RTSP source] 685 RTP packets lost
+2026/01/30 09:57:24 WAR [path kesanapalli-03] [RTSP source] 482 RTP packets lost
+2026/01/30 09:57:25 WAR [path kesanapalli-02] [RTSP source] 38 RTP packets lost
+2026/01/30 09:57:26 WAR [path kesanapalli-03] [RTSP source] 549 RTP packets lost
+2026/01/30 09:57:26 WAR [path kesanapalli-02] [RTSP source] 114 RTP packets lost
+2026/01/30 09:57:30 WAR [path kesanapalli-03] [RTSP source] 488 RTP packets lost
+2026/01/30 09:57:31 WAR [path kesanapalli-03] [RTSP source] 307 RTP packets lost
+2026/01/30 09:57:33 WAR [path kesanapalli-03] [RTSP source] 184 RTP packets lost
+2026/01/30 09:57:38 WAR [path kesanapalli-03] [RTSP source] 493 RTP packets lost
+2026/01/30 09:57:39 WAR [path kesanapalli-03] [RTSP source] 297 RTP packets lost
+2026/01/30 09:57:41 WAR [path kesanapalli-03] [RTSP source] 251 RTP packets lost
+2026/01/30 09:57:43 WAR [path kesanapalli-03] [RTSP source] 248 RTP packets lost
+2026/01/30 09:57:48 WAR [path kesanapalli-03] [RTSP source] 445 RTP packets lost
+2026/01/30 09:57:51 WAR [path kesanapalli-03] [RTSP source] 200 RTP packets lost
+2026/01/30 09:57:57 WAR [path kesanapalli-03] [RTSP source] 943 RTP packets lost
+2026/01/30 09:57:59 WAR [path kesanapalli-02] [RTSP source] 566 RTP packets lost
+2026/01/30 09:58:00 WAR [path kesanapalli-03] [RTSP source] 247 RTP packets lost
+2026/01/30 09:58:01 WAR [path kesanapalli-02] [RTSP source] 38 RTP packets lost
+2026/01/30 09:58:02 WAR [path kesanapalli-02] [RTSP source] 100 RTP packets lost
+2026/01/30 09:58:03 WAR [path kesanapalli-03] [RTSP source] 981 RTP packets lost
+2026/01/30 09:58:03 WAR [path kesanapalli-02] [RTSP source] 176 RTP packets lost
+2026/01/30 09:58:04 INF [WebRTC] [session 294873ff] created by [::1]:49831
+2026/01/30 09:58:04 INF [path vijayawada-01] [RTSP source] started on demand
+2026/01/30 09:58:04 WAR [path kesanapalli-02] [RTSP source] 206 RTP packets lost
+2026/01/30 09:58:05 WAR [path kesanapalli-02] [RTSP source] 110 RTP packets lost
+2026/01/30 09:58:06 WAR [path kesanapalli-03] [RTSP source] 708 RTP packets lost
+2026/01/30 09:58:09 WAR [path kesanapalli-03] [RTSP source] 934 RTP packets lost
+2026/01/30 09:58:09 WAR [path kesanapalli-02] [RTSP source] 824 RTP packets lost
+2026/01/30 09:58:11 WAR [path kesanapalli-02] [RTSP source] 326 RTP packets lost
+2026/01/30 09:58:12 WAR [path kesanapalli-02] [RTSP source] 252 RTP packets lost
+2026/01/30 09:58:14 INF [path vijayawada-01] [RTSP source] stopped: timed out
+2026/01/30 09:58:14 ERR [path vijayawada-01] [RTSP source] dial tcp 10.205.101.141:554: i/o timeout
+2026/01/30 09:58:14 INF [WebRTC] [session 294873ff] closed: source of path 'vijayawada-01' has timed out
+2026/01/30 09:58:14 WAR [path kesanapalli-03] [RTSP source] 752 RTP packets lost
+2026/01/30 09:58:14 WAR [path kesanapalli-02] [RTSP source] 108 RTP packets lost
+2026/01/30 09:58:16 INF [WebRTC] [session 5b07b90f] closed: peer connection closed
+2026/01/30 09:58:17 WAR [path kesanapalli-03] [RTSP source] 855 RTP packets lost
+2026/01/30 09:58:17 WAR [path kesanapalli-02] [RTSP source] 286 RTP packets lost
+2026/01/30 09:58:19 INF [WebRTC] [session 78c9db19] created by [::1]:49831
+2026/01/30 09:58:19 INF [path vijayawada-01] [RTSP source] started on demand
+2026/01/30 09:58:19 WAR [path kesanapalli-02] [RTSP source] 100 RTP packets lost
+2026/01/30 09:58:20 WAR [path kesanapalli-03] [RTSP source] 838 RTP packets lost
+2026/01/30 09:58:21 WAR [path kesanapalli-02] [RTSP source] 636 RTP packets lost
+2026/01/30 09:58:22 WAR [path kesanapalli-02] [RTSP source] 100 RTP packets lost
+2026/01/30 09:58:23 WAR [path kesanapalli-02] [RTSP source] 258 RTP packets lost
+2026/01/30 09:58:24 WAR [path kesanapalli-02] [RTSP source] 214 RTP packets lost
+2026/01/30 09:58:25 INF [WebRTC] [session b9486b41] created by [::1]:54200
+2026/01/30 09:58:25 WAR [path kesanapalli-03] [RTSP source] 1010 RTP packets lost
+2026/01/30 09:58:25 WAR [path kesanapalli-02] [RTSP source] 180 RTP packets lost
+2026/01/30 09:58:25 INF [WebRTC] [session b9486b41] peer connection established, local candidate: host/udp/192.168.1.70/8189, remote candidate: prflx/udp/127.0.0.1/50838
+2026/01/30 09:58:25 INF [WebRTC] [session b9486b41] is reading from path 'kesanapalli-03', 1 track (H264)
+2026/01/30 09:58:26 WAR [path kesanapalli-03] [RTSP source] 878 RTP packets lost
+2026/01/30 09:58:26 WAR [path kesanapalli-02] [RTSP source] 332 RTP packets lost
+2026/01/30 09:58:27 WAR [path kesanapalli-02] [RTSP source] 134 RTP packets lost
+2026/01/30 09:58:28 WAR [path kesanapalli-02] [RTSP source] 40 RTP packets lost
+2026/01/30 09:58:29 INF [path vijayawada-01] [RTSP source] stopped: timed out
+2026/01/30 09:58:29 INF [WebRTC] [session 78c9db19] closed: source of path 'vijayawada-01' has timed out
+2026/01/30 09:58:29 ERR [path vijayawada-01] [RTSP source] dial tcp 10.205.101.141:554: i/o timeout
+2026/01/30 09:58:29 WAR [path kesanapalli-02] [RTSP source] 494 RTP packets lost
+2026/01/30 09:58:31 WAR [path kesanapalli-02] [RTSP source] 40 RTP packets lost
+2026/01/30 09:58:32 WAR [path kesanapalli-03] [RTSP source] 1307 RTP packets lost
+2026/01/30 09:58:32 WAR [path kesanapalli-02] [RTSP source] 282 RTP packets lost
+2026/01/30 09:58:34 WAR [path kesanapalli-02] [RTSP source] 40 RTP packets lost
+2026/01/30 09:58:35 WAR [path kesanapalli-02] [RTSP source] 368 RTP packets lost
+2026/01/30 09:58:36 WAR [path kesanapalli-03] [RTSP source] 661 RTP packets lost
+2026/01/30 09:58:36 WAR [path kesanapalli-02] [RTSP source] 40 RTP packets lost
+2026/01/30 09:58:37 WAR [path kesanapalli-02] [RTSP source] 66 RTP packets lost
+2026/01/30 09:58:39 WAR [path kesanapalli-02] [RTSP source] 134 RTP packets lost
+2026/01/30 09:58:40 WAR [path kesanapalli-03] [RTSP source] 593 RTP packets lost
+2026/01/30 09:58:42 WAR [path kesanapalli-02] [RTSP source] 458 RTP packets lost
+2026/01/30 09:58:43 WAR [path kesanapalli-03] [RTSP source] 979 RTP packets lost
+2026/01/30 09:58:44 WAR [path kesanapalli-02] [RTSP source] 572 RTP packets lost
+2026/01/30 09:58:45 WAR [path kesanapalli-02] [RTSP source] 36 RTP packets lost
+2026/01/30 09:58:46 WAR [path kesanapalli-02] [RTSP source] 40 RTP packets lost
+2026/01/30 09:58:47 WAR [path kesanapalli-02] [RTSP source] 642 RTP packets lost
+2026/01/30 09:58:48 WAR [path kesanapalli-03] [RTSP source] 936 RTP packets lost
+2026/01/30 09:58:48 WAR [path kesanapalli-02] [RTSP source] 102 RTP packets lost
+2026/01/30 09:58:49 WAR [path kesanapalli-02] [RTSP source] 32 RTP packets lost
+2026/01/30 09:58:50 WAR [path kesanapalli-03] [RTSP source] 555 RTP packets lost
+2026/01/30 09:58:50 WAR [path kesanapalli-02] [RTSP source] 246 RTP packets lost
+2026/01/30 09:58:51 WAR [path kesanapalli-02] [RTSP source] 402 RTP packets lost
+2026/01/30 09:58:52 WAR [path kesanapalli-02] [RTSP source] 110 RTP packets lost
+2026/01/30 09:58:53 WAR [path kesanapalli-03] [RTSP source] 547 RTP packets lost
+2026/01/30 09:58:53 WAR [path kesanapalli-02] [RTSP source] 136 RTP packets lost
+2026/01/30 09:58:54 WAR [path kesanapalli-03] [RTSP source] 763 RTP packets lost
+2026/01/30 09:58:54 WAR [path kesanapalli-02] [RTSP source] 76 RTP packets lost
+2026/01/30 09:58:55 WAR [path kesanapalli-02] [RTSP source] 120 RTP packets lost
+2026/01/30 09:58:56 WAR [path kesanapalli-02] [RTSP source] 138 RTP packets lost
+2026/01/30 09:58:57 WAR [path kesanapalli-02] [RTSP source] 36 RTP packets lost
+2026/01/30 09:58:58 WAR [path kesanapalli-03] [RTSP source] 403 RTP packets lost
+2026/01/30 09:58:58 WAR [path kesanapalli-02] [RTSP source] 138 RTP packets lost
+2026/01/30 09:59:01 WAR [path kesanapalli-03] [RTSP source] 507 RTP packets lost
+2026/01/30 09:59:01 WAR [path kesanapalli-02] [RTSP source] 870 RTP packets lost
+2026/01/30 09:59:02 WAR [path kesanapalli-02] [RTSP source] 41 RTP packets lost
+2026/01/30 09:59:03 WAR [path kesanapalli-02] [RTSP source] 41 RTP packets lost
+2026/01/30 09:59:04 WAR [path kesanapalli-03] [RTSP source] 519 RTP packets lost
+2026/01/30 09:59:04 WAR [path kesanapalli-02] [RTSP source] 138 RTP packets lost
+2026/01/30 09:59:05 WAR [path kesanapalli-03] [RTSP source] 571 RTP packets lost
+2026/01/30 09:59:05 WAR [path kesanapalli-02] [RTSP source] 205 RTP packets lost
+2026/01/30 09:59:06 WAR [path kesanapalli-02] [RTSP source] 184 RTP packets lost
+2026/01/30 09:59:08 WAR [path kesanapalli-03] [RTSP source] 452 RTP packets lost
+2026/01/30 09:59:08 WAR [path kesanapalli-02] [RTSP source] 302 RTP packets lost
+2026/01/30 09:59:09 WAR [path kesanapalli-02] [RTSP source] 203 RTP packets lost
+2026/01/30 09:59:10 INF [WebRTC] [session b9486b41] closed: peer connection closed
+2026/01/30 09:59:10 WAR [path kesanapalli-03] [RTSP source] 450 RTP packets lost
+2026/01/30 09:59:10 WAR [path kesanapalli-02] [RTSP source] 222 RTP packets lost
+2026/01/30 09:59:11 WAR [path kesanapalli-02] [RTSP source] 72 RTP packets lost
+2026/01/30 09:59:12 WAR [path kesanapalli-02] [RTSP source] 144 RTP packets lost
+2026/01/30 09:59:13 WAR [path kesanapalli-02] [RTSP source] 172 RTP packets lost
+2026/01/30 09:59:15 WAR [path kesanapalli-03] [RTSP source] 416 RTP packets lost
+2026/01/30 09:59:15 WAR [path kesanapalli-02] [RTSP source] 105 RTP packets lost
+2026/01/30 09:59:16 WAR [path kesanapalli-02] [RTSP source] 440 RTP packets lost
+2026/01/30 09:59:18 WAR [path kesanapalli-03] [RTSP source] 1157 RTP packets lost
+2026/01/30 09:59:19 WAR [path kesanapalli-02] [RTSP source] 145 RTP packets lost
+2026/01/30 09:59:20 INF [path kesanapalli-03] [RTSP source] stopped: not needed by anyone
+2026/01/30 09:59:20 WAR [path kesanapalli-02] [RTSP source] 138 RTP packets lost
+2026/01/30 09:59:21 WAR [path kesanapalli-02] [RTSP source] 39 RTP packets lost
+2026/01/30 09:59:22 INF [WebRTC] [session 35b850f1] created by [::1]:64505
+2026/01/30 09:59:22 INF [path kesanapalli-03] [RTSP source] started on demand
+2026/01/30 09:59:22 WAR [path kesanapalli-02] [RTSP source] 313 RTP packets lost
+2026/01/30 09:59:22 INF [path kesanapalli-03] [RTSP source] ready: 1 track (H264)
+2026/01/30 09:59:23 INF [WebRTC] [session 35b850f1] peer connection established, local candidate: host/udp/127.0.0.1/8189, remote candidate: prflx/udp/127.0.0.1/55907
+2026/01/30 09:59:23 INF [WebRTC] [session 35b850f1] is reading from path 'kesanapalli-03', 1 track (H264)
+2026/01/30 09:59:23 WAR [path kesanapalli-02] [RTSP source] 243 RTP packets lost
+2026/01/30 09:59:24 WAR [path kesanapalli-02] [RTSP source] 200 RTP packets lost
+2026/01/30 09:59:25 WAR [path kesanapalli-03] [RTSP source] 427 RTP packets lost
+2026/01/30 09:59:25 WAR [path kesanapalli-02] [RTSP source] 204 RTP packets lost
+2026/01/30 09:59:26 WAR [path kesanapalli-03] [RTSP source] 363 RTP packets lost
+2026/01/30 09:59:26 WAR [path kesanapalli-02] [RTSP source] 276 RTP packets lost
+2026/01/30 09:59:27 WAR [path kesanapalli-03] [RTSP source] 297 RTP packets lost
+2026/01/30 09:59:27 WAR [path kesanapalli-02] [RTSP source] 76 RTP packets lost
+2026/01/30 09:59:28 WAR [path kesanapalli-03] [RTSP source] 191 RTP packets lost
+2026/01/30 09:59:29 WAR [path kesanapalli-03] [RTSP source] 50 RTP packets lost
+2026/01/30 09:59:29 WAR [path kesanapalli-02] [RTSP source] 117 RTP packets lost
+2026/01/30 09:59:30 WAR [path kesanapalli-03] [RTSP source] 595 RTP packets lost
+2026/01/30 09:59:31 WAR [path kesanapalli-03] [RTSP source] 136 RTP packets lost
+2026/01/30 09:59:31 WAR [path kesanapalli-02] [RTSP source] 120 RTP packets lost
+2026/01/30 09:59:32 WAR [path kesanapalli-03] [RTSP source] 467 RTP packets lost
+2026/01/30 09:59:32 WAR [path kesanapalli-02] [RTSP source] 74 RTP packets lost
+2026/01/30 09:59:33 WAR [path kesanapalli-02] [RTSP source] 404 RTP packets lost
+2026/01/30 09:59:35 WAR [path kesanapalli-02] [RTSP source] 38 RTP packets lost
+2026/01/30 09:59:37 WAR [path kesanapalli-02] [RTSP source] 252 RTP packets lost
+2026/01/30 09:59:39 WAR [path kesanapalli-03] [RTSP source] 140 RTP packets lost
+2026/01/30 09:59:39 WAR [path kesanapalli-02] [RTSP source] 784 RTP packets lost
+2026/01/30 09:59:40 WAR [path kesanapalli-03] [RTSP source] 2400 RTP packets lost
+2026/01/30 09:59:40 WAR [path kesanapalli-02] [RTSP source] 492 RTP packets lost
+2026/01/30 09:59:42 WAR [path kesanapalli-03] [RTSP source] 280 RTP packets lost
+2026/01/30 09:59:42 WAR [path kesanapalli-02] [RTSP source] 38 RTP packets lost
+2026/01/30 09:59:43 WAR [path kesanapalli-03] [RTSP source] 329 RTP packets lost
+2026/01/30 09:59:43 WAR [path kesanapalli-02] [RTSP source] 304 RTP packets lost
+2026/01/30 09:59:44 WAR [path kesanapalli-03] [RTSP source] 337 RTP packets lost
+2026/01/30 09:59:44 WAR [path kesanapalli-02] [RTSP source] 244 RTP packets lost
+2026/01/30 09:59:45 WAR [path kesanapalli-03] [RTSP source] 338 RTP packets lost
+2026/01/30 09:59:45 WAR [path kesanapalli-02] [RTSP source] 72 RTP packets lost
+2026/01/30 09:59:46 WAR [path kesanapalli-03] [RTSP source] 373 RTP packets lost
+2026/01/30 09:59:46 INF [WebRTC] [session 6259e704] created by [::1]:64505
+2026/01/30 09:59:46 INF [WebRTC] [session 6259e704] closed: no stream is available on path 'kesanapalli-04-h264'
+2026/01/30 09:59:46 WAR [path kesanapalli-02] [RTSP source] 168 RTP packets lost
+2026/01/30 09:59:47 WAR [path kesanapalli-03] [RTSP source] 228 RTP packets lost
+2026/01/30 09:59:47 WAR [path kesanapalli-02] [RTSP source] 134 RTP packets lost
+2026/01/30 09:59:48 WAR [path kesanapalli-03] [RTSP source] 338 RTP packets lost
+2026/01/30 09:59:48 WAR [path kesanapalli-02] [RTSP source] 234 RTP packets lost
+2026/01/30 09:59:49 WAR [path kesanapalli-03] [RTSP source] 238 RTP packets lost
+2026/01/30 09:59:50 WAR [path kesanapalli-02] [RTSP source] 180 RTP packets lost
+2026/01/30 09:59:51 WAR [path kesanapalli-03] [RTSP source] 331 RTP packets lost
+2026/01/30 09:59:51 WAR [path kesanapalli-02] [RTSP source] 136 RTP packets lost
+2026/01/30 09:59:52 WAR [path kesanapalli-03] [RTSP source] 626 RTP packets lost
+2026/01/30 09:59:52 WAR [path kesanapalli-02] [RTSP source] 433 RTP packets lost
+2026/01/30 09:59:53 WAR [path kesanapalli-03] [RTSP source] 480 RTP packets lost
+2026/01/30 09:59:53 WAR [path kesanapalli-02] [RTSP source] 38 RTP packets lost
+2026/01/30 09:59:54 WAR [path kesanapalli-03] [RTSP source] 50 RTP packets lost
+2026/01/30 09:59:55 WAR [path kesanapalli-02] [RTSP source] 280 RTP packets lost
+2026/01/30 09:59:57 WAR [path kesanapalli-03] [RTSP source] 445 RTP packets lost
+2026/01/30 09:59:57 WAR [path kesanapalli-02] [RTSP source] 473 RTP packets lost
+2026/01/30 09:59:58 WAR [path kesanapalli-03] [RTSP source] 695 RTP packets lost
+2026/01/30 09:59:59 WAR [path kesanapalli-02] [RTSP source] 370 RTP packets lost
+2026/01/30 10:00:00 WAR [path kesanapalli-03] [RTSP source] 258 RTP packets lost
+2026/01/30 10:00:02 WAR [path kesanapalli-03] [RTSP source] 741 RTP packets lost
+2026/01/30 10:00:03 WAR [path kesanapalli-02] [RTSP source] 294 RTP packets lost
+2026/01/30 10:00:04 INF [WebRTC] [session 89903807] created by [::1]:64505
+2026/01/30 10:00:04 INF [WebRTC] [session 89903807] closed: no stream is available on path 'kesanapalli-01-h264'
+2026/01/30 10:00:04 WAR [path kesanapalli-02] [RTSP source] 409 RTP packets lost
+2026/01/30 10:00:05 WAR [path kesanapalli-02] [RTSP source] 333 RTP packets lost
+2026/01/30 10:00:06 WAR [path kesanapalli-02] [RTSP source] 140 RTP packets lost
+2026/01/30 10:00:07 WAR [path kesanapalli-02] [RTSP source] 39 RTP packets lost
+2026/01/30 10:00:08 WAR [path kesanapalli-02] [RTSP source] 39 RTP packets lost
+2026/01/30 10:00:09 WAR [path kesanapalli-02] [RTSP source] 261 RTP packets lost
+2026/01/30 10:00:12 WAR [path kesanapalli-02] [RTSP source] 395 RTP packets lost
+2026/01/30 10:00:13 WAR [path kesanapalli-02] [RTSP source] 173 RTP packets lost
+2026/01/30 10:00:14 WAR [path kesanapalli-02] [RTSP source] 742 RTP packets lost
+2026/01/30 10:00:14 INF [path kesanapalli-03] [RTSP source] stopped: an error occurred
+2026/01/30 10:00:14 ERR [path kesanapalli-03] [RTSP source] TCP timeout
+2026/01/30 10:00:14 INF [WebRTC] [session 35b850f1] closed: terminated
+2026/01/30 10:00:15 WAR [path kesanapalli-02] [RTSP source] 140 RTP packets lost
+2026/01/30 10:00:16 WAR [path kesanapalli-02] [RTSP source] 78 RTP packets lost
+2026/01/30 10:00:17 WAR [path kesanapalli-02] [RTSP source] 39 RTP packets lost
+2026/01/30 10:00:18 WAR [path kesanapalli-02] [RTSP source] 285 RTP packets lost
+2026/01/30 10:00:19 WAR [path kesanapalli-02] [RTSP source] 184 RTP packets lost
+2026/01/30 10:00:20 WAR [path kesanapalli-02] [RTSP source] 185 RTP packets lost
+2026/01/30 10:00:21 WAR [path kesanapalli-02] [RTSP source] 181 RTP packets lost
+2026/01/30 10:00:22 WAR [path kesanapalli-02] [RTSP source] 111 RTP packets lost
+2026/01/30 10:00:23 WAR [path kesanapalli-02] [RTSP source] 152 RTP packets lost
+2026/01/30 10:00:24 WAR [path kesanapalli-02] [RTSP source] 144 RTP packets lost
+2026/01/30 10:00:25 WAR [path kesanapalli-02] [RTSP source] 109 RTP packets lost
+2026/01/30 10:00:26 WAR [path kesanapalli-02] [RTSP source] 228 RTP packets lost
+2026/01/30 10:00:27 WAR [path kesanapalli-02] [RTSP source] 10 RTP packets lost
+2026/01/30 10:00:30 WAR [path kesanapalli-02] [RTSP source] 39 RTP packets lost
+2026/01/30 10:00:31 WAR [path kesanapalli-02] [RTSP source] 113 RTP packets lost
+2026/01/30 10:00:32 WAR [path kesanapalli-02] [RTSP source] 39 RTP packets lost
+2026/01/30 10:00:36 WAR [path kesanapalli-02] [RTSP source] 187 RTP packets lost
+2026/01/30 10:00:39 WAR [path kesanapalli-02] [RTSP source] 618 RTP packets lost
+2026/01/30 10:00:40 WAR [path kesanapalli-02] [RTSP source] 74 RTP packets lost
+2026/01/30 10:00:41 WAR [path kesanapalli-02] [RTSP source] 446 RTP packets lost
+2026/01/30 10:00:42 WAR [path kesanapalli-02] [RTSP source] 175 RTP packets lost
+2026/01/30 10:00:43 WAR [path kesanapalli-02] [RTSP source] 323 RTP packets lost
+2026/01/30 10:00:44 WAR [path kesanapalli-02] [RTSP source] 78 RTP packets lost
+2026/01/30 10:00:45 WAR [path kesanapalli-02] [RTSP source] 78 RTP packets lost
+2026/01/30 10:00:46 WAR [path kesanapalli-02] [RTSP source] 290 RTP packets lost
+2026/01/30 10:00:48 WAR [path kesanapalli-02] [RTSP source] 72 RTP packets lost
+2026/01/30 10:00:49 WAR [path kesanapalli-02] [RTSP source] 37 RTP packets lost
+2026/01/30 10:00:53 WAR [path kesanapalli-02] [RTSP source] 440 RTP packets lost
+2026/01/30 10:00:54 WAR [path kesanapalli-02] [RTSP source] 929 RTP packets lost
+2026/01/30 10:00:55 WAR [path kesanapalli-02] [RTSP source] 80 RTP packets lost
+2026/01/30 10:00:56 WAR [path kesanapalli-02] [RTSP source] 78 RTP packets lost
+2026/01/30 10:00:57 WAR [path kesanapalli-02] [RTSP source] 144 RTP packets lost
+2026/01/30 10:00:58 WAR [path kesanapalli-02] [RTSP source] 398 RTP packets lost
+2026/01/30 10:01:00 WAR [path kesanapalli-02] [RTSP source] 101 RTP packets lost
+2026/01/30 10:01:02 WAR [path kesanapalli-02] [RTSP source] 239 RTP packets lost
+2026/01/30 10:01:03 WAR [path kesanapalli-02] [RTSP source] 277 RTP packets lost
+2026/01/30 10:01:04 WAR [path kesanapalli-02] [RTSP source] 103 RTP packets lost
+2026/01/30 10:01:05 WAR [path kesanapalli-02] [RTSP source] 306 RTP packets lost
+2026/01/30 10:01:06 WAR [path kesanapalli-02] [RTSP source] 254 RTP packets lost
+2026/01/30 10:01:07 WAR [path kesanapalli-02] [RTSP source] 142 RTP packets lost
+2026/01/30 10:01:07 INF [WebRTC] [session 53b843c9] created by [::1]:51418
+2026/01/30 10:01:07 INF [WebRTC] [session 53b843c9] closed: no stream is available on path 'kesanapalli-04-h264'
+2026/01/30 10:01:08 WAR [path kesanapalli-02] [RTSP source] 218 RTP packets lost
+2026/01/30 10:01:09 WAR [path kesanapalli-02] [RTSP source] 239 RTP packets lost
+2026/01/30 10:01:13 WAR [path kesanapalli-02] [RTSP source] 978 RTP packets lost
+2026/01/30 10:01:16 WAR [path kesanapalli-02] [RTSP source] 538 RTP packets lost
+2026/01/30 10:01:18 WAR [path kesanapalli-02] [RTSP source] 72 RTP packets lost
+2026/01/30 10:01:19 WAR [path kesanapalli-02] [RTSP source] 70 RTP packets lost
+2026/01/30 10:01:21 WAR [path kesanapalli-02] [RTSP source] 106 RTP packets lost
+2026/01/30 10:01:22 WAR [path kesanapalli-02] [RTSP source] 140 RTP packets lost
+2026/01/30 10:01:23 WAR [path kesanapalli-02] [RTSP source] 696 RTP packets lost
+2026/01/30 10:01:24 WAR [path kesanapalli-02] [RTSP source] 168 RTP packets lost
+2026/01/30 10:01:26 WAR [path kesanapalli-02] [RTSP source] 62 RTP packets lost
+2026/01/30 10:01:27 WAR [path kesanapalli-02] [RTSP source] 106 RTP packets lost
+2026/01/30 10:01:28 WAR [path kesanapalli-02] [RTSP source] 686 RTP packets lost
+2026/01/30 10:01:29 WAR [path kesanapalli-02] [RTSP source] 102 RTP packets lost
+2026/01/30 10:01:32 WAR [path kesanapalli-02] [RTSP source] 38 RTP packets lost
+2026/01/30 10:01:33 WAR [path kesanapalli-02] [RTSP source] 394 RTP packets lost
+2026/01/30 10:01:34 WAR [path kesanapalli-02] [RTSP source] 76 RTP packets lost
+2026/01/30 10:01:35 WAR [path kesanapalli-02] [RTSP source] 248 RTP packets lost
+2026/01/30 10:01:36 WAR [path kesanapalli-02] [RTSP source] 64 RTP packets lost
+2026/01/30 10:01:49 INF [WebRTC] [session d69d6311] closed: peer connection closed
+2026/01/30 10:01:52 INF [WebRTC] [session 8dd36660] created by [::1]:50383
+2026/01/30 10:01:53 INF [WebRTC] [session 8dd36660] peer connection established, local candidate: host/udp/192.168.1.70/8189, remote candidate: prflx/udp/127.0.0.1/60425
+2026/01/30 10:01:53 INF [WebRTC] [session 8dd36660] is reading from path 'kesanapalli-02', 1 track (H264)
+2026/01/30 10:01:58 INF [WebRTC] [session 54d095db] created by [::1]:50383
+2026/01/30 10:01:58 INF [WebRTC] [session 54d095db] closed: no stream is available on path 'kesanapalli-01-h264'
+2026/01/30 10:02:19 WAR [path kesanapalli-02] [RTSP source] 138 RTP packets lost
+2026/01/30 10:02:22 INF [WebRTC] [session 8dd36660] closed: peer connection closed
+2026/01/30 10:02:23 WAR [path kesanapalli-02] [RTSP source] 216 RTP packets lost
+2026/01/30 10:02:24 WAR [path kesanapalli-02] [RTSP source] 74 RTP packets lost
+2026/01/30 10:02:25 WAR [path kesanapalli-02] [RTSP source] 110 RTP packets lost
+2026/01/30 10:02:25 INF [WebRTC] [session 4f59c7cf] created by [::1]:50383
+2026/01/30 10:02:26 INF [WebRTC] [session 4f59c7cf] peer connection established, local candidate: host/udp/192.168.1.70/8189, remote candidate: prflx/udp/127.0.0.1/56051
+2026/01/30 10:02:26 INF [WebRTC] [session 4f59c7cf] is reading from path 'kesanapalli-02', 1 track (H264)
+2026/01/30 10:02:39 WAR [path kesanapalli-02] [RTSP source] 188 RTP packets lost
+2026/01/30 10:02:40 WAR [path kesanapalli-02] [RTSP source] 38 RTP packets lost
+2026/01/30 10:02:41 INF [WebRTC] [session c1da2a41] created by [::1]:50383
+2026/01/30 10:02:41 INF [WebRTC] [session c1da2a41] closed: no stream is available on path 'kesanapalli-04-h264'
+2026/01/30 10:02:43 WAR [path kesanapalli-02] [RTSP source] 234 RTP packets lost
+2026/01/30 10:02:44 WAR [path kesanapalli-02] [RTSP source] 470 RTP packets lost
+2026/01/30 10:02:48 WAR [path kesanapalli-02] [RTSP source] 38 RTP packets lost
+2026/01/30 10:02:49 WAR [path kesanapalli-02] [RTSP source] 254 RTP packets lost
+2026/01/30 10:02:51 WAR [path kesanapalli-02] [RTSP source] 38 RTP packets lost
+2026/01/30 10:02:52 WAR [path kesanapalli-02] [RTSP source] 72 RTP packets lost
+2026/01/30 10:02:53 WAR [path kesanapalli-02] [RTSP source] 614 RTP packets lost
+2026/01/30 10:02:54 WAR [path kesanapalli-02] [RTSP source] 178 RTP packets lost
+2026/01/30 10:02:55 WAR [path kesanapalli-02] [RTSP source] 66 RTP packets lost
+2026/01/30 10:02:56 WAR [path kesanapalli-02] [RTSP source] 132 RTP packets lost
+2026/01/30 10:02:57 WAR [path kesanapalli-02] [RTSP source] 110 RTP packets lost
+2026/01/30 10:02:58 WAR [path kesanapalli-02] [RTSP source] 168 RTP packets lost
+2026/01/30 10:02:59 WAR [path kesanapalli-02] [RTSP source] 176 RTP packets lost
+2026/01/30 10:03:00 WAR [path kesanapalli-02] [RTSP source] 206 RTP packets lost
+2026/01/30 10:03:03 WAR [path kesanapalli-02] [RTSP source] 38 RTP packets lost
+2026/01/30 10:03:04 WAR [path kesanapalli-02] [RTSP source] 76 RTP packets lost
+2026/01/30 10:03:06 WAR [path kesanapalli-02] [RTSP source] 72 RTP packets lost
+2026/01/30 10:03:07 WAR [path kesanapalli-02] [RTSP source] 700 RTP packets lost
+2026/01/30 10:03:12 WAR [path kesanapalli-02] [RTSP source] 38 RTP packets lost
+2026/01/30 10:03:13 WAR [path kesanapalli-02] [RTSP source] 76 RTP packets lost
+2026/01/30 10:03:14 WAR [path kesanapalli-02] [RTSP source] 174 RTP packets lost
+2026/01/30 10:03:15 WAR [path kesanapalli-02] [RTSP source] 134 RTP packets lost
+2026/01/30 10:03:16 WAR [path kesanapalli-02] [RTSP source] 76 RTP packets lost
+2026/01/30 10:03:17 WAR [path kesanapalli-02] [RTSP source] 144 RTP packets lost
+2026/01/30 10:03:18 WAR [path kesanapalli-02] [RTSP source] 238 RTP packets lost
+2026/01/30 10:03:19 WAR [path kesanapalli-02] [RTSP source] 266 RTP packets lost
+2026/01/30 10:03:20 WAR [path kesanapalli-02] [RTSP source] 74 RTP packets lost
+2026/01/30 10:03:21 WAR [path kesanapalli-02] [RTSP source] 110 RTP packets lost
+2026/01/30 10:03:22 WAR [path kesanapalli-02] [RTSP source] 38 RTP packets lost
+2026/01/30 10:03:23 WAR [path kesanapalli-02] [RTSP source] 110 RTP packets lost
+2026/01/30 10:03:24 WAR [path kesanapalli-02] [RTSP source] 38 RTP packets lost
+2026/01/30 10:03:25 WAR [path kesanapalli-02] [RTSP source] 100 RTP packets lost
+2026/01/30 10:03:26 WAR [path kesanapalli-02] [RTSP source] 134 RTP packets lost
+2026/01/30 10:03:27 WAR [path kesanapalli-02] [RTSP source] 274 RTP packets lost
+2026/01/30 10:03:28 WAR [path kesanapalli-02] [RTSP source] 340 RTP packets lost
+2026/01/30 10:03:29 WAR [path kesanapalli-02] [RTSP source] 110 RTP packets lost
+2026/01/30 10:03:30 WAR [path kesanapalli-02] [RTSP source] 38 RTP packets lost
+2026/01/30 10:03:31 WAR [path kesanapalli-02] [RTSP source] 206 RTP packets lost
+2026/01/30 10:03:33 WAR [path kesanapalli-02] [RTSP source] 38 RTP packets lost
+2026/01/30 10:03:34 WAR [path kesanapalli-02] [RTSP source] 182 RTP packets lost
+2026/01/30 10:03:35 WAR [path kesanapalli-02] [RTSP source] 110 RTP packets lost
+2026/01/30 10:03:36 WAR [path kesanapalli-02] [RTSP source] 146 RTP packets lost
+2026/01/30 10:03:37 WAR [path kesanapalli-02] [RTSP source] 140 RTP packets lost
+2026/01/30 10:03:38 WAR [path kesanapalli-02] [RTSP source] 202 RTP packets lost
+2026/01/30 10:03:39 WAR [path kesanapalli-02] [RTSP source] 132 RTP packets lost
+2026/01/30 10:03:40 WAR [path kesanapalli-02] [RTSP source] 140 RTP packets lost
+2026/01/30 10:03:41 WAR [path kesanapalli-02] [RTSP source] 242 RTP packets lost
+2026/01/30 10:03:42 WAR [path kesanapalli-02] [RTSP source] 102 RTP packets lost
+2026/01/30 10:03:43 WAR [path kesanapalli-02] [RTSP source] 136 RTP packets lost
+2026/01/30 10:03:44 WAR [path kesanapalli-02] [RTSP source] 70 RTP packets lost
+2026/01/30 10:03:46 WAR [path kesanapalli-02] [RTSP source] 146 RTP packets lost
+2026/01/30 10:03:47 WAR [path kesanapalli-02] [RTSP source] 430 RTP packets lost
+2026/01/30 10:03:48 WAR [path kesanapalli-02] [RTSP source] 70 RTP packets lost
+2026/01/30 10:03:49 WAR [path kesanapalli-02] [RTSP source] 70 RTP packets lost
+2026/01/30 10:03:50 WAR [path kesanapalli-02] [RTSP source] 196 RTP packets lost
+2026/01/30 10:03:51 WAR [path kesanapalli-02] [RTSP source] 364 RTP packets lost
+2026/01/30 10:03:52 WAR [path kesanapalli-02] [RTSP source] 104 RTP packets lost
+2026/01/30 10:03:53 WAR [path kesanapalli-02] [RTSP source] 70 RTP packets lost
+2026/01/30 10:03:54 WAR [path kesanapalli-02] [RTSP source] 270 RTP packets lost
+2026/01/30 10:03:55 WAR [path kesanapalli-02] [RTSP source] 206 RTP packets lost
+2026/01/30 10:03:56 WAR [path kesanapalli-02] [RTSP source] 206 RTP packets lost
+2026/01/30 10:03:57 WAR [path kesanapalli-02] [RTSP source] 38 RTP packets lost
+2026/01/30 10:03:58 WAR [path kesanapalli-02] [RTSP source] 206 RTP packets lost
+2026/01/30 10:03:59 WAR [path kesanapalli-02] [RTSP source] 72 RTP packets lost
+2026/01/30 10:04:01 WAR [path kesanapalli-02] [RTSP source] 206 RTP packets lost
+2026/01/30 10:04:02 WAR [path kesanapalli-02] [RTSP source] 538 RTP packets lost
+2026/01/30 10:04:03 WAR [path kesanapalli-02] [RTSP source] 64 RTP packets lost
+2026/01/30 10:04:05 WAR [path kesanapalli-02] [RTSP source] 102 RTP packets lost
+2026/01/30 10:04:08 WAR [path kesanapalli-02] [RTSP source] 564 RTP packets lost
+2026/01/30 10:04:09 WAR [path kesanapalli-02] [RTSP source] 432 RTP packets lost
+2026/01/30 10:04:11 INF [WebRTC] [session e407b5e1] created by [::1]:57724
+2026/01/30 10:04:11 INF [WebRTC] [session e407b5e1] closed: no stream is available on path 'kesanapalli-04-h264'
+2026/01/30 10:04:12 WAR [path kesanapalli-02] [RTSP source] 174 RTP packets lost
+2026/01/30 10:04:13 WAR [path kesanapalli-02] [RTSP source] 326 RTP packets lost
+2026/01/30 10:04:14 WAR [path kesanapalli-02] [RTSP source] 182 RTP packets lost
+2026/01/30 10:04:21 WAR [path kesanapalli-02] [RTSP source] 316 RTP packets lost
+2026/01/30 10:04:22 WAR [path kesanapalli-02] [RTSP source] 784 RTP packets lost
+2026/01/30 10:04:23 WAR [path kesanapalli-02] [RTSP source] 72 RTP packets lost
+2026/01/30 10:04:25 WAR [path kesanapalli-02] [RTSP source] 276 RTP packets lost
+2026/01/30 10:04:26 WAR [path kesanapalli-02] [RTSP source] 428 RTP packets lost
+2026/01/30 10:04:30 WAR [path kesanapalli-02] [RTSP source] 38 RTP packets lost
+2026/01/30 10:04:31 WAR [path kesanapalli-02] [RTSP source] 342 RTP packets lost
+2026/01/30 10:04:32 WAR [path kesanapalli-02] [RTSP source] 72 RTP packets lost
+2026/01/30 10:04:33 WAR [path kesanapalli-02] [RTSP source] 108 RTP packets lost
+2026/01/30 10:04:34 WAR [path kesanapalli-02] [RTSP source] 142 RTP packets lost
+2026/01/30 10:04:35 WAR [path kesanapalli-02] [RTSP source] 206 RTP packets lost
+2026/01/30 10:04:36 WAR [path kesanapalli-02] [RTSP source] 70 RTP packets lost
+2026/01/30 10:04:37 WAR [path kesanapalli-02] [RTSP source] 302 RTP packets lost
+2026/01/30 10:04:38 WAR [path kesanapalli-02] [RTSP source] 206 RTP packets lost
+2026/01/30 10:04:39 WAR [path kesanapalli-02] [RTSP source] 274 RTP packets lost
+2026/01/30 10:04:40 WAR [path kesanapalli-02] [RTSP source] 166 RTP packets lost
+2026/01/30 10:04:41 WAR [path kesanapalli-02] [RTSP source] 102 RTP packets lost
+2026/01/30 10:04:53 WAR [path kesanapalli-02] [RTSP source] 39 RTP packets lost
+2026/01/30 10:04:54 WAR [path kesanapalli-02] [RTSP source] 78 RTP packets lost
+2026/01/30 10:04:55 WAR [path kesanapalli-02] [RTSP source] 39 RTP packets lost
+2026/01/30 10:04:56 WAR [path kesanapalli-02] [RTSP source] 212 RTP packets lost
+2026/01/30 10:04:57 WAR [path kesanapalli-02] [RTSP source] 218 RTP packets lost
+2026/01/30 10:04:58 WAR [path kesanapalli-02] [RTSP source] 309 RTP packets lost
+2026/01/30 10:05:02 INF [WebRTC] [session 509ad1df] created by [::1]:51302
+2026/01/30 10:05:02 INF [WebRTC] [session 509ad1df] closed: no stream is available on path 'kesanapalli-01-h264'
+2026/01/30 10:05:04 WAR [path kesanapalli-02] [RTSP source] 39 RTP packets lost
+2026/01/30 10:05:06 WAR [path kesanapalli-02] [RTSP source] 39 RTP packets lost
+2026/01/30 10:05:07 WAR [path kesanapalli-02] [RTSP source] 578 RTP packets lost
+2026/01/30 10:05:08 WAR [path kesanapalli-02] [RTSP source] 37 RTP packets lost
+2026/01/30 10:05:09 WAR [path kesanapalli-02] [RTSP source] 39 RTP packets lost
+2026/01/30 10:05:10 WAR [path kesanapalli-02] [RTSP source] 379 RTP packets lost
+2026/01/30 10:05:11 WAR [path kesanapalli-02] [RTSP source] 39 RTP packets lost
+2026/01/30 10:05:12 WAR [path kesanapalli-02] [RTSP source] 74 RTP packets lost
+2026/01/30 10:05:13 WAR [path kesanapalli-02] [RTSP source] 377 RTP packets lost
+2026/01/30 10:05:14 WAR [path kesanapalli-02] [RTSP source] 220 RTP packets lost
+2026/01/30 10:05:15 WAR [path kesanapalli-02] [RTSP source] 148 RTP packets lost
+2026/01/30 10:05:16 WAR [path kesanapalli-02] [RTSP source] 78 RTP packets lost
+2026/01/30 10:05:17 WAR [path kesanapalli-02] [RTSP source] 39 RTP packets lost
+2026/01/30 10:05:18 WAR [path kesanapalli-02] [RTSP source] 204 RTP packets lost
+2026/01/30 10:05:19 WAR [path kesanapalli-02] [RTSP source] 113 RTP packets lost
+2026/01/30 10:05:20 WAR [path kesanapalli-02] [RTSP source] 72 RTP packets lost
+2026/01/30 10:05:21 WAR [path kesanapalli-02] [RTSP source] 138 RTP packets lost
+2026/01/30 10:05:23 WAR [path kesanapalli-02] [RTSP source] 175 RTP packets lost
+2026/01/30 10:05:24 WAR [path kesanapalli-02] [RTSP source] 311 RTP packets lost
+2026/01/30 10:05:25 WAR [path kesanapalli-02] [RTSP source] 444 RTP packets lost
+2026/01/30 10:05:26 WAR [path kesanapalli-02] [RTSP source] 39 RTP packets lost
+2026/01/30 10:05:27 WAR [path kesanapalli-02] [RTSP source] 74 RTP packets lost
+2026/01/30 10:05:28 WAR [path kesanapalli-02] [RTSP source] 220 RTP packets lost
+2026/01/30 10:05:29 WAR [path kesanapalli-02] [RTSP source] 311 RTP packets lost
+2026/01/30 10:05:30 WAR [path kesanapalli-02] [RTSP source] 313 RTP packets lost
+2026/01/30 10:05:31 WAR [path kesanapalli-02] [RTSP source] 146 RTP packets lost
+2026/01/30 10:05:32 WAR [path kesanapalli-02] [RTSP source] 173 RTP packets lost
+2026/01/30 10:05:33 WAR [path kesanapalli-02] [RTSP source] 241 RTP packets lost
+2026/01/30 10:05:34 WAR [path kesanapalli-02] [RTSP source] 72 RTP packets lost
+2026/01/30 10:05:36 WAR [path kesanapalli-02] [RTSP source] 245 RTP packets lost
+2026/01/30 10:05:37 WAR [path kesanapalli-02] [RTSP source] 338 RTP packets lost
+2026/01/30 10:05:38 WAR [path kesanapalli-02] [RTSP source] 72 RTP packets lost
+2026/01/30 10:05:39 WAR [path kesanapalli-02] [RTSP source] 138 RTP packets lost
+2026/01/30 10:05:42 WAR [path kesanapalli-02] [RTSP source] 554 RTP packets lost
+2026/01/30 10:05:47 WAR [path kesanapalli-02] [RTSP source] 436 RTP packets lost
+2026/01/30 10:05:48 WAR [path kesanapalli-02] [RTSP source] 880 RTP packets lost
+2026/01/30 10:05:55 WAR [path kesanapalli-02] [RTSP source] 214 RTP packets lost
+2026/01/30 10:05:56 WAR [path kesanapalli-02] [RTSP source] 171 RTP packets lost
+2026/01/30 10:06:14 WAR [path kesanapalli-02] [RTSP source] 39 RTP packets lost
+2026/01/30 10:06:15 WAR [path kesanapalli-02] [RTSP source] 150 RTP packets lost
+2026/01/30 10:06:16 WAR [path kesanapalli-02] [RTSP source] 222 RTP packets lost
+2026/01/30 10:06:17 WAR [path kesanapalli-02] [RTSP source] 37 RTP packets lost
+2026/01/30 10:06:18 WAR [path kesanapalli-02] [RTSP source] 39 RTP packets lost
+2026/01/30 10:06:42 WAR [path kesanapalli-02] [RTSP source] 39 RTP packets lost
+2026/01/30 10:06:43 WAR [path kesanapalli-02] [RTSP source] 152 RTP packets lost
+2026/01/30 10:06:44 WAR [path kesanapalli-02] [RTSP source] 78 RTP packets lost
+2026/01/30 10:06:45 WAR [path kesanapalli-02] [RTSP source] 39 RTP packets lost
+2026/01/30 10:06:46 WAR [path kesanapalli-02] [RTSP source] 335 RTP packets lost
+2026/01/30 10:06:48 WAR [path kesanapalli-02] [RTSP source] 78 RTP packets lost
+2026/01/30 10:06:49 WAR [path kesanapalli-02] [RTSP source] 220 RTP packets lost
+2026/01/30 10:06:50 WAR [path kesanapalli-02] [RTSP source] 177 RTP packets lost
+2026/01/30 10:06:51 WAR [path kesanapalli-02] [RTSP source] 39 RTP packets lost
+2026/01/30 10:06:54 WAR [path kesanapalli-02] [RTSP source] 278 RTP packets lost
+2026/01/30 10:06:55 WAR [path kesanapalli-02] [RTSP source] 442 RTP packets lost
+2026/01/30 10:06:56 WAR [path kesanapalli-02] [RTSP source] 179 RTP packets lost
+2026/01/30 10:06:57 WAR [path kesanapalli-02] [RTSP source] 209 RTP packets lost
+2026/01/30 10:06:58 WAR [path kesanapalli-02] [RTSP source] 171 RTP packets lost
+2026/01/30 10:06:59 WAR [path kesanapalli-02] [RTSP source] 39 RTP packets lost
+2026/01/30 10:07:00 WAR [path kesanapalli-02] [RTSP source] 183 RTP packets lost
+2026/01/30 10:07:01 WAR [path kesanapalli-02] [RTSP source] 148 RTP packets lost
+2026/01/30 10:07:02 WAR [path kesanapalli-02] [RTSP source] 109 RTP packets lost
+2026/01/30 10:07:03 WAR [path kesanapalli-02] [RTSP source] 41 RTP packets lost
+2026/01/30 10:07:04 WAR [path kesanapalli-02] [RTSP source] 183 RTP packets lost
+2026/01/30 10:07:05 WAR [path kesanapalli-02] [RTSP source] 274 RTP packets lost
+2026/01/30 10:07:06 WAR [path kesanapalli-02] [RTSP source] 82 RTP packets lost
+2026/01/30 10:07:07 WAR [path kesanapalli-02] [RTSP source] 41 RTP packets lost
+2026/01/30 10:07:10 WAR [path kesanapalli-02] [RTSP source] 874 RTP packets lost
+2026/01/30 10:07:13 WAR [path kesanapalli-02] [RTSP source] 82 RTP packets lost
+2026/01/30 10:07:14 WAR [path kesanapalli-02] [RTSP source] 479 RTP packets lost
+2026/01/30 10:07:15 WAR [path kesanapalli-02] [RTSP source] 82 RTP packets lost
+2026/01/30 10:07:16 WAR [path kesanapalli-02] [RTSP source] 243 RTP packets lost
+2026/01/30 10:07:19 WAR [path kesanapalli-02] [RTSP source] 189 RTP packets lost
+2026/01/30 10:07:20 WAR [path kesanapalli-02] [RTSP source] 175 RTP packets lost
+2026/01/30 10:07:21 WAR [path kesanapalli-02] [RTSP source] 292 RTP packets lost
+2026/01/30 10:07:22 WAR [path kesanapalli-02] [RTSP source] 101 RTP packets lost
+2026/01/30 10:07:23 WAR [path kesanapalli-02] [RTSP source] 185 RTP packets lost
+2026/01/30 10:07:25 WAR [path kesanapalli-02] [RTSP source] 486 RTP packets lost
+2026/01/30 10:07:31 WAR [path kesanapalli-02] [RTSP source] 329 RTP packets lost
+2026/01/30 10:07:32 WAR [path kesanapalli-02] [RTSP source] 41 RTP packets lost
+2026/01/30 10:07:33 WAR [path kesanapalli-02] [RTSP source] 82 RTP packets lost
+2026/01/30 10:07:34 WAR [path kesanapalli-02] [RTSP source] 101 RTP packets lost
+2026/01/30 10:07:36 WAR [path kesanapalli-02] [RTSP source] 144 RTP packets lost
+2026/01/30 10:07:37 WAR [path kesanapalli-02] [RTSP source] 344 RTP packets lost
+2026/01/30 10:07:38 WAR [path kesanapalli-02] [RTSP source] 441 RTP packets lost
+2026/01/30 10:07:42 WAR [path kesanapalli-02] [RTSP source] 321 RTP packets lost
+2026/01/30 10:07:43 WAR [path kesanapalli-02] [RTSP source] 409 RTP packets lost
+2026/01/30 10:07:44 WAR [path kesanapalli-02] [RTSP source] 175 RTP packets lost
+2026/01/30 10:07:51 WAR [path kesanapalli-02] [RTSP source] 39 RTP packets lost
+2026/01/30 10:07:52 WAR [path kesanapalli-02] [RTSP source] 78 RTP packets lost
+2026/01/30 10:07:53 WAR [path kesanapalli-02] [RTSP source] 173 RTP packets lost
+2026/01/30 10:07:54 WAR [path kesanapalli-02] [RTSP source] 286 RTP packets lost
+2026/01/30 10:07:55 WAR [path kesanapalli-02] [RTSP source] 72 RTP packets lost
+2026/01/30 10:07:56 WAR [path kesanapalli-02] [RTSP source] 138 RTP packets lost
+2026/01/30 10:07:58 WAR [path kesanapalli-02] [RTSP source] 101 RTP packets lost
+2026/01/30 10:07:59 WAR [path kesanapalli-02] [RTSP source] 239 RTP packets lost
+2026/01/30 10:08:00 WAR [path kesanapalli-02] [RTSP source] 173 RTP packets lost
+2026/01/30 10:08:03 WAR [path kesanapalli-02] [RTSP source] 688 RTP packets lost
+2026/01/30 10:08:04 WAR [path kesanapalli-02] [RTSP source] 518 RTP packets lost
+2026/01/30 10:08:05 WAR [path kesanapalli-02] [RTSP source] 78 RTP packets lost
+2026/01/30 10:08:06 WAR [path kesanapalli-02] [RTSP source] 74 RTP packets lost
+2026/01/30 10:08:08 WAR [path kesanapalli-02] [RTSP source] 185 RTP packets lost
+2026/01/30 10:08:09 WAR [path kesanapalli-02] [RTSP source] 542 RTP packets lost
+2026/01/30 10:08:11 WAR [path kesanapalli-02] [RTSP source] 210 RTP packets lost
+2026/01/30 10:08:12 WAR [path kesanapalli-02] [RTSP source] 335 RTP packets lost
+2026/01/30 10:08:14 WAR [path kesanapalli-02] [RTSP source] 39 RTP packets lost
+2026/01/30 10:08:15 WAR [path kesanapalli-02] [RTSP source] 187 RTP packets lost
+2026/01/30 10:08:17 WAR [path kesanapalli-02] [RTSP source] 146 RTP packets lost
+2026/01/30 10:08:18 WAR [path kesanapalli-02] [RTSP source] 146 RTP packets lost
+2026/01/30 10:08:21 WAR [path kesanapalli-02] [RTSP source] 340 RTP packets lost
+2026/01/30 10:08:25 WAR [path kesanapalli-02] [RTSP source] 757 RTP packets lost
+2026/01/30 10:08:26 WAR [path kesanapalli-02] [RTSP source] 660 RTP packets lost
+2026/01/30 10:08:27 WAR [path kesanapalli-02] [RTSP source] 41 RTP packets lost
+2026/01/30 10:08:27 INF [WebRTC] [session 61e06bcb] created by [::1]:61558
+2026/01/30 10:08:27 INF [WebRTC] [session 61e06bcb] closed: no stream is available on path 'kesanapalli-04-h264'
+2026/01/30 10:08:29 WAR [path kesanapalli-02] [RTSP source] 625 RTP packets lost
+2026/01/30 10:08:32 WAR [path kesanapalli-02] [RTSP source] 148 RTP packets lost
+2026/01/30 10:08:35 WAR [path kesanapalli-02] [RTSP source] 41 RTP packets lost
+2026/01/30 10:08:36 WAR [path kesanapalli-02] [RTSP source] 222 RTP packets lost
+2026/01/30 10:08:37 WAR [path kesanapalli-02] [RTSP source] 41 RTP packets lost
+2026/01/30 10:08:38 WAR [path kesanapalli-02] [RTSP source] 41 RTP packets lost
+2026/01/30 10:08:39 WAR [path kesanapalli-02] [RTSP source] 210 RTP packets lost
+2026/01/30 10:08:40 WAR [path kesanapalli-02] [RTSP source] 294 RTP packets lost
+2026/01/30 10:08:41 WAR [path kesanapalli-02] [RTSP source] 70 RTP packets lost
+2026/01/30 10:08:43 WAR [path kesanapalli-02] [RTSP source] 307 RTP packets lost
+2026/01/30 10:08:44 WAR [path kesanapalli-02] [RTSP source] 517 RTP packets lost
+2026/01/30 10:08:46 WAR [path kesanapalli-02] [RTSP source] 255 RTP packets lost
+2026/01/30 10:08:47 WAR [path kesanapalli-02] [RTSP source] 274 RTP packets lost
+2026/01/30 10:08:48 WAR [path kesanapalli-02] [RTSP source] 108 RTP packets lost
+2026/01/30 10:09:05 WAR [path kesanapalli-02] [RTSP source] 180 RTP packets lost
+2026/01/30 10:09:06 WAR [path kesanapalli-02] [RTSP source] 106 RTP packets lost
+2026/01/30 10:09:07 WAR [path kesanapalli-02] [RTSP source] 152 RTP packets lost
+2026/01/30 10:09:25 WAR [path kesanapalli-02] [RTSP source] 76 RTP packets lost
+2026/01/30 10:09:26 WAR [path kesanapalli-02] [RTSP source] 106 RTP packets lost
+2026/01/30 10:09:27 WAR [path kesanapalli-02] [RTSP source] 106 RTP packets lost
+2026/01/30 10:09:28 WAR [path kesanapalli-02] [RTSP source] 40 RTP packets lost
+2026/01/30 10:09:29 WAR [path kesanapalli-02] [RTSP source] 308 RTP packets lost
+2026/01/30 10:09:30 WAR [path kesanapalli-02] [RTSP source] 78 RTP packets lost
+2026/01/30 10:09:31 WAR [path kesanapalli-02] [RTSP source] 178 RTP packets lost
+2026/01/30 10:09:32 WAR [path kesanapalli-02] [RTSP source] 66 RTP packets lost
+2026/01/30 10:09:33 WAR [path kesanapalli-02] [RTSP source] 40 RTP packets lost
+2026/01/30 10:09:34 WAR [path kesanapalli-02] [RTSP source] 336 RTP packets lost
+2026/01/30 10:09:35 WAR [path kesanapalli-02] [RTSP source] 98 RTP packets lost
+2026/01/30 10:09:36 WAR [path kesanapalli-02] [RTSP source] 166 RTP packets lost
+2026/01/30 10:09:37 WAR [path kesanapalli-02] [RTSP source] 170 RTP packets lost
+2026/01/30 10:09:38 WAR [path kesanapalli-02] [RTSP source] 360 RTP packets lost
+2026/01/30 10:09:39 WAR [path kesanapalli-02] [RTSP source] 40 RTP packets lost
+2026/01/30 10:09:40 WAR [path kesanapalli-02] [RTSP source] 178 RTP packets lost
+2026/01/30 10:09:41 WAR [path kesanapalli-02] [RTSP source] 170 RTP packets lost
+2026/01/30 10:09:42 WAR [path kesanapalli-02] [RTSP source] 104 RTP packets lost
+2026/01/30 10:09:43 WAR [path kesanapalli-02] [RTSP source] 37 RTP packets lost
+2026/01/30 10:09:45 WAR [path kesanapalli-02] [RTSP source] 179 RTP packets lost
+2026/01/30 10:09:46 WAR [path kesanapalli-02] [RTSP source] 545 RTP packets lost
+2026/01/30 10:09:48 WAR [path kesanapalli-02] [RTSP source] 41 RTP packets lost
+2026/01/30 10:09:49 WAR [path kesanapalli-02] [RTSP source] 138 RTP packets lost
+2026/01/30 10:09:50 WAR [path kesanapalli-02] [RTSP source] 101 RTP packets lost
+2026/01/30 10:09:51 WAR [path kesanapalli-02] [RTSP source] 247 RTP packets lost
+2026/01/30 10:09:53 WAR [path kesanapalli-02] [RTSP source] 105 RTP packets lost
+2026/01/30 10:09:54 WAR [path kesanapalli-02] [RTSP source] 636 RTP packets lost
+2026/01/30 10:09:56 WAR [path kesanapalli-02] [RTSP source] 115 RTP packets lost
+2026/01/30 10:09:58 WAR [path kesanapalli-02] [RTSP source] 82 RTP packets lost
+2026/01/30 10:10:00 WAR [path kesanapalli-02] [RTSP source] 109 RTP packets lost
+2026/01/30 10:10:01 WAR [path kesanapalli-02] [RTSP source] 290 RTP packets lost
+2026/01/30 10:10:02 WAR [path kesanapalli-02] [RTSP source] 70 RTP packets lost
+2026/01/30 10:10:05 WAR [path kesanapalli-02] [RTSP source] 214 RTP packets lost
+2026/01/30 10:10:07 WAR [path kesanapalli-02] [RTSP source] 144 RTP packets lost
+2026/01/30 10:10:08 WAR [path kesanapalli-02] [RTSP source] 1218 RTP packets lost
+2026/01/30 10:10:10 WAR [path kesanapalli-02] [RTSP source] 41 RTP packets lost
+2026/01/30 10:10:11 WAR [path kesanapalli-02] [RTSP source] 142 RTP packets lost
+2026/01/30 10:10:12 WAR [path kesanapalli-02] [RTSP source] 74 RTP packets lost
+2026/01/30 10:10:14 WAR [path kesanapalli-02] [RTSP source] 620 RTP packets lost
+2026/01/30 10:10:15 WAR [path kesanapalli-02] [RTSP source] 181 RTP packets lost
+2026/01/30 10:10:16 WAR [path kesanapalli-02] [RTSP source] 282 RTP packets lost
+2026/01/30 10:10:17 WAR [path kesanapalli-02] [RTSP source] 179 RTP packets lost
+2026/01/30 10:10:18 WAR [path kesanapalli-02] [RTSP source] 272 RTP packets lost
+2026/01/30 10:10:19 WAR [path kesanapalli-02] [RTSP source] 74 RTP packets lost
+2026/01/30 10:10:20 WAR [path kesanapalli-02] [RTSP source] 348 RTP packets lost
+2026/01/30 10:10:21 WAR [path kesanapalli-02] [RTSP source] 82 RTP packets lost
+2026/01/30 10:10:22 WAR [path kesanapalli-02] [RTSP source] 41 RTP packets lost
+2026/01/30 10:10:48 WAR [path kesanapalli-02] [RTSP source] 41 RTP packets lost
+2026/01/30 10:10:49 WAR [path kesanapalli-02] [RTSP source] 37 RTP packets lost
+2026/01/30 10:11:09 INF [path kesanapalli-02] [RTSP source] stopped: an error occurred
+2026/01/30 10:11:09 ERR [path kesanapalli-02] [RTSP source] read tcp 172.20.10.3:60427->117.236.225.211:554: wsarecv: An established connection was aborted by the software in your host machine.
+2026/01/30 10:11:09 INF [WebRTC] [session 4f59c7cf] closed: terminated

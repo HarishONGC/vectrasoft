@@ -1,0 +1,298 @@
+# MediaMTX config for RTSP->HLS proxying
+# HLS URLs will look like: http://localhost:8888/<path>/index.m3u8
+#
+# Note: for broad browser compatibility, prefer H.264 (AVC). H.265/HEVC may not play in most browsers and can trigger HLS muxing errors.
+
+logLevel: info
+
+rtsp: yes
+rtspAddress: :8554
+# Use RTSP over TCP only to avoid binding UDP RTP/RTCP ports (8000/8001),
+# which commonly conflict on Windows and can prevent MediaMTX from starting.
+rtspTransports: [tcp]
+
+hls: yes
+hlsAddress: :8888
+hlsAllowOrigins: ['*']
+
+# WebRTC / WHEP (low-latency playback)
+# WHEP URLs look like: http://localhost:8889/<path>/whep
+webrtc: yes
+webrtcAddress: :8889
+webrtcAllowOrigins: ['*']
+# Local ICE listener (UDP). Works well for LAN / same-machine testing.
+webrtcLocalUDPAddress: :8189
+
+# Prefer MPEG-TS HLS for maximum client compatibility and fewer LL-HLS timing quirks.
+hlsVariant: mpegts
+# Slightly larger segments reduce overhead and are usually more stable on lossy links.
+hlsSegmentDuration: 2s
+
+paths:
+  kesanapalli-01:
+    source: "rtsp://live:WSS4Bosch!@117.236.225.209:554"
+    rtspTransport: tcp
+    sourceOnDemand: yes
+  # Transcoded variant (H.265 -> H.264) published by ffmpeg.
+  # HLS MPEG-TS only supports H.264 video.
+  kesanapalli-01-h264: {}
+  kesanapalli-02:
+    source: "rtsp://live:WSS4Bosch!@117.236.225.211:554"
+    rtspTransport: tcp
+    sourceOnDemand: yes
+  kesanapalli-03:
+    source: "rtsp://live:WSS4Bosch!@117.236.225.212:554"
+    rtspTransport: tcp
+    sourceOnDemand: yes
+  kesanapalli-04:
+    source: "rtsp://live:WSS4Bosch!@117.236.225.213:554"
+    rtspTransport: tcp
+    sourceOnDemand: yes
+  # Transcoded variant (H.265 -> H.264) published by ffmpeg.
+  kesanapalli-04-h264: {}
+
+  # Vijayawada - 50 channel NVR
+  # Password contains '@' so it is URL-encoded as '%40'.
+  vijayawada-01:
+    source: "rtsp://admin:Acss%405995@10.205.101.141:554/1/1"
+    rtspTransport: tcp
+    sourceOnDemand: yes
+  vijayawada-02:
+    source: "rtsp://admin:Acss%405995@10.205.101.141:554/2/1"
+    rtspTransport: tcp
+    sourceOnDemand: yes
+  vijayawada-03:
+    source: "rtsp://admin:Acss%405995@10.205.101.141:554/3/1"
+    rtspTransport: tcp
+    sourceOnDemand: yes
+  vijayawada-04:
+    source: "rtsp://admin:Acss%405995@10.205.101.141:554/4/1"
+    rtspTransport: tcp
+    sourceOnDemand: yes
+  vijayawada-05:
+    source: "rtsp://admin:Acss%405995@10.205.101.141:554/5/1"
+    rtspTransport: tcp
+    sourceOnDemand: yes
+  vijayawada-06:
+    source: "rtsp://admin:Acss%405995@10.205.101.141:554/6/1"
+    rtspTransport: tcp
+    sourceOnDemand: yes
+  vijayawada-07:
+    source: "rtsp://admin:Acss%405995@10.205.101.141:554/7/1"
+    rtspTransport: tcp
+    sourceOnDemand: yes
+  vijayawada-08:
+    source: "rtsp://admin:Acss%405995@10.205.101.141:554/8/1"
+    rtspTransport: tcp
+    sourceOnDemand: yes
+  vijayawada-09:
+    source: "rtsp://admin:Acss%405995@10.205.101.141:554/9/1"
+    rtspTransport: tcp
+    sourceOnDemand: yes
+  vijayawada-10:
+    source: "rtsp://admin:Acss%405995@10.205.101.141:554/10/1"
+    rtspTransport: tcp
+    sourceOnDemand: yes
+  vijayawada-11:
+    source: "rtsp://admin:Acss%405995@10.205.101.141:554/11/1"
+    rtspTransport: tcp
+    sourceOnDemand: yes
+  vijayawada-12:
+    source: "rtsp://admin:Acss%405995@10.205.101.141:554/12/1"
+    rtspTransport: tcp
+    sourceOnDemand: yes
+  vijayawada-13:
+    source: "rtsp://admin:Acss%405995@10.205.101.141:554/13/1"
+    rtspTransport: tcp
+    sourceOnDemand: yes
+  vijayawada-14:
+    source: "rtsp://admin:Acss%405995@10.205.101.141:554/14/1"
+    rtspTransport: tcp
+    sourceOnDemand: yes
+  vijayawada-15:
+    source: "rtsp://admin:Acss%405995@10.205.101.141:554/15/1"
+    rtspTransport: tcp
+    sourceOnDemand: yes
+  vijayawada-16:
+    source: "rtsp://admin:Acss%405995@10.205.101.141:554/16/1"
+    rtspTransport: tcp
+    sourceOnDemand: yes
+  vijayawada-17:
+    source: "rtsp://admin:Acss%405995@10.205.101.141:554/17/1"
+    rtspTransport: tcp
+    sourceOnDemand: yes
+  vijayawada-18:
+    source: "rtsp://admin:Acss%405995@10.205.101.141:554/18/1"
+    rtspTransport: tcp
+    sourceOnDemand: yes
+  vijayawada-19:
+    source: "rtsp://admin:Acss%405995@10.205.101.141:554/19/1"
+    rtspTransport: tcp
+    sourceOnDemand: yes
+  vijayawada-20:
+    source: "rtsp://admin:Acss%405995@10.205.101.141:554/20/1"
+    rtspTransport: tcp
+    sourceOnDemand: yes
+  vijayawada-21:
+    source: "rtsp://admin:Acss%405995@10.205.101.141:554/21/1"
+    rtspTransport: tcp
+    sourceOnDemand: yes
+  vijayawada-22:
+    source: "rtsp://admin:Acss%405995@10.205.101.141:554/22/1"
+    rtspTransport: tcp
+    sourceOnDemand: yes
+  vijayawada-23:
+    source: "rtsp://admin:Acss%405995@10.205.101.141:554/23/1"
+    rtspTransport: tcp
+    sourceOnDemand: yes
+  vijayawada-24:
+    source: "rtsp://admin:Acss%405995@10.205.101.141:554/24/1"
+    rtspTransport: tcp
+    sourceOnDemand: yes
+  vijayawada-25:
+    source: "rtsp://admin:Acss%405995@10.205.101.141:554/25/1"
+    rtspTransport: tcp
+    sourceOnDemand: yes
+  vijayawada-26:
+    source: "rtsp://admin:Acss%405995@10.205.101.141:554/26/1"
+    rtspTransport: tcp
+    sourceOnDemand: yes
+  vijayawada-27:
+    source: "rtsp://admin:Acss%405995@10.205.101.141:554/27/1"
+    rtspTransport: tcp
+    sourceOnDemand: yes
+  vijayawada-28:
+    source: "rtsp://admin:Acss%405995@10.205.101.141:554/28/1"
+    rtspTransport: tcp
+    sourceOnDemand: yes
+  vijayawada-29:
+    source: "rtsp://admin:Acss%405995@10.205.101.141:554/29/1"
+    rtspTransport: tcp
+    sourceOnDemand: yes
+  vijayawada-30:
+    source: "rtsp://admin:Acss%405995@10.205.101.141:554/30/1"
+    rtspTransport: tcp
+    sourceOnDemand: yes
+  vijayawada-31:
+    source: "rtsp://admin:Acss%405995@10.205.101.141:554/31/1"
+    rtspTransport: tcp
+    sourceOnDemand: yes
+  vijayawada-32:
+    source: "rtsp://admin:Acss%405995@10.205.101.141:554/32/1"
+    rtspTransport: tcp
+    sourceOnDemand: yes
+  vijayawada-33:
+    source: "rtsp://admin:Acss%405995@10.205.101.141:554/33/1"
+    rtspTransport: tcp
+    sourceOnDemand: yes
+  vijayawada-34:
+    source: "rtsp://admin:Acss%405995@10.205.101.141:554/34/1"
+    rtspTransport: tcp
+    sourceOnDemand: yes
+  vijayawada-35:
+    source: "rtsp://admin:Acss%405995@10.205.101.141:554/35/1"
+    rtspTransport: tcp
+    sourceOnDemand: yes
+  vijayawada-36:
+    source: "rtsp://admin:Acss%405995@10.205.101.141:554/36/1"
+    rtspTransport: tcp
+    sourceOnDemand: yes
+  vijayawada-37:
+    source: "rtsp://admin:Acss%405995@10.205.101.141:554/37/1"
+    rtspTransport: tcp
+    sourceOnDemand: yes
+  vijayawada-38:
+    source: "rtsp://admin:Acss%405995@10.205.101.141:554/38/1"
+    rtspTransport: tcp
+    sourceOnDemand: yes
+  vijayawada-39:
+    source: "rtsp://admin:Acss%405995@10.205.101.141:554/39/1"
+    rtspTransport: tcp
+    sourceOnDemand: yes
+  vijayawada-40:
+    source: "rtsp://admin:Acss%405995@10.205.101.141:554/40/1"
+    rtspTransport: tcp
+    sourceOnDemand: yes
+  vijayawada-41:
+    source: "rtsp://admin:Acss%405995@10.205.101.141:554/41/1"
+    rtspTransport: tcp
+    sourceOnDemand: yes
+  vijayawada-42:
+    source: "rtsp://admin:Acss%405995@10.205.101.141:554/42/1"
+    rtspTransport: tcp
+    sourceOnDemand: yes
+  vijayawada-43:
+    source: "rtsp://admin:Acss%405995@10.205.101.141:554/43/1"
+    rtspTransport: tcp
+    sourceOnDemand: yes
+  vijayawada-44:
+    source: "rtsp://admin:Acss%405995@10.205.101.141:554/44/1"
+    rtspTransport: tcp
+    sourceOnDemand: yes
+  vijayawada-45:
+    source: "rtsp://admin:Acss%405995@10.205.101.141:554/45/1"
+    rtspTransport: tcp
+    sourceOnDemand: yes
+  vijayawada-46:
+    source: "rtsp://admin:Acss%405995@10.205.101.141:554/46/1"
+    rtspTransport: tcp
+    sourceOnDemand: yes
+  vijayawada-47:
+    source: "rtsp://admin:Acss%405995@10.205.101.141:554/47/1"
+    rtspTransport: tcp
+    sourceOnDemand: yes
+  vijayawada-48:
+    source: "rtsp://admin:Acss%405995@10.205.101.141:554/48/1"
+    rtspTransport: tcp
+    sourceOnDemand: yes
+  vijayawada-49:
+    source: "rtsp://admin:Acss%405995@10.205.101.141:554/49/1"
+    rtspTransport: tcp
+    sourceOnDemand: yes
+  vijayawada-50:
+    source: "rtsp://admin:Acss%405995@10.205.101.141:554/50/1"
+    rtspTransport: tcp
+    sourceOnDemand: yes
+
+  # Mumbai - 10 channel NVR
+  # Password contains '@' so it is URL-encoded as '%40'.
+  mumbai-01:
+    source: "rtsp://admin:EV2002%40123@10.227.96.70:554/1/2"
+    rtspTransport: tcp
+    sourceOnDemand: yes
+  mumbai-02:
+    source: "rtsp://admin:EV2002%40123@10.227.96.70:554/2/2"
+    rtspTransport: tcp
+    sourceOnDemand: yes
+  mumbai-03:
+    source: "rtsp://admin:EV2002%40123@10.227.96.70:554/3/2"
+    rtspTransport: tcp
+    sourceOnDemand: yes
+  mumbai-04:
+    source: "rtsp://admin:EV2002%40123@10.227.96.70:554/4/2"
+    rtspTransport: tcp
+    sourceOnDemand: yes
+  mumbai-05:
+    source: "rtsp://admin:EV2002%40123@10.227.96.70:554/5/2"
+    rtspTransport: tcp
+    sourceOnDemand: yes
+  mumbai-06:
+    source: "rtsp://admin:EV2002%40123@10.227.96.70:554/6/2"
+    rtspTransport: tcp
+    sourceOnDemand: yes
+  mumbai-07:
+    source: "rtsp://admin:EV2002%40123@10.227.96.70:554/7/2"
+    rtspTransport: tcp
+    sourceOnDemand: yes
+  mumbai-08:
+    source: "rtsp://admin:EV2002%40123@10.227.96.70:554/8/2"
+    rtspTransport: tcp
+    sourceOnDemand: yes
+  mumbai-09:
+    source: "rtsp://admin:EV2002%40123@10.227.96.70:554/9/2"
+    rtspTransport: tcp
+    sourceOnDemand: yes
+  mumbai-10:
+    source: "rtsp://admin:EV2002%40123@10.227.96.70:554/10/2"
+    rtspTransport: tcp
+    sourceOnDemand: yes

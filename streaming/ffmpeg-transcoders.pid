@@ -1,0 +1,22 @@
+﻿{
+    "ffmpeg":  "C:\\Users\\HARISH N\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe\\ffmpeg-8.0-full_build\\bin\\ffmpeg.exe",
+    "processes":  [
+                      {
+                          "name":  "kesanapalli-01",
+                          "pid":  37444,
+                          "publishPath":  "kesanapalli-01-h264",
+                          "outUrl":  "rtsp://localhost:8554/kesanapalli-01-h264",
+                          "outLog":  "C:\\python\\CCTV_Dashboard\\streaming\\logs\\kesanapalli-01.ffmpeg.out.log",
+                          "errLog":  "C:\\python\\CCTV_Dashboard\\streaming\\logs\\kesanapalli-01.ffmpeg.err.log"
+                      },
+                      {
+                          "name":  "kesanapalli-04",
+                          "pid":  31604,
+                          "publishPath":  "kesanapalli-04-h264",
+                          "outUrl":  "rtsp://localhost:8554/kesanapalli-04-h264",
+                          "outLog":  "C:\\python\\CCTV_Dashboard\\streaming\\logs\\kesanapalli-04.ffmpeg.out.log",
+                          "errLog":  "C:\\python\\CCTV_Dashboard\\streaming\\logs\\kesanapalli-04.ffmpeg.err.log"
+                      }
+                  ],
+    "startedAt":  "2026-01-30T08:24:48.7815012+05:30"
+}

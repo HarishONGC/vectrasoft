@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Font - Cereal */
+@font-face {
+  font-family: 'Cereal';
+  src: url('http://localhost:3000/fonts/CerealWBk.woff2') format('woff2'),
+       url('http://localhost:3000/fonts/CerealWBk.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Enterprise theme tokens (SOC-friendly) */
+:root {
+  /* Light theme (daylight office optimized) */
+  --bg: 245 247 250; /* #F5F7FA */
+  --surface: 255 255 255;
+  --surface2: 243 244 246;
+  --border: 226 232 240;
+  --text: 15 23 42;
+  --muted: 100 116 139;
+}
+
+.dark {
+  --bg: 8 12 20;
+  --surface: 12 18 31;
+  --surface2: 15 23 42;
+  --border: 30 41 59;
+  --text: 226 232 240;
+  --muted: 148 163 184;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  @apply bg-bg text-text font-sans;
+}
+
+* {
+  @apply border-border;
+}
+
+@keyframes pulse-ring {
+  0% {
+    box-shadow: 0 0 0 0 rgba(244, 63, 94, 0.45);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(244, 63, 94, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(244, 63, 94, 0);
+  }
+}
+
+.animate-pulse-ring {
+  animation: pulse-ring 1.6s ease-out infinite;
+}

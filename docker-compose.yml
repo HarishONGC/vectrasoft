@@ -1,0 +1,131 @@
+services:
+  db:
+    image: mysql:8.0
+    container_name: cctv-db
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD:-securedatabase}
+      MYSQL_DATABASE: ${DB_NAME:-vms}
+    volumes:
+      - db_data:/var/lib/mysql
+
+  backend:
+    build:
+      context: ./backend
+    container_name: cctv-backend
+    restart: unless-stopped
+    environment:
+      PORT: 4000
+      DB_HOST: db
+      DB_PORT: 3306
+      DB_USER: root
+      DB_PASSWORD: ${DB_PASSWORD:-securedatabase}
+      DB_NAME: ${DB_NAME:-vms}
+      CORS_ORIGIN: ${CORS_ORIGIN:-*}
+    depends_on:
+      - db
+    ports:
+      - "4000:4000"
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        VITE_API_BASE_URL: ${VITE_API_BASE_URL:-/api}
+        VITE_WS_URL: ${VITE_WS_URL:-http://localhost}
+    container_name: cctv-frontend
+    restart: unless-stopped
+    depends_on:
+      - backend
+    ports:
+      - "80:80"
+
+  mediamtx:
+    image: bluenviron/mediamtx:latest
+    container_name: cctv-mediamtx
+    restart: unless-stopped
+    ports:
+      - "8554:8554"   # RTSP
+      - "8888:8888"   # HLS (http://<host>:8888/<path>/index.m3u8)
+      - "8889:8889"   # WebRTC HTTP (optional)
+      - "8189:8189/udp" # WebRTC ICE/UDP (optional)
+    volumes:
+      - ./streaming/mediamtx.docker.yml:/mediamtx.yml:ro
+
+  # H.265 -> H.264 transcoders for specific cameras
+  ffmpeg-kesanapalli-01:
+    image: linuxserver/ffmpeg:latest
+    container_name: cctv-ffmpeg-kesanapalli-01
+    restart: unless-stopped
+    depends_on:
+      - mediamtx
+    command:
+      [
+        "-hide_banner",
+        "-loglevel",
+        "warning",
+        "-rtsp_transport",
+        "tcp",
+        "-i",
+        "rtsp://live:WSS4Bosch!@117.236.225.209:554",
+        "-an",
+        "-c:v",
+        "libx264",
+        "-preset",
+        "veryfast",
+        "-tune",
+        "zerolatency",
+        "-pix_fmt",
+        "yuv420p",
+        "-g",
+        "50",
+        "-keyint_min",
+        "50",
+        "-sc_threshold",
+        "0",
+        "-f",
+        "rtsp",
+        "-rtsp_transport",
+        "tcp",
+        "rtsp://mediamtx:8554/kesanapalli-01"
+      ]
+
+  ffmpeg-kesanapalli-04:
+    image: linuxserver/ffmpeg:latest
+    container_name: cctv-ffmpeg-kesanapalli-04
+    restart: unless-stopped
+    depends_on:
+      - mediamtx
+    command:
+      [
+        "-hide_banner",
+        "-loglevel",
+        "warning",
+        "-rtsp_transport",
+        "tcp",
+        "-i",
+        "rtsp://live:WSS4Bosch!@117.236.225.213:554",
+        "-an",
+        "-c:v",
+        "libx264",
+        "-preset",
+        "veryfast",
+        "-tune",
+        "zerolatency",
+        "-pix_fmt",
+        "yuv420p",
+        "-g",
+        "50",
+        "-keyint_min",
+        "50",
+        "-sc_threshold",
+        "0",
+        "-f",
+        "rtsp",
+        "-rtsp_transport",
+        "tcp",
+        "rtsp://mediamtx:8554/kesanapalli-04"
+      ]
+
+volumes:
+  db_data:

@@ -1,0 +1,11 @@
+tunnel: cctv-dashboard
+credentials-file: C:\Users\YourUsername\.cloudflared\cctv-dashboard.json
+
+ingress:
+  - hostname: vectrasoftsolutions.com
+    service: http://localhost
+  - hostname: hls.vectrasoftsolutions.com
+    service: http://localhost:8888
+  - hostname: rtsp.vectrasoftsolutions.com
+    service: http://localhost:8554
+  - service: http_status:404
