@@ -32,6 +32,12 @@ export function TopBar({ mode, className = '' }: { mode: 'ADMIN' | 'CONTROL', cl
     >
       <div className="absolute inset-0 bg-gradient-to-r from-blue-900/70 via-blue-800/60 to-blue-900/70 backdrop-blur-sm"></div>
       <div className="relative z-10 flex items-center gap-2 sm:gap-3 min-w-0">
+        <img 
+          src="/vectrasoft-logo.svg" 
+          alt="VectraSoft Technologies" 
+          className="h-8 sm:h-10 w-auto flex-shrink-0 drop-shadow-lg"
+        />
+        <div className="hidden sm:block w-px h-8 bg-white/30 mx-1"></div>
         <div className="flex h-9 w-9 sm:h-11 sm:w-11 flex-shrink-0 items-center justify-center rounded-lg bg-white/20 backdrop-blur-md text-white border border-white/30 shadow-lg">
           {mode === 'CONTROL' ? <Video size={18} className="sm:w-[22px] sm:h-[22px]" strokeWidth={2.5} /> : <Shield size={18} className="sm:w-[22px] sm:h-[22px]" strokeWidth={2.5} />}
         </div>

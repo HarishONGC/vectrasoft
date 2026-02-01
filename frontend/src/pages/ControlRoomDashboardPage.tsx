@@ -39,43 +39,6 @@ import { cn } from '../app/cn'
 
 type GridLayout = '2x2' | '3x3' | '4x4'
 
-function SmallGlassKpi({
-  label,
-  value,
-  tone,
-}: {
-  label: string
-  value: number | string
-  tone: 'brand' | 'ok' | 'bad' | 'warn'
-}) {
-  const borderColor =
-    tone === 'ok'
-      ? 'border-emerald-500/30'
-      : tone === 'warn'
-        ? 'border-amber-500/30'
-        : tone === 'bad'
-          ? 'border-rose-500/30'
-          : 'border-brand-500/30'
-
-  const valueColor =
-    tone === 'ok'
-      ? 'text-emerald-700 dark:text-emerald-300'
-      : tone === 'warn'
-        ? 'text-amber-700 dark:text-amber-300'
-        : tone === 'bad'
-          ? 'text-rose-700 dark:text-rose-300'
-          : 'text-brand-700 dark:text-brand-300'
-
-  return (
-    <div className={'rounded-lg bg-surface border ' + borderColor}>
-      <div className="px-3 py-2">
-        <div className="text-[10px] font-bold uppercase tracking-wider text-muted">{label}</div>
-        <div className={"mt-1 text-xl font-bold tabular-nums " + valueColor}>{value}</div>
-      </div>
-    </div>
-  )
-}
-
 function formatSeconds(totalSeconds: number) {
   if (!Number.isFinite(totalSeconds) || totalSeconds < 0) return '0:00'
   const minutes = Math.floor(totalSeconds / 60)
@@ -127,19 +90,9 @@ export function ControlRoomDashboardPage() {
   const gridScroll = useDragScroll<HTMLDivElement>()
 
   const prevSummaryRef = useRef<typeof summary | null>(null)
-  const [deltas, setDeltas] = useState<{ total?: number; online?: number; offline?: number; warning?: number } | null>(null)
 
   useEffect(() => {
     if (!summary) return
-    const prev = prevSummaryRef.current
-    if (prev) {
-      setDeltas({
-        total: summary.total - prev.total,
-        online: summary.online - prev.online,
-        offline: summary.offline - prev.offline,
-        warning: summary.warning - prev.warning,
-      })
-    }
     prevSummaryRef.current = summary
   }, [summary])
 
@@ -206,6 +159,12 @@ export function ControlRoomDashboardPage() {
     const next = new URLSearchParams(params)
     next.delete('fullscreen')
     setParams(next, { replace: true })
+    
+    // Exit browser fullscreen if active
+    const doc = document as Document & { exitFullscreen?: () => Promise<void> }
+    if (doc.fullscreenElement) {
+      void doc.exitFullscreen?.()
+    }
   }
 
   const enterWallMode = useCallback(() => {
@@ -380,6 +339,14 @@ export function ControlRoomDashboardPage() {
 
   const recordingSizeLabel = useMemo(() => formatBytes(recordingSizeBytes), [recordingSizeBytes])
 
+  // Clean up invalid fullscreen parameter if camera not found
+  useEffect(() => {
+    if (fullscreenId && !fullscreenCam && cameras.length > 0) {
+      // Camera with fullscreen ID doesn't exist, close fullscreen
+      closeFullscreen()
+    }
+  }, [fullscreenId, fullscreenCam, cameras.length])
+
   // Reset recording when switching cameras
   useEffect(() => {
     if (fullscreenCam) {
@@ -405,13 +372,12 @@ export function ControlRoomDashboardPage() {
   return (
     <div className="min-h-full p-3 sm:p-4">
       {!wall ? (
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 sm:gap-3 mb-3">
-          <KpiCard label="Total Cameras" value={summary?.total ?? '—'} tone="brand" delta={deltas?.total} />
-          <KpiCard label="Online" value={summary?.online ?? '—'} tone="ok" delta={deltas?.online} />
-          <KpiCard label="Offline" value={summary?.offline ?? '—'} tone="bad" delta={deltas?.offline} />
-          <KpiCard label="Warning / Unstable" value={summary?.warning ?? '—'} tone="warn" delta={deltas?.warning} />
-          <KpiCard label="Availability" value={availabilityPct != null ? `${availabilityPct}%` : '—'} tone="neutral" />
-          <KpiCard label="Today Downtime" value={'—'} tone="neutral" />
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2 sm:gap-3 mb-3">
+          <KpiCard label="Total Cameras" value={selectedLocationCounts.total} tone="brand" icon="globe" />
+          <KpiCard label="Online" value={selectedLocationCounts.online} tone="ok" icon="check" />
+          <KpiCard label="Offline" value={selectedLocationCounts.offline} tone="bad" icon="trash" />
+          <KpiCard label="Warning / Unstable" value={selectedLocationCounts.unstable} tone="warn" icon="activity" />
+          <KpiCard label="Availability" value={availabilityPct != null ? `${availabilityPct}%` : '—'} tone="neutral" icon="activity" />
         </div>
       ) : null}
 
@@ -490,13 +456,6 @@ export function ControlRoomDashboardPage() {
             </div>
           </div>
 
-          <div className="mt-3 grid grid-cols-2 sm:grid-cols-4 gap-2">
-            <SmallGlassKpi label="Total Cameras" value={selectedLocationCounts.total} tone="brand" />
-            <SmallGlassKpi label="Online" value={selectedLocationCounts.online} tone="ok" />
-            <SmallGlassKpi label="Offline" value={selectedLocationCounts.offline} tone="bad" />
-            <SmallGlassKpi label="Unstable" value={selectedLocationCounts.unstable} tone="warn" />
-          </div>
-
           <div
             {...gridScroll.bind}
             className={
@@ -507,11 +466,17 @@ export function ControlRoomDashboardPage() {
           >
             <div
               className={
-                layout === '2x2'
+                pageSize === 4
                   ? 'grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3 px-1'
-                  : layout === '3x3'
+                  : pageSize === 6
                     ? 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-3 px-1'
-                    : 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 sm:gap-3 px-1'
+                    : pageSize === 9
+                      ? 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-3 px-1'
+                      : pageSize === 16
+                        ? 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 sm:gap-3 px-1'
+                        : pageSize === 25
+                          ? 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-2 sm:gap-3 px-1'
+                          : 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 sm:gap-3 px-1'
               }
             >
               {gridCameras.map((cam) => (
@@ -566,10 +531,10 @@ export function ControlRoomDashboardPage() {
       ) : null}
 
       {fullscreenCam ? (
-        <div className="fixed inset-0 z-[9999] bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
-          <div className="w-[70vw] max-w-[1200px] h-[80vh] max-h-[90vh] min-h-[360px] flex flex-col">
+        <div className="fixed inset-0 z-[9999] bg-black flex flex-col">
+          <div className="flex flex-col h-full overflow-hidden">
             <div className="flex flex-col h-full overflow-hidden bg-black shadow-2xl">
-              <div className="flex-shrink-0 flex flex-wrap items-center justify-between gap-2 sm:gap-4 border-b border-slate-700/60 px-3 sm:px-4 py-1.5 backdrop-blur-md bg-slate-900/90">
+              <div className="flex-shrink-0 flex flex-wrap items-center justify-between gap-2 sm:gap-4 border-b border-slate-700/60 px-3 sm:px-4 py-2 sm:py-2.5 backdrop-blur-md bg-slate-900/90">
                 <div className="min-w-0 flex-1">
                   <div className="flex flex-wrap items-center gap-2 sm:gap-3">
                     <div className="min-w-0">
@@ -629,7 +594,7 @@ export function ControlRoomDashboardPage() {
               <div className="flex-1 min-h-0 flex flex-col bg-black">
                 <div className="relative flex-1 overflow-hidden">
                   <div className="absolute inset-0">
-                      {fullscreenCam.enabled && fullscreenCam.status !== 'OFFLINE' && (fullscreenCam.whepUrl || fullscreenCam.hlsUrl) ? (
+                      {fullscreenCam.enabled && (fullscreenCam.whepUrl || fullscreenCam.hlsUrl) ? (
                         fullscreenCam.whepUrl && !whepFailed ? (
                           <WebRtcVideo 
                             key={streamRefreshKey} 
@@ -670,12 +635,12 @@ export function ControlRoomDashboardPage() {
                                     ? 'No live stream configured for this camera.'
                                     : 'Stream unavailable.'}
                             </div>
-                            {!fullscreenCam.whepUrl && !fullscreenCam.hlsUrl && fullscreenCam.enabled && fullscreenCam.status !== 'OFFLINE' ? (
+                            {!fullscreenCam.whepUrl && !fullscreenCam.hlsUrl && fullscreenCam.enabled ? (
                               <div className="mt-2 text-xs text-slate-300/90">
                                 Set a WHEP (WebRTC) URL or HLS URL in Admin → Cameras to enable live playback.
                               </div>
                             ) : null}
-                            {!fullscreenCam.whepUrl && !fullscreenCam.hlsUrl && fullscreenCam.enabled && fullscreenCam.status !== 'OFFLINE' ? (
+                            {!fullscreenCam.whepUrl && !fullscreenCam.hlsUrl && fullscreenCam.enabled ? (
                               <div className="mt-4 flex justify-center">
                                 <Button
                                   variant="secondary"
@@ -747,7 +712,7 @@ export function ControlRoomDashboardPage() {
                             <button
                               type="button"
                               className="inline-flex items-center gap-1 sm:gap-2 rounded-lg bg-emerald-500/15 px-2 sm:px-3 py-1.5 sm:py-2 text-[10px] sm:text-xs font-semibold text-emerald-300 ring-1 ring-emerald-500/40 hover:bg-emerald-500/20"
-                              onClick={recorder.downloadRecording}
+                              onClick={() => recorder.downloadRecording(fullscreenCam.name)}
                               title="Download recording"
                             >
                               <Download size={12} className="sm:w-3.5 sm:h-3.5" /> <span className="hidden sm:inline">Download</span>

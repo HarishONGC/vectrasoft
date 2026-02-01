@@ -6,19 +6,27 @@ import { Server as IOServer } from 'socket.io'
 import { createPool } from 'mysql2/promise'
 import { buildRoutes } from './routes'
 import type { MysqlConfig } from './store'
+import { InMemoryStore } from './store'
+import { startStatusSimulator } from './statusSimulator'
 
 const PORT = Number(process.env.PORT ?? 4000)
 const CORS_ORIGIN = process.env.CORS_ORIGIN ?? 'http://localhost:5173'
+const ALLOW_TUNNEL_ORIGINS = process.env.CORS_ALLOW_TUNNELS === '1'
 const CORS_ORIGINS = CORS_ORIGIN.split(',')
   .map((origin) => origin.trim())
   .filter(Boolean)
 
 const isLocalhostOrigin = (origin: string) => /^https?:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/i.test(origin)
+const isTunnelOrigin = (origin: string) => {
+  if (!ALLOW_TUNNEL_ORIGINS) return false
+  return /^https?:\/\/[\w-]+\.(ngrok-free\.app|ngrok\.io|ngrok\.app)$/i.test(origin)
+}
 const isAllowedOrigin = (origin?: string | null) => {
   if (!origin) return true
   if (CORS_ORIGINS.includes('*')) return true
   if (CORS_ORIGINS.includes(origin)) return true
-  return isLocalhostOrigin(origin)
+  if (isLocalhostOrigin(origin)) return true
+  return isTunnelOrigin(origin)
 }
 
 const app = express()
@@ -98,6 +106,18 @@ const start = async () => {
     await db.query('SELECT 1')
     // eslint-disable-next-line no-console
     console.log(`[backend] connected to MySQL (${mysqlConfig.database})`)
+    
+    // Initialize in-memory store from database
+    const store = new InMemoryStore()
+    await store.hydrateFromMysql(mysqlConfig)
+    // eslint-disable-next-line no-console
+    console.log(`[backend] loaded ${store.cameras.length} cameras from database`)
+    
+    // Start status simulator
+    startStatusSimulator(store, io)
+    // eslint-disable-next-line no-console
+    console.log(`[backend] status simulator started`)
+    
   } catch (err) {
     // eslint-disable-next-line no-console
     console.error('[backend] MySQL load failed. Backend will not start.', err)

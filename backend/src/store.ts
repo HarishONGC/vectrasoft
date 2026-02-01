@@ -1,12 +1,10 @@
-import { randomUUID } from 'crypto'
-import type { AuditEvent, Camera, HealthSettings, Location } from './models'
+import type { Camera, HealthSettings, Location } from './models'
 
 const nowIso = () => new Date().toISOString()
 
 export class InMemoryStore {
   public locations: Location[] = []
   public cameras: Camera[] = []
-  public audit: AuditEvent[] = []
   public healthSettings: HealthSettings = {
     pingIntervalSeconds: 5,
     timeoutMs: 1200,
@@ -18,11 +16,6 @@ export class InMemoryStore {
   }
 
   constructor(_seedData = true) {}
-
-  log(event: Omit<AuditEvent, 'id' | 'at'>) {
-    this.audit.unshift({ id: randomUUID(), at: nowIso(), ...event })
-    this.audit = this.audit.slice(0, 500)
-  }
 
   async hydrateFromMysql(config: MysqlConfig) {
     const { createConnection } = await import('mysql2/promise')
@@ -58,7 +51,6 @@ export class InMemoryStore {
       const [locationRows] = await conn.execute('SELECT * FROM locations')
       const [cameraRows] = await conn.execute('SELECT * FROM cameras')
       const [healthRows] = await conn.execute('SELECT * FROM health_settings')
-      const [auditRows] = await conn.execute('SELECT * FROM audit_events ORDER BY at DESC LIMIT 500')
 
       this.locations = (locationRows as any[]).map((row) => ({
         id: String(row.id),
@@ -120,26 +112,6 @@ export class InMemoryStore {
           escalationMinutes: Number(health.escalationMinutes),
         }
       }
-
-      this.audit = (auditRows as any[]).map((row) => {
-        let details = row.details ?? undefined
-        if (typeof details === 'string') {
-          try {
-            details = JSON.parse(details)
-          } catch {
-            details = { raw: details }
-          }
-        }
-        return {
-          id: String(row.id),
-          actor: String(row.actor),
-          action: row.action,
-          entityId: row.entityId ?? undefined,
-          entityName: row.entityName ?? undefined,
-          details: details ?? undefined,
-          at: toIso(row.at) ?? nowIso(),
-        } as AuditEvent
-      })
     } finally {
       await conn.end()
     }

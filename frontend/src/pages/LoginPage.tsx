@@ -46,11 +46,8 @@ export function LoginPage() {
 
       setUser(user)
 
-      if (user.role === 'ADMIN') {
-        nav('/admin/locations')
-      } else {
-        nav('/control-room')
-      }
+      // All users (including ADMIN) navigate to control room after login
+      nav('/control-room')
     } catch {
       setError('Unable to reach the server. Check the backend URL and try again.')
     } finally {

@@ -9,12 +9,11 @@ import { ControlRoomDashboardPage } from '../pages/ControlRoomDashboardPage'
 import { AdminLocationsPage } from '../pages/admin/AdminLocationsPage'
 import { AdminCamerasPage } from '../pages/admin/AdminCamerasPage'
 import { AdminSettingsPage } from '../pages/admin/AdminSettingsPage'
-import { AdminAuditPage } from '../pages/admin/AdminAuditPage'
 import { AdminUsersPage } from '../pages/admin/AdminUsersPage'
 
 function HomeRedirect() {
   const role = getRole()
-  if (role === 'ADMIN') return <Navigate to="/admin/locations" replace />
+  if (role === 'ADMIN') return <Navigate to="/control-room" replace />
   if (role === 'OPERATOR' || role === 'VIEWER') return <Navigate to="/control-room" replace />
   return <Navigate to="/login" replace />
 }
@@ -48,7 +47,6 @@ export const router = createBrowserRouter([
       { path: 'locations', element: <AdminLocationsPage /> },
       { path: 'cameras', element: <AdminCamerasPage /> },
       { path: 'settings', element: <AdminSettingsPage /> },
-      { path: 'audit', element: <AdminAuditPage /> },
       { path: 'users', element: <AdminUsersPage /> },
       { index: true, element: <Navigate to="/admin/locations" replace /> },
     ],

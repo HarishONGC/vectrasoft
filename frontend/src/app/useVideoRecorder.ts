@@ -298,7 +298,7 @@ export function useVideoRecorder({ maxDurationMs = 10 * 60 * 1000, videoRef, vid
     // setState((prev) => ({ ...prev, isRecording: false, isPaused: false }))
   }, [])
 
-  const downloadRecording = useCallback(() => {
+  const downloadRecording = useCallback((cameraName?: string) => {
     if (!state.recordedBlob) return
 
     if (state.recordedBlob.size === 0) {
@@ -308,10 +308,14 @@ export function useVideoRecorder({ maxDurationMs = 10 * 60 * 1000, videoRef, vid
 
     console.log(`Downloading recording: ${state.recordedBlob.size} bytes`)
 
+    const safeName = cameraName ? cameraName.replace(/[^a-z0-9\-_. ]/gi, '_').trim() : 'camera'
+    const timestamp = new Date().toISOString().replace(/[:.]/g, '-').split('.')[0] // YYYY-MM-DDTHH-MM-SS
+    const filename = `${safeName}-recording-${timestamp}.webm`
+
     const url = URL.createObjectURL(state.recordedBlob)
     const a = document.createElement('a')
     a.href = url
-    a.download = `recording-${Date.now()}.webm`
+    a.download = filename
     document.body.appendChild(a)
     a.click()
     document.body.removeChild(a)

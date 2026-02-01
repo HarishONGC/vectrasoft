@@ -87,6 +87,42 @@ Admin:
 - Frontend listens and updates camera status, latency, signal strength.
 - REST queries auto-refresh every 5 seconds for a polling-based fallback.
 
+## Ngrok tunneling (dev)
+
+You can expose the dev app over an ngrok tunnel.
+
+1) Start the app:
+
+```bash
+npm run dev
+```
+
+2) Start ngrok (separate terminals):
+
+```bash
+ngrok http 5173
+ngrok http 4000
+```
+
+3) Set env vars for the frontend (Vite):
+
+```bash
+VITE_API_BASE_URL=https://<your-backend-ngrok-domain>/api
+VITE_WS_URL=https://<your-backend-ngrok-domain>
+VITE_DEV_TUNNEL_HOST=<your-frontend-ngrok-domain>
+```
+
+4) Allow tunnel origins on the backend:
+
+```bash
+CORS_ALLOW_TUNNELS=1
+```
+
+Notes:
+
+- If you use a custom ngrok domain, you can also set `CORS_ORIGIN` to that exact URL.
+- RTSP/HLS/WHEP streams on private IPs won’t be reachable from the public internet unless you also expose or proxy the streaming gateway.
+
 ## Streaming integration notes (RTSP → Web)
 
 This demo supports **real HLS playback** when a camera has an `hlsUrl` configured.

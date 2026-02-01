@@ -22,20 +22,15 @@ hlsVariant: mpegts
 hlsSegmentDuration: 2s
 
 paths:
-  # Kesanapalli
-  # NOTE: -01 and -04 are H.265 (HEVC) and are published by ffmpeg transcoders.
+  # Kesanapalli (published by laptop/edge FFmpeg push)
   kesanapalli-01:
-    # Published by docker compose service: ffmpeg-kesanapalli-01
+    # Published by laptop FFmpeg to rtsp://mediamtx:8554/kesanapalli-01
   kesanapalli-02:
-    source: "rtsp://live:WSS4Bosch!@117.236.225.211:554"
-    rtspTransport: tcp
-    sourceOnDemand: yes
+    # Published by laptop FFmpeg to rtsp://mediamtx:8554/kesanapalli-02
   kesanapalli-03:
-    source: "rtsp://live:WSS4Bosch!@117.236.225.212:554"
-    rtspTransport: tcp
-    sourceOnDemand: yes
+    # Published by laptop FFmpeg to rtsp://mediamtx:8554/kesanapalli-03
   kesanapalli-04:
-    # Published by docker compose service: ffmpeg-kesanapalli-04
+    # Published by laptop FFmpeg to rtsp://mediamtx:8554/kesanapalli-04
 
   # Vijayawada - 50 channel NVR
   # Password contains '@' so it is URL-encoded as '%40'.

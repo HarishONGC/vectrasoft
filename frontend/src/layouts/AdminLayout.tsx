@@ -1,4 +1,4 @@
-import { Building2, Camera, ClipboardList, Settings, ChevronsLeft, ChevronsRight, Plus, MonitorPlay, Users } from 'lucide-react'
+import { Building2, Camera, Settings, ChevronsLeft, ChevronsRight, Plus, MonitorPlay, Users } from 'lucide-react'
 import { NavLink, Outlet, useNavigate, useSearchParams } from 'react-router-dom'
 import { useMemo, useState } from 'react'
 import { cn } from '../app/cn'
@@ -164,7 +164,7 @@ export function AdminLayout() {
               <Settings size={16} /> Health Settings
             </NavLink>
             <NavLink
-              to="/admin/audit"
+              to="/admin/users"
               className={({ isActive }) =>
                 cn(
                   itemBase,
@@ -172,9 +172,9 @@ export function AdminLayout() {
                   isActive && 'bg-surface2 text-text ring-1 ring-border/70',
                 )
               }
-              title="Audit Logs"
+              title="User Management"
             >
-              <ClipboardList size={16} /> Audit Logs
+              <Users size={16} /> User Management
             </NavLink>
           </nav>
 

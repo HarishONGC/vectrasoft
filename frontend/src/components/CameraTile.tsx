@@ -2,7 +2,7 @@ import { Camera as CameraIcon, Maximize2, Info } from 'lucide-react'
 import { Play, RotateCw, Camera as SnapshotIcon } from 'lucide-react'
 import { cn } from '../app/cn'
 import { useInView } from '../app/useInView'
-import { useCallback, useMemo, useRef, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import type { Camera, Location } from '../api/types'
 import { HlsVideo } from './HlsVideo'
 import { WebRtcVideo } from './WebRtcVideo'
@@ -29,20 +29,23 @@ export function CameraTile({
   onSettings?: () => void
   onShowDetails?: (rect: DOMRect) => void
 }) {
-  const statusTone = camera.status === 'ONLINE' ? 'ok' : camera.status === 'OFFLINE' ? 'bad' : 'warn'
-
   const tileRef = useRef<HTMLDivElement | null>(null)
   const infoButtonRef = useRef<HTMLButtonElement | null>(null)
   const videoRef = useRef<HTMLVideoElement | null>(null)
   const inView = useInView(tileRef)
   const [playerKey, setPlayerKey] = useState(0)
+  const [whepFailed, setWhepFailed] = useState(false)
   const lastTapRef = useRef<number>(0)
 
   const canPlay = useMemo(() => {
-    return Boolean(camera.enabled && camera.status !== 'OFFLINE' && (camera.whepUrl || camera.hlsUrl))
-  }, [camera.enabled, camera.status, camera.whepUrl, camera.hlsUrl])
+    return Boolean(camera.enabled && (camera.whepUrl || camera.hlsUrl))
+  }, [camera.enabled, camera.whepUrl, camera.hlsUrl])
 
   const isOffline = camera.status === 'OFFLINE'
+
+  useEffect(() => {
+    setWhepFailed(false)
+  }, [camera.id, camera.whepUrl, camera.hlsUrl])
 
   const takeSnapshot = async () => {
     const videoEl = videoRef.current
@@ -152,10 +155,24 @@ export function CameraTile({
     >
       <div className="relative aspect-video w-full overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700">
         {inView && canPlay ? (
-          camera.whepUrl ? (
-            <WebRtcVideo key={playerKey} src={camera.whepUrl} videoRef={videoRef} />
+          camera.whepUrl && !whepFailed ? (
+            <WebRtcVideo
+              key={playerKey}
+              src={camera.whepUrl}
+              videoRef={videoRef}
+              onError={() => {
+                if (camera.hlsUrl) setWhepFailed(true)
+              }}
+            />
+          ) : camera.hlsUrl ? (
+            <HlsVideo key={playerKey} src={camera.hlsUrl} videoRef={videoRef} />
           ) : (
-            <HlsVideo key={playerKey} src={camera.hlsUrl!} videoRef={videoRef} />
+            <div className="flex h-full items-center justify-center text-slate-200">
+              <div className="flex items-center gap-2 text-xs">
+                <CameraIcon size={16} /> Stream error
+                <span className="text-slate-400">(no compatible stream)</span>
+              </div>
+            </div>
           )
         ) : (
           <div className="flex h-full items-center justify-center text-slate-200">
@@ -166,27 +183,14 @@ export function CameraTile({
           </div>
         )}
 
-        {/* Overlays */}
-        <div className="pointer-events-none absolute left-3 top-3 flex items-center gap-2">
-          <Badge tone={statusTone}>{camera.status}</Badge>
-          {camera.lastLatencyMs != null && camera.status !== 'OFFLINE' ? (
+        {/* Overlays - only show latency, status badge moved to card footer */}
+        {camera.lastLatencyMs != null && camera.status !== 'OFFLINE' ? (
+          <div className="pointer-events-none absolute left-3 top-3">
             <span className="rounded-md bg-black/35 px-2 py-1 text-[11px] font-medium tabular-nums text-white ring-1 ring-white/10">
               {camera.lastLatencyMs} ms
             </span>
-          ) : null}
-        </div>
-
-        <div className="pointer-events-none absolute bottom-3 left-3 flex items-center gap-2 text-[11px] text-white">
-          {typeof camera.fps === 'number' ? (
-            <span className="rounded-md bg-black/35 px-2 py-1 font-medium tabular-nums ring-1 ring-white/10">{camera.fps} FPS</span>
-          ) : null}
-          {camera.resolution ? (
-            <span className="rounded-md bg-black/35 px-2 py-1 font-medium tabular-nums ring-1 ring-white/10">{camera.resolution}</span>
-          ) : null}
-          {camera.codec ? (
-            <span className="rounded-md bg-black/35 px-2 py-1 font-medium tabular-nums ring-1 ring-white/10">{camera.codec}</span>
-          ) : null}
-        </div>
+          </div>
+        ) : null}
 
         {/* Hover actions */}
         <div className="absolute right-3 top-3 flex gap-2 opacity-0 transition group-hover:opacity-100 pointer-events-none">
@@ -284,25 +288,36 @@ export function CameraTile({
 
       </div>
 
-      <div className="p-3">
-        <div className="flex items-start justify-between gap-2">
-          <div className="min-w-0">
-            <div className="truncate text-sm font-bold">{camera.name}</div>
-            <div className="truncate text-xs font-medium text-muted">{location?.code ?? '—'} • {camera.zone}</div>
+      <div className="p-2.5">
+        <div className="flex items-start justify-between gap-2 mb-1.5">
+          <div className="min-w-0 flex-1">
+            <div className="truncate text-sm font-bold leading-tight">{camera.name}</div>
+            <div className="truncate text-xs font-medium text-muted leading-tight">{location?.code ?? '—'} • {camera.zone}</div>
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1.5">
             <SignalStrength strength={camera.signalStrength} />
             <StatusDot status={camera.status} />
           </div>
         </div>
 
-        <div className="mt-2 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <Badge tone={statusTone}>{camera.status}</Badge>
+        <div className="flex items-center justify-between gap-2">
+          <div className="flex items-center gap-1.5">
+            {typeof camera.fps === 'number' ? (
+              <span className="px-2 py-0.5 text-[10px] font-semibold bg-slate-100 text-slate-700 rounded">
+                {camera.fps} FPS
+              </span>
+            ) : null}
+            {camera.resolution ? (
+              <span className="px-2 py-0.5 text-[10px] font-semibold bg-slate-100 text-slate-700 rounded">
+                {camera.resolution}
+              </span>
+            ) : null}
+            {camera.codec ? (
+              <span className="px-2 py-0.5 text-[10px] font-semibold bg-slate-100 text-slate-700 rounded">
+                {camera.codec}
+              </span>
+            ) : null}
             {!camera.enabled ? <Badge tone="neutral">DISABLED</Badge> : null}
-          </div>
-          <div className="text-xs font-semibold text-muted tabular-nums">
-            {camera.lastLatencyMs != null ? `${camera.lastLatencyMs} ms` : camera.status === 'OFFLINE' ? 'No heartbeat' : '—'}
           </div>
         </div>
       </div>
