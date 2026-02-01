@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 
 async function waitForIceGatheringComplete(pc: RTCPeerConnection, timeoutMs = 5000) {
   if (pc.iceGatheringState === 'complete') return
@@ -41,6 +41,19 @@ export function WebRtcVideo({
   const videoRef = externalVideoRef ?? internalVideoRef
   const [connecting, setConnecting] = useState(true)
   const [error, setError] = useState<string | null>(null)
+  const normalizedSrc = useMemo(() => {
+    let next = src.trim()
+
+    if (next.includes('/whep:')) {
+      next = next.replace('/whep:', '/whep')
+    }
+
+    if (!/^https?:\/\//i.test(next)) {
+      next = `http://${next}`
+    }
+
+    return next
+  }, [src])
 
   useEffect(() => {
     const abort = new AbortController()
@@ -108,7 +121,7 @@ export function WebRtcVideo({
       const offerSdp = pc.localDescription?.sdp
       if (!offerSdp) throw new Error('Failed to create WebRTC offer.')
 
-      const res = await fetch(src, {
+      const res = await fetch(normalizedSrc, {
         method: 'POST',
         headers: {
           'content-type': 'application/sdp',
@@ -125,7 +138,7 @@ export function WebRtcVideo({
       const location = res.headers.get('location')
       if (location) {
         // Some servers return relative URLs.
-        sessionUrl = new URL(location, src).toString()
+        sessionUrl = new URL(location, normalizedSrc).toString()
       }
 
       const answerSdp = await res.text()
@@ -145,7 +158,7 @@ export function WebRtcVideo({
     return () => {
       void stop()
     }
-  }, [src])
+  }, [normalizedSrc, onError, videoRef])
 
   return (
     <div className={className ?? 'relative h-full w-full'}>

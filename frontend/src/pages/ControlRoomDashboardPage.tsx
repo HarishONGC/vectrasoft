@@ -1,28 +1,24 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { createPortal } from 'react-dom'
 import {
   Maximize,
   Search,
   LayoutGrid,
   Camera,
-  Download,
   Maximize2,
   Minimize2,
   Pause,
   Play,
   RefreshCw,
   RotateCcw,
-  Square,
-  Timer,
   Volume2,
   VolumeX,
-  X,
 } from 'lucide-react'
 import { useNavigate, useSearchParams } from 'react-router-dom'
 import { useQueryClient } from '@tanstack/react-query'
 import { queryKeys, useCameras, useLocations, useSummary } from '../api/hooks'
 import type { CameraStatus, CameraType } from '../api/types'
 import { useDragScroll } from '../app/useDragScroll'
-import { useVideoRecorder } from '../app/useVideoRecorder'
 import { CameraDetailsPopup } from '../components/CameraDetailsPopup'
 import { CameraTile } from '../components/CameraTile'
 import { KpiCard } from '../components/KpiCard'
@@ -46,14 +42,6 @@ function formatSeconds(totalSeconds: number) {
   return `${minutes}:${String(seconds).padStart(2, '0')}`
 }
 
-function formatBytes(bytes: number) {
-  if (!Number.isFinite(bytes) || bytes <= 0) return '0 B'
-  if (bytes < 1024) return `${Math.round(bytes)} B`
-  if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(1)} KB`
-  if (bytes < 1024 * 1024 * 1024) return `${(bytes / (1024 * 1024)).toFixed(2)} MB`
-  return `${(bytes / (1024 * 1024 * 1024)).toFixed(2)} GB`
-}
-
 export function ControlRoomDashboardPage() {
   useCameraStatusRealtime()
 
@@ -72,7 +60,6 @@ export function ControlRoomDashboardPage() {
   const [search, setSearch] = useState('')
   const [status, setStatus] = useState<CameraStatus | 'ALL'>('ALL')
   const [cameraType, setCameraType] = useState<CameraType | 'ALL'>('ALL')
-  const [recordQuality, setRecordQuality] = useState<'low' | 'medium' | 'high'>('high')
   const [isMuted, setIsMuted] = useState(true)
   const [volume, setVolume] = useState(0.7)
   const [playbackSpeed, setPlaybackSpeed] = useState('1')
@@ -192,29 +179,7 @@ export function ControlRoomDashboardPage() {
   const fullscreenId = params.get('fullscreen')
   const fullscreenCam = fullscreenId ? cameras.find((c) => c.id === fullscreenId) : undefined
 
-  // Recording state for fullscreen camera
   const fullscreenVideoRef = useRef<HTMLVideoElement | null>(null)
-  const recordBitrate = useMemo(() => {
-    if (recordQuality === 'low') return 1_500_000
-    if (recordQuality === 'medium') return 3_000_000
-    return 5_000_000
-  }, [recordQuality])
-  const recorder = useVideoRecorder({
-    videoRef: fullscreenVideoRef,
-    maxDurationMs: 10 * 60 * 1000, // 10 minutes
-    videoBitsPerSecond: recordBitrate,
-  })
-
-  // Debug logging
-  useEffect(() => {
-    console.log('Recorder state changed:', {
-      isRecording: recorder.isRecording,
-      isPaused: recorder.isPaused,
-      duration: recorder.duration,
-      recordedBlob: recorder.recordedBlob ? `${recorder.recordedBlob.size} bytes` : null,
-      error: recorder.error,
-    })
-  }, [recorder.isRecording, recorder.isPaused, recorder.duration, recorder.recordedBlob, recorder.error])
 
   useEffect(() => {
     const onFullscreenChange = () => {
@@ -232,6 +197,18 @@ export function ControlRoomDashboardPage() {
       setParams(next, { replace: true })
     }
   }, [wall, isBrowserFullscreen, params, setParams])
+
+  // Sync layout selection with pageSize for grid display
+  useEffect(() => {
+    if (layout === '2x2') {
+      setPageSize(4)
+    } else if (layout === '3x3') {
+      setPageSize(9)
+    } else if (layout === '4x4') {
+      setPageSize(16)
+    }
+    setCurrentPage(1) // Reset to first page when layout changes
+  }, [layout])
 
   useEffect(() => {
     const video = fullscreenVideoRef.current
@@ -331,14 +308,6 @@ export function ControlRoomDashboardPage() {
 
   const latencyMs = fullscreenCam?.lastLatencyMs
 
-  const recordingSizeBytes = useMemo(() => {
-    if (recorder.recordedBlob) return recorder.recordedBlob.size
-    if (!recorder.isRecording) return 0
-    return Math.max(0, Math.floor((recordBitrate / 8) * recorder.duration))
-  }, [recordBitrate, recorder.duration, recorder.isRecording, recorder.recordedBlob])
-
-  const recordingSizeLabel = useMemo(() => formatBytes(recordingSizeBytes), [recordingSizeBytes])
-
   // Clean up invalid fullscreen parameter if camera not found
   useEffect(() => {
     if (fullscreenId && !fullscreenCam && cameras.length > 0) {
@@ -347,10 +316,9 @@ export function ControlRoomDashboardPage() {
     }
   }, [fullscreenId, fullscreenCam, cameras.length])
 
-  // Reset recording when switching cameras
+  // Reset WHEP fallback when switching cameras
   useEffect(() => {
     if (fullscreenCam) {
-      recorder.resetRecording()
       setWhepFailed(false)
     }
   }, [fullscreenId])
@@ -530,8 +498,9 @@ export function ControlRoomDashboardPage() {
         />
       ) : null}
 
-      {fullscreenCam ? (
-        <div className="fixed inset-0 z-[9999] bg-black flex flex-col">
+      {fullscreenCam && typeof document !== 'undefined'
+        ? createPortal(
+            <div className="fixed inset-0 z-[9999] bg-black flex flex-col">
           <div className="flex flex-col h-full overflow-hidden">
             <div className="flex flex-col h-full overflow-hidden bg-black shadow-2xl">
               <div className="flex-shrink-0 flex flex-wrap items-center justify-between gap-2 sm:gap-4 border-b border-slate-700/60 px-3 sm:px-4 py-2 sm:py-2.5 backdrop-blur-md bg-slate-900/90">
@@ -544,21 +513,9 @@ export function ControlRoomDashboardPage() {
                       </div>
                     </div>
                     <div className="flex items-center gap-2">
-                      <span
-                        className={cn(
-                          'inline-flex items-center gap-1.5 sm:gap-2 rounded-full px-2 sm:px-3 py-0.5 sm:py-1 text-[10px] sm:text-xs font-bold uppercase tracking-wider',
-                          recorder.isRecording
-                            ? 'bg-rose-500/15 text-rose-400 ring-1 ring-rose-500/40'
-                            : 'bg-emerald-500/15 text-emerald-400 ring-1 ring-emerald-500/40',
-                        )}
-                      >
-                        <span
-                          className={cn(
-                            'h-2 w-2 sm:h-2.5 sm:w-2.5 rounded-full',
-                            recorder.isRecording ? 'bg-rose-500 animate-pulse' : 'bg-emerald-400',
-                          )}
-                        />
-                        {recorder.isRecording ? 'REC' : 'LIVE'}
+                      <span className="inline-flex items-center gap-1.5 sm:gap-2 rounded-full px-2 sm:px-3 py-0.5 sm:py-1 text-[10px] sm:text-xs font-bold uppercase tracking-wider bg-emerald-500/15 text-emerald-400 ring-1 ring-emerald-500/40">
+                        <span className="h-2 w-2 sm:h-2.5 sm:w-2.5 rounded-full bg-emerald-400" />
+                        LIVE
                       </span>
                     </div>
                   </div>
@@ -684,69 +641,12 @@ export function ControlRoomDashboardPage() {
                       <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
                         <button
                           type="button"
-                          className={cn(
-                            'inline-flex items-center gap-1 sm:gap-2 rounded-lg px-2 sm:px-3 py-1.5 sm:py-2 text-[10px] sm:text-xs font-semibold transition-colors',
-                            recorder.isRecording
-                              ? 'bg-rose-500/15 text-rose-300 ring-1 ring-rose-500/40'
-                              : 'bg-surface2 text-text hover:bg-surface2/70',
-                          )}
-                          onClick={recorder.isRecording ? recorder.stopRecording : recorder.startRecording}
-                          title="Start / Stop recording"
+                          className="inline-flex items-center gap-1 sm:gap-2 rounded-lg bg-surface2 px-2 sm:px-3 py-1.5 sm:py-2 text-[10px] sm:text-xs font-semibold text-text hover:bg-surface2/70"
+                          onClick={handleReconnect}
+                          title="Reconnect stream"
                         >
-                          <Square size={12} className="sm:w-3.5 sm:h-3.5" />
-                          <span className="hidden sm:inline">{recorder.isRecording ? 'Stop' : 'Record'}</span>
+                          <RotateCcw size={12} className="sm:w-3.5 sm:h-3.5" /> <span className="hidden sm:inline">Reconnect</span>
                         </button>
-                        {recorder.isRecording ? (
-                          <button
-                            type="button"
-                            className="inline-flex items-center gap-1 sm:gap-2 rounded-lg bg-surface2 px-2 sm:px-3 py-1.5 sm:py-2 text-[10px] sm:text-xs font-semibold text-text hover:bg-surface2/70"
-                            onClick={recorder.isPaused ? recorder.resumeRecording : recorder.pauseRecording}
-                            title="Pause / Resume recording"
-                          >
-                            {recorder.isPaused ? <Play size={12} className="sm:w-3.5 sm:h-3.5" /> : <Pause size={12} className="sm:w-3.5 sm:h-3.5" />}
-                            <span className="hidden sm:inline">{recorder.isPaused ? 'Resume' : 'Pause'}</span>
-                          </button>
-                        ) : null}
-                        {recorder.recordedBlob ? (
-                          <>
-                            <button
-                              type="button"
-                              className="inline-flex items-center gap-1 sm:gap-2 rounded-lg bg-emerald-500/15 px-2 sm:px-3 py-1.5 sm:py-2 text-[10px] sm:text-xs font-semibold text-emerald-300 ring-1 ring-emerald-500/40 hover:bg-emerald-500/20"
-                              onClick={() => recorder.downloadRecording(fullscreenCam.name)}
-                              title="Download recording"
-                            >
-                              <Download size={12} className="sm:w-3.5 sm:h-3.5" /> <span className="hidden sm:inline">Download</span>
-                            </button>
-                            <button
-                              type="button"
-                              className="inline-flex items-center gap-1 sm:gap-2 rounded-lg bg-surface2 px-2 sm:px-3 py-1.5 sm:py-2 text-[10px] sm:text-xs font-semibold text-text hover:bg-surface2/70"
-                              onClick={recorder.resetRecording}
-                              title="Clear recording and start over"
-                            >
-                              <X size={12} className="sm:w-3.5 sm:h-3.5" /> <span className="hidden sm:inline">Clear</span>
-                            </button>
-                          </>
-                        ) : null}
-                      </div>
-
-                      <div className="flex flex-wrap items-center gap-2 sm:gap-3">
-                        <div className="flex items-center gap-1 sm:gap-2 text-[10px] sm:text-xs text-muted">
-                          <Timer size={12} className="sm:w-3.5 sm:h-3.5" />
-                          {formatSeconds(recorder.duration)}
-                        </div>
-                        <div className="flex items-center gap-1 sm:gap-2 text-[10px] sm:text-xs text-muted">
-                          <Square size={12} className="sm:w-3.5 sm:h-3.5" />
-                          {recordingSizeLabel}
-                        </div>
-                        <select
-                          value={recordQuality}
-                          onChange={(e) => setRecordQuality(e.target.value as 'low' | 'medium' | 'high')}
-                          className="h-7 sm:h-8 md:h-9 rounded-lg border border-border bg-surface2 px-1.5 sm:px-2 text-[10px] sm:text-xs text-text"
-                        >
-                          <option value="low">Low</option>
-                          <option value="medium">Med</option>
-                          <option value="high">High</option>
-                        </select>
                       </div>
                     </div>
 
@@ -802,8 +702,10 @@ export function ControlRoomDashboardPage() {
               </div>
             </div>
           </div>
-        </div>
-      ) : null}
+        </div>,
+            document.body,
+          )
+        : null}
     </div>
   )
 }

@@ -64,17 +64,44 @@ export function useVideoRecorder({ maxDurationMs = 10 * 60 * 1000, videoRef, vid
 
     if (!video || !canvas || !ctx) return
 
+    let frameCount = 0
+    let lastLogTime = Date.now()
+    let errorCount = 0
+
     const drawFrame = () => {
       // Only draw if recording and not paused
       if (isRecordingRef.current && !state.isPaused) {
         // Check if video has data to draw
         if (video.readyState >= video.HAVE_CURRENT_DATA) {
           try {
+            // Ensure canvas is cleared
             ctx.fillStyle = '#000000'
             ctx.fillRect(0, 0, canvas.width, canvas.height)
+            
+            // Draw video frame - this is critical
             ctx.drawImage(video, 0, 0, canvas.width, canvas.height)
+            frameCount++
+
+            // Log every second
+            const now = Date.now()
+            if (now - lastLogTime >= 1000) {
+              console.log(`Drawing frames: ${frameCount} frames in last second`)
+              frameCount = 0
+              lastLogTime = now
+            }
           } catch (e) {
-            console.error('Error drawing frame:', e)
+            errorCount++
+            if (errorCount <= 5) {
+              // Only log first 5 errors to avoid spam
+              console.error(`Error drawing frame (${errorCount}):`, e)
+            }
+          }
+        } else {
+          // Log if video isn't ready
+          const now = Date.now()
+          if (now - lastLogTime >= 2000) {
+            console.warn(`Video not ready for capture. readyState=${video.readyState}, videoWidth=${video.videoWidth}, videoHeight=${video.videoHeight}, paused=${video.paused}`)
+            lastLogTime = now
           }
         }
         animationFrameRef.current = requestAnimationFrame(drawFrame)
@@ -93,6 +120,14 @@ export function useVideoRecorder({ maxDurationMs = 10 * 60 * 1000, videoRef, vid
 
   const startRecording = useCallback(async () => {
     try {
+      if (typeof MediaRecorder === 'undefined') {
+        setState((prev) => ({
+          ...prev,
+          error: 'Recording is not supported in this browser. Try Chrome or Edge.',
+        }))
+        return
+      }
+
       const video = videoRef.current
       if (!video) {
         setState((prev) => ({ ...prev, error: 'Video element not found' }))
@@ -128,6 +163,8 @@ export function useVideoRecorder({ maxDurationMs = 10 * 60 * 1000, videoRef, vid
       canvas.width = video.videoWidth > 0 ? video.videoWidth : 1280
       canvas.height = video.videoHeight > 0 ? video.videoHeight : 720
 
+      console.log(`Canvas created: ${canvas.width}x${canvas.height}`)
+
       canvasRef.current = canvas
 
       const ctx = canvas.getContext('2d', { willReadFrequently: true })
@@ -141,9 +178,12 @@ export function useVideoRecorder({ maxDurationMs = 10 * 60 * 1000, videoRef, vid
       // Capture canvas stream at 30 FPS
       const canvasStream = canvas.captureStream(30)
       if (!canvasStream || canvasStream.getVideoTracks().length === 0) {
+        console.error('Canvas capture failed. Video tracks:', canvasStream?.getVideoTracks().length)
         setState((prev) => ({ ...prev, error: 'Could not capture canvas stream' }))
         return
       }
+
+      console.log(`Canvas stream created with ${canvasStream.getVideoTracks().length} video track(s)`)
 
       // Try to get audio from video element or use silent audio
       let audioTracks: MediaStreamTrack[] = []
@@ -166,15 +206,11 @@ export function useVideoRecorder({ maxDurationMs = 10 * 60 * 1000, videoRef, vid
       // Combine canvas video + audio
       const combinedStream = new MediaStream([...canvasStream.getVideoTracks(), ...audioTracks])
 
-      // Create recorder
-      const mimeType = MediaRecorder.isTypeSupported('video/webm;codecs=vp9')
-        ? 'video/webm;codecs=vp9'
-        : MediaRecorder.isTypeSupported('video/webm;codecs=vp8')
-          ? 'video/webm;codecs=vp8'
-          : 'video/webm'
+      const supportedTypes = ['video/webm;codecs=vp9', 'video/webm;codecs=vp8', 'video/webm']
+      const mimeType = supportedTypes.find((type) => MediaRecorder.isTypeSupported(type))
 
       const recorder = new MediaRecorder(combinedStream, {
-        mimeType,
+        ...(mimeType ? { mimeType } : {}),
         videoBitsPerSecond: videoBitsPerSecond ?? 5000000, // 5 Mbps default
       })
 
@@ -183,48 +219,51 @@ export function useVideoRecorder({ maxDurationMs = 10 * 60 * 1000, videoRef, vid
 
       recorder.ondataavailable = (e) => {
         dataAvailableCount++
-        console.log(`Recording data available (chunk ${dataAvailableCount}): ${e.data.size} bytes`)
         if (e.data.size > 0) {
+          console.log(`Recording data available (chunk ${dataAvailableCount}): ${e.data.size} bytes`)
           chunksRef.current.push(e.data)
+        } else {
+          console.warn(`Empty chunk received (${dataAvailableCount})`)
         }
       }
 
-      recorder.onstop = () => {
+      const finalizeRecording = () => {
         const totalSize = chunksRef.current.reduce((sum, blob) => sum + blob.size, 0)
         console.log(`Recording stopped. Total chunks: ${chunksRef.current.length}, Total size: ${totalSize} bytes`)
-        console.log('Chunks:', chunksRef.current.map(c => c.size))
+        console.log('Chunks:', chunksRef.current.map((c) => c.size))
+
+        // Always create a blob, even if empty, so the download button appears
+        const blob = new Blob(chunksRef.current, { type: mimeType ?? 'video/webm' })
+        console.log(`Created blob: ${blob.size} bytes, type: ${blob.type}`)
 
         if (totalSize === 0) {
           console.error('Recording produced no data!')
           setState((prev) => ({
             ...prev,
-            recordedBlob: null,
+            recordedBlob: blob, // Still set the blob so download button appears
             isRecording: false,
             isPaused: false,
-            error: 'Recording captured no data. The video stream may not be working. Check console for WHEP/HLS errors.',
+            error: 'Recording captured no data. Canvas frames were not drawn. This usually means the video element cannot be captured due to CORS or codec issues. Try recording from a different stream.',
           }))
-
-          combinedStream.getTracks().forEach((track) => {
-            track.stop()
-          })
-          return
+        } else {
+          setState((prev) => ({
+            ...prev,
+            recordedBlob: blob,
+            isRecording: false,
+            isPaused: false,
+            error: null,
+          }))
         }
-
-        const blob = new Blob(chunksRef.current, { type: mimeType })
-        console.log(`Created blob: ${blob.size} bytes, type: ${blob.type}`)
-        
-        setState((prev) => ({
-          ...prev,
-          recordedBlob: blob,
-          isRecording: false,
-          isPaused: false,
-          error: null,
-        }))
 
         // Stop all streams
         combinedStream.getTracks().forEach((track) => {
           track.stop()
         })
+      }
+
+      recorder.onstop = () => {
+        // Allow any pending dataavailable event to enqueue its chunk first.
+        window.setTimeout(finalizeRecording, 50)
       }
 
       recorder.onerror = (e) => {
@@ -255,7 +294,7 @@ export function useVideoRecorder({ maxDurationMs = 10 * 60 * 1000, videoRef, vid
       setState((prev) => ({ ...prev, error: `Failed to start recording: ${message}` }))
       isRecordingRef.current = false
     }
-  }, [videoRef])
+  }, [videoRef, videoBitsPerSecond])
 
   const pauseRecording = useCallback(() => {
     if (recorderRef.current && recorderRef.current.state === 'recording') {
@@ -281,12 +320,20 @@ export function useVideoRecorder({ maxDurationMs = 10 * 60 * 1000, videoRef, vid
 
     if (recorderRef.current && recorderRef.current.state !== 'inactive') {
       try {
+        // Request any pending data before stopping
         recorderRef.current.requestData()
+        console.log('requestData() called')
       } catch (e) {
         console.warn('requestData failed:', e)
       }
-      recorderRef.current.stop()
-      console.log('MediaRecorder.stop() called')
+      
+      // Small delay to allow final data event to process
+      window.setTimeout(() => {
+        if (recorderRef.current && recorderRef.current.state !== 'inactive') {
+          recorderRef.current.stop()
+          console.log('MediaRecorder.stop() called')
+        }
+      }, 50)
     }
 
     if (animationFrameRef.current) {
@@ -299,27 +346,65 @@ export function useVideoRecorder({ maxDurationMs = 10 * 60 * 1000, videoRef, vid
   }, [])
 
   const downloadRecording = useCallback((cameraName?: string) => {
-    if (!state.recordedBlob) return
+    if (!state.recordedBlob) {
+      setState((prev) => ({ ...prev, error: 'No recording available to download' }))
+      return
+    }
 
     if (state.recordedBlob.size === 0) {
-      setState((prev) => ({ ...prev, error: 'Recording file is empty. Please record again.' }))
+      setState((prev) => ({
+        ...prev,
+        error: 'Recording file is empty (0 bytes). The video stream may not have been captured. Ensure HLS/WHEP is playing before recording.',
+      }))
       return
     }
 
     console.log(`Downloading recording: ${state.recordedBlob.size} bytes`)
 
-    const safeName = cameraName ? cameraName.replace(/[^a-z0-9\-_. ]/gi, '_').trim() : 'camera'
-    const timestamp = new Date().toISOString().replace(/[:.]/g, '-').split('.')[0] // YYYY-MM-DDTHH-MM-SS
-    const filename = `${safeName}-recording-${timestamp}.webm`
+    try {
+      const safeName = cameraName ? cameraName.replace(/[^a-z0-9\-_. ]/gi, '_').trim() : 'camera'
+      const timestamp = new Date().toISOString().replace(/[:.]/g, '-').split('.')[0] // YYYY-MM-DDTHH-MM-SS
+      const filename = `${safeName}-recording-${timestamp}.webm`
 
-    const url = URL.createObjectURL(state.recordedBlob)
-    const a = document.createElement('a')
-    a.href = url
-    a.download = filename
-    document.body.appendChild(a)
-    a.click()
-    document.body.removeChild(a)
-    URL.revokeObjectURL(url)
+      const url = URL.createObjectURL(state.recordedBlob)
+      console.log(`Created object URL: ${url}, size: ${state.recordedBlob.size}`)
+
+      // Create anchor element
+      const anchor = document.createElement('a')
+      anchor.href = url
+      anchor.download = filename
+      anchor.style.display = 'none'
+
+      // Append to body
+      document.body.appendChild(anchor)
+
+      // Try to trigger download
+      try {
+        anchor.click()
+        console.log('Download triggered via anchor.click()')
+      } catch (clickErr) {
+        console.warn('anchor.click() failed, trying alternative method:', clickErr)
+        // Fallback: open in new tab
+        window.open(url, '_blank')
+      }
+
+      // Clean up after giving the browser time to process
+      setTimeout(() => {
+        try {
+          document.body.removeChild(anchor)
+          URL.revokeObjectURL(url)
+          console.log('Cleaned up download resources')
+        } catch (cleanupErr) {
+          console.warn('Cleanup error:', cleanupErr)
+        }
+      }, 100)
+    } catch (err) {
+      console.error('Download failed:', err)
+      setState((prev) => ({
+        ...prev,
+        error: `Download failed: ${err instanceof Error ? err.message : String(err)}`,
+      }))
+    }
   }, [state.recordedBlob])
 
   const resetRecording = useCallback(() => {

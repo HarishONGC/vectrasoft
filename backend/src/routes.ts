@@ -808,6 +808,33 @@ export function buildRoutes(db: Pool) {
     })
   })
 
+function rewriteStreamUrlForOrigin(streamUrl: string | null | undefined, req: Request): string | undefined {
+  if (!streamUrl) return undefined
+  
+  try {
+    const urlObj = new URL(streamUrl)
+    
+    // Get the client's host - the one they're actually accessing from
+    const clientHostHeader = req.headers['x-forwarded-host']
+    const clientHost = typeof clientHostHeader === 'string' ? clientHostHeader : req.hostname
+    
+    // For port 8888 (HLS) or 8889 (WHEP), rewrite to use the client's actual host
+    // This handles:
+    // - localhost -> client's IP
+    // - 127.0.0.1 -> client's IP
+    // - Any tunnel/external IP -> client's local IP
+    if (urlObj.port === '8888' || urlObj.port === '8889') {
+      // Replace hostname with what the client is actually using to access the backend
+      urlObj.hostname = clientHost || '127.0.0.1'
+      return urlObj.toString()
+    }
+    
+    return streamUrl
+  } catch {
+    return streamUrl
+  }
+}
+
   router.get('/cameras', async (_req, res) => {
     const includeDeleted = String(_req.query.includeDeleted ?? '') === '1'
     const user = authUserFromReq(_req)
@@ -836,8 +863,8 @@ export function buildRoutes(db: Pool) {
         zone: String(row.zone),
         ipAddress: String(row.ipAddress),
         rtspUrl: String(row.rtspUrl),
-        hlsUrl: row.hlsUrl ?? undefined,
-        whepUrl: row.whepUrl ?? undefined,
+        hlsUrl: rewriteStreamUrlForOrigin(row.hlsUrl, _req),
+        whepUrl: rewriteStreamUrlForOrigin(row.whepUrl, _req),
         codec: row.codec ?? undefined,
         fps: toNum(row.fps),
         resolution: row.resolution ?? undefined,
@@ -880,8 +907,8 @@ export function buildRoutes(db: Pool) {
       zone: String(cam.zone),
       ipAddress: String(cam.ipAddress),
       rtspUrl: String(cam.rtspUrl),
-      hlsUrl: cam.hlsUrl ?? undefined,
-      whepUrl: cam.whepUrl ?? undefined,
+      hlsUrl: rewriteStreamUrlForOrigin(cam.hlsUrl, req),
+      whepUrl: rewriteStreamUrlForOrigin(cam.whepUrl, req),
       codec: cam.codec ?? undefined,
       fps: toNum(cam.fps),
       resolution: cam.resolution ?? undefined,

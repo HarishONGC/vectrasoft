@@ -23,29 +23,29 @@ webrtcAllowOrigins: ['*']
 # Local ICE listener (UDP). Works well for LAN / same-machine testing.
 webrtcLocalUDPAddress: :8189
 
-# Prefer MPEG-TS HLS for maximum client compatibility and fewer LL-HLS timing quirks.
-hlsVariant: mpegts
+# Use low-latency HLS to support both H.264 and H.265 video codecs
+hlsVariant: lowLatency
 # Slightly larger segments reduce overhead and are usually more stable on lossy links.
 hlsSegmentDuration: 2s
 
 paths:
   kesanapalli-01:
-    source: "rtsp://live:WSS4Bosch!@117.236.225.209:554"
+    source: "rtsp://live:WSS4Bosch!@117.236.225.209:554/rtsp_tunnel"
     rtspTransport: tcp
     sourceOnDemand: yes
   # Transcoded variant (H.265 -> H.264) published by ffmpeg.
   # HLS MPEG-TS only supports H.264 video.
   kesanapalli-01-h264: {}
   kesanapalli-02:
-    source: "rtsp://live:WSS4Bosch!@117.236.225.211:554"
+    source: "rtsp://live:WSS4Bosch!@117.236.225.211:554/rtsp_tunnel"
     rtspTransport: tcp
     sourceOnDemand: yes
   kesanapalli-03:
-    source: "rtsp://live:WSS4Bosch!@117.236.225.212:554"
+    source: "rtsp://live:WSS4Bosch!@117.236.225.212:554/rtsp_tunnel"
     rtspTransport: tcp
     sourceOnDemand: yes
   kesanapalli-04:
-    source: "rtsp://live:WSS4Bosch!@117.236.225.213:554"
+    source: "rtsp://live:WSS4Bosch!@117.236.225.213:554/rtsp_tunnel"
     rtspTransport: tcp
     sourceOnDemand: yes
   # Transcoded variant (H.265 -> H.264) published by ffmpeg.
