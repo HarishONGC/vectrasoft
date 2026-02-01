@@ -31,7 +31,6 @@ import { Card } from '../components/ui/Card'
 import { Input } from '../components/ui/Input'
 import { Select } from '../components/ui/Select'
 import { useCameraStatusRealtime } from '../realtime/useCameraStatusRealtime'
-import { cn } from '../app/cn'
 
 type GridLayout = '2x2' | '3x3' | '4x4'
 
